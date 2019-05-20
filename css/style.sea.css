@@ -292,7 +292,7 @@ STYLE SWITCHER FOR DEMO
 /*
  * 1. NAVBAR
  */
-.navbar {
+/*.navbar {
   padding: 0.5rem 1rem;
 }
 
@@ -313,7 +313,7 @@ STYLE SWITCHER FOR DEMO
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(248, 244, 244, 0.973);
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
@@ -390,7 +390,7 @@ STYLE SWITCHER FOR DEMO
 
 .navbar-dark .navbar-text {
   color: rgba(255, 255, 255, 0.5);
-}
+} */
 
 /*
  * 2. BUTTONS
