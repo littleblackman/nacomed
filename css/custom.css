@@ -88,3 +88,9 @@ text-transform: uppercase;
     transform: translate3d(0, 100%, 0);
   }
 }
+
+/*Section A propos de nous */
+
+.container p, h4 {
+  text-align: center;
+}
