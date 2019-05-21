@@ -375,6 +375,26 @@
     if(settings.pagination == true)  {
       $(".onepage-pagination li a").click(function (){
         var page_index = $(this).data("index");
+        if ($(".onepage-pagination li a").hasClass("active")) {
+          switch (page_index) {
+            case 1:
+              console.log('page_index = ' + page_index + ' devrait afficher "Accueil"');
+              $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").before('Accueil');
+            break;
+
+            case 2:
+              console.log('page_index = ' + page_index + ' devrait afficher "Qui sommes-nous ?"');
+              $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").before('Qui sommes-nous ?');
+            break;
+
+            default:
+              console.log('page_index = ' + page_index + ' : cas défaut');
+          }
+        } else {
+          console.log('le lien ne possède pas la classe "active"');
+
+        }
+          
         el.moveTo(page_index);
       });
     }
