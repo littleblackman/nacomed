@@ -148,6 +148,52 @@
       if(settings.pagination == true) {
         $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
         $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
+
+        switch (next.data("index")) {
+          case 1:  
+            $("#accueil").show();
+            $("#about").hide();
+            $("#objectifs").hide();
+            $("#missions").hide();
+            $("#contact").hide();
+          break;
+
+          case 2:
+          $("#accueil").hide();
+          $("#about").show();
+          $("#objectifs").hide();
+          $("#missions").hide();
+          $("#contact").hide();
+          break;
+
+          case 3:
+          $("#accueil").hide();
+          $("#about").hide();
+          $("#objectifs").show();
+          $("#missions").hide();
+          $("#contact").hide();
+          break;
+
+          case 4:
+          $("#accueil").hide();
+          $("#about").hide();
+          $("#objectifs").hide();
+          $("#missions").show();
+          $("#contact").hide();
+          break;
+
+          case 5:
+          $("#accueil").hide();
+          $("#about").hide();
+          $("#objectifs").hide();
+          $("#missions").hide();
+          $("#contact").show();
+          break;
+
+          default:
+            console.log('Cas défaut, page_index = ' + page_index);
+        }
+
       }
 
       $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
@@ -188,6 +234,52 @@
       if(settings.pagination == true) {
         $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
         $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
+        
+        switch (next.data("index")) {
+          case 1:  
+            $("#accueil").show();
+            $("#about").hide();
+            $("#objectifs").hide();
+            $("#missions").hide();
+            $("#contact").hide();
+          break;
+
+          case 2:
+          $("#accueil").hide();
+          $("#about").show();
+          $("#objectifs").hide();
+          $("#missions").hide();
+          $("#contact").hide();
+          break;
+
+          case 3:
+          $("#accueil").hide();
+          $("#about").hide();
+          $("#objectifs").show();
+          $("#missions").hide();
+          $("#contact").hide();
+          break;
+
+          case 4:
+          $("#accueil").hide();
+          $("#about").hide();
+          $("#objectifs").hide();
+          $("#missions").show();
+          $("#contact").hide();
+          break;
+
+          case 5:
+          $("#accueil").hide();
+          $("#about").hide();
+          $("#objectifs").hide();
+          $("#missions").hide();
+          $("#contact").show();
+          break;
+
+          default:
+            console.log('Cas défaut, page_index = ' + page_index);
+        }
+
       }
       $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
       $("body").addClass("viewing-page-"+next.data("index"))
@@ -202,10 +294,11 @@
     $.fn.moveTo = function(page_index) {
       current = $(settings.sectionContainer + ".active")
       next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
+      
       if(next.length > 0) {
         if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
-        current.removeClass("active")
-        next.addClass("active")
+        current.removeClass("active");
+        next.addClass("active");
         $(".onepage-pagination li a" + ".active").removeClass("active");
         $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").addClass("active");
         $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
@@ -314,7 +407,39 @@
 
 
       if(settings.pagination == true) {
-        paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'></a></li>"
+        span_text = '';
+        id = '';
+        
+        switch (i) {
+          case 0:
+            id = 'accueil';
+            span_text = 'Accueil';
+          break;
+
+          case 1:
+            id = 'about';
+            span_text = 'Qui sommes-nous ?';
+          break;
+
+          case 2:
+            id = 'objectifs';
+            span_text = 'Objectifs';
+          break;
+
+          case 3:
+            id = 'missions';
+            span_text = 'Missions';
+          break;
+
+          case 4:
+            id = 'contact';
+            span_text = 'Contact';
+          break;
+
+          default:
+            span_text = '';
+        }
+        paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'><span id='" +id+ "'>" + span_text + "</span></a></li>"
       }
     });
 
@@ -338,11 +463,105 @@
         el.find(".onepage-pagination").css("margin-top", posTop);
       }
       $('ul.onepage-pagination').html(paginationList);
+
+      $("#accueil").hide();
+      $("#about").hide();
+      $("#objectifs").hide();
+      $("#missions").hide();
+      $("#contact").hide();
+      
+      $(".onepage-pagination li a" + "[data-index='" + 1 + "']").click(function() {
+        if ($('#mainNav').hasClass('is-fixed') && pos == 0) {
+          $('#mainNav').addClass('is-visible');
+        } else {
+            $('#mainNav').removeClass('is-visible is-fixed');
+          }
+      });
+
+      $(".onepage-pagination li a" + "[data-index='" + 2 + "']").click(function() {
+        $('#mainNav').removeClass('is-visible');
+        if (!$('#mainNav').hasClass('is-fixed')) {
+          $('#mainNav').addClass('is-fixed');
+        }
+      });
+
+      $(".onepage-pagination li a" + "[data-index='" + 3 + "']").click(function() {
+        $('#mainNav').removeClass('is-visible');
+        if (!$('#mainNav').hasClass('is-fixed')) {
+          $('#mainNav').addClass('is-fixed');
+        }
+      });
+
+      $(".onepage-pagination li a" + "[data-index='" + 4 + "']").click(function() {
+        $('#mainNav').removeClass('is-visible');
+        if (!$('#mainNav').hasClass('is-fixed')) {
+          $('#mainNav').addClass('is-fixed');
+        }
+      });
+
+      $(".onepage-pagination li a" + "[data-index='" + 5 + "']").click(function() {
+        $('#mainNav').removeClass('is-visible');
+        if (!$('#mainNav').hasClass('is-fixed')) {
+          $('#mainNav').addClass('is-fixed');
+        }
+      });
+
+      $(".onepage-pagination li a" + "[data-index='" + 1 + "']").hover(function() {
+        $('#accueil').show();
+      }, function() {
+        if ($(".onepage-pagination li a" + "[data-index='" + 1 + "']").hasClass('active')) {
+          $('#accueil').show();
+        } else {
+            $('#accueil').hide();
+        }
+      }); 
+
+      $(".onepage-pagination li a" + "[data-index='" + 2 + "']").hover(function() {
+        $('#about').show();
+      }, function() {
+        if ($(".onepage-pagination li a" + "[data-index='" + 2 + "']").hasClass('active')) {
+          $('#about').show();
+        } else {
+            $('#about').hide();
+        }
+      });
+
+      $(".onepage-pagination li a" + "[data-index='" + 3 + "']").hover(function() {
+        $('#objectifs').show();
+      }, function() {
+        if ($(".onepage-pagination li a" + "[data-index='" + 3 + "']").hasClass('active')) {
+          $('#objectifs').show();
+        } else {
+            $('#objectifs').hide();
+        }
+      });
+
+      $(".onepage-pagination li a" + "[data-index='" + 4 + "']").hover(function() {
+        $('#missions').show();
+      }, function() {
+        if ($(".onepage-pagination li a" + "[data-index='" + 4 + "']").hasClass('active')) {
+          $('#missions').show();
+        } else {
+            $('#missions').hide();
+        }
+      })
+
+      $(".onepage-pagination li a" + "[data-index='" + 5 + "']").hover(function() {
+        $('#contact').show();
+      }, function() {
+        if ($(".onepage-pagination li a" + "[data-index='" + 5 + "']").hasClass('active')) {
+          $('#contact').show();
+        } else {
+            $('#contact').hide();
+        }
+      })
+
+
     }
 
     if(window.location.hash != "" && window.location.hash != "#1") {
       init_index =  window.location.hash.replace("#", "")
-
+      
       if (parseInt(init_index) <= total && parseInt(init_index) > 0) {
         $(settings.sectionContainer + "[data-index='" + init_index + "']").addClass("active")
         $("body").addClass("viewing-page-"+ init_index)
@@ -375,26 +594,52 @@
     if(settings.pagination == true)  {
       $(".onepage-pagination li a").click(function (){
         var page_index = $(this).data("index");
-        if ($(".onepage-pagination li a").hasClass("active")) {
-          switch (page_index) {
-            case 1:
-              console.log('page_index = ' + page_index + ' devrait afficher "Accueil"');
-              $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").before('Accueil');
-            break;
 
-            case 2:
-              console.log('page_index = ' + page_index + ' devrait afficher "Qui sommes-nous ?"');
-              $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").before('Qui sommes-nous ?');
-            break;
+        switch (page_index) {
+          case 1:
+            $('#accueil').show();
+            $("#about").hide();
+            $("#objectifs").hide();
+            $("#missions").hide();
+            $("#contact").hide();
+          break;
 
-            default:
-              console.log('page_index = ' + page_index + ' : cas défaut');
-          }
-        } else {
-          console.log('le lien ne possède pas la classe "active"');
+          case 2:
+            $("#accueil").hide();
+            $("#about").show();
+            $("#objectifs").hide();
+            $("#missions").hide();
+            $("#contact").hide();
+          break;
 
+          case 3:
+            $("#accueil").hide();
+            $("#about").hide();
+            $("#objectifs").show();
+            $("#missions").hide();
+            $("#contact").hide();
+          break;
+
+          case 4:
+            $("#accueil").hide();
+            $("#about").hide();
+            $("#objectifs").hide();
+            $("#missions").show();
+            $("#contact").hide();
+          break;
+
+          case 5:
+            $("#accueil").hide();
+            $("#about").hide();
+            $("#objectifs").hide();
+            $("#missions").hide();
+            $("#contact").show();
+          break;
+
+          default:
+            console.log('page_index = ' + page_index);
         }
-          
+
         el.moveTo(page_index);
       });
     }
@@ -450,6 +695,4 @@
     }
     return false;
   }
-
-
 }(window.jQuery);
