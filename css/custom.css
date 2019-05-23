@@ -94,3 +94,30 @@ text-transform: uppercase;
 .container p, h4 {
   text-align: center;
 }
+
+/*Section pagination */
+
+#about {
+  width: 135px;
+}
+
+.onepage-pagination span {
+  float: right;
+  position: relative;
+  top: -12px;
+  left: -10px;
+  /*display: none;*/
+}
+
+.onepage-pagination a:hover #accueil {
+  display: block;
+}
+
+
+.onepage-pagination a.active {
+  display: block;
+}
+
+/*.onepage-pagination a:hover {
+  visibility: visible;
+}*/
