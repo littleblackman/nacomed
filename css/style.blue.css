@@ -88,7 +88,7 @@ section {
 }
 
 .bg-center {
-  background-position: center center !important;
+  background-position: bottom;
 }
 
 .dark-overlay {
