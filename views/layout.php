@@ -9,7 +9,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Association Nacomed</title>
+        <title><?= $title ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
@@ -35,6 +35,7 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     </head>
     <body>
+        <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="index.html">NACOMED</a>
@@ -67,8 +68,11 @@
                 </div>
             </div>
         </nav>
+        <!-- Navigation -->
 
+        <!-- Contenu des pages -->
         <?= $content ?>
+        <!-- Contenu des pages -->
 
         <!-- Footer -->
         <footer class="page-footer font-small indigo">
