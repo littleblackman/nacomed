@@ -1014,12 +1014,12 @@ body {
 }
 
 a {
-  color: #4fbfa8;
+  color: #4896c0;
   text-decoration: none;
 }
 
-a:hover, a:focus {
-  color: #348e7b;
+a:hover a:active {
+  color: #064769;
   text-decoration: underline;
 }
 
