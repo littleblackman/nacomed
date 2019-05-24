@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Articles;
+
 class ArticlesManager {
 
     private $_db;

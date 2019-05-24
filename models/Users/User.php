@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Users;
+
 class User {
     
     // Déclaration des attributs

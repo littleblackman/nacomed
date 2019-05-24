@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Users;
+
 class UsersManager {
 
     private $_db;
