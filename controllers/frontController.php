@@ -1,5 +1,5 @@
 <?php
-    require('../vendor/autoload.php');
+    use App\models\Articles;
 
 function listLastArticles() {
     $db = setDb();
@@ -46,6 +46,10 @@ function reportCom($article_id, $com_id) {
 
     $reportedCom = $commentsManager->reportComment($com_id);
     require('./views/frontend/postView.php');
+}
+
+function displayHome() {
+    require('../public/views/frontend/home.php');
 }
 
 function displayAbout() {
