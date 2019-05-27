@@ -1,0 +1,4 @@
+/img/
+./vendor/composer/
+./composer.json
+./composer.phar
