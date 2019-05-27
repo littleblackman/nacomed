@@ -12,6 +12,10 @@ font-weight: 800;
 color: #343a40;
 }
 
+.navbar-brand img {
+  width: 10%;
+}
+
 #mainNav .navbar-toggler {
 font-size: 12px;
 font-weight: 800;
@@ -62,7 +66,8 @@ text-transform: uppercase;
   #mainNav.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
-    top: -83px;
+    top: -100px;
+    height: 100px;
     -webkit-transition: -webkit-transform 0.2s;
     transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
@@ -89,16 +94,42 @@ text-transform: uppercase;
   }
 }
 
-/*Section A propos de nous */
+/*Section Présentation */
 
-.container p, h4 {
-  text-align: center;
+.about-title {
+  text-align: left;
+}
+
+.about-title img {
+  padding-right: 25px;
+  padding-left: 45px;
+}
+
+.sensibilisation, .technologie {
+  margin-bottom: 0;
+}
+
+.technologie {
+  margin-top: 15px;
+}
+
+.about-subtitle {
+  margin-bottom: 0;
+}
+
+.school-boat {
+  margin-top: 35px;
+}
+
+.about-logo {
+  position: relative;
+  top: 65px;
 }
 
 /*Section pagination */
 
-#about {
-  width: 135px;
+#boat {
+  width: 65px;
 }
 
 .onepage-pagination span {
@@ -121,3 +152,64 @@ text-transform: uppercase;
 /*.onepage-pagination a:hover {
   visibility: visible;
 }*/
+
+/*Section 1*/
+
+.welcome {
+  margin-bottom: 55px;
+}
+
+.nav_infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  left: 5%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.fa-angle-double-right {
+   padding-right: 20px;
+}
+
+.link-down {
+  color: white;
+  z-index: 2;
+  position: relative;
+  top: 55%;
+  right: 29%;
+}
+
+/*Section 2*/
+
+.about-subtitle {
+  padding-left: 100px; 
+}
+
+/* Footer */
+
+.page-footer {
+  position: relative;
+  top: 125px;
+}
+
+/* Section contact */
+
+.contact-logo {
+  width: 15%;
+  margin-bottom: 60px;
+}
+
+.person_infos p {
+  margin-bottom: 0;
+}
+
+.person_infos {
+  padding-left: 315px;
+}
+
+.person_pic {
+  padding-right: 315px;
+}
