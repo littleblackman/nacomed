@@ -154,7 +154,7 @@
             $("#accueil").show();
             $("#about").hide();
             $("#objectifs").hide();
-            $("#missions").hide();
+            $("#boat").hide();
             $("#contact").hide();
           break;
 
@@ -162,7 +162,7 @@
           $("#accueil").hide();
           $("#about").show();
           $("#objectifs").hide();
-          $("#missions").hide();
+          $("#boat").hide();
           $("#contact").hide();
           break;
 
@@ -170,7 +170,7 @@
           $("#accueil").hide();
           $("#about").hide();
           $("#objectifs").show();
-          $("#missions").hide();
+          $("#boat").hide();
           $("#contact").hide();
           break;
 
@@ -178,7 +178,7 @@
           $("#accueil").hide();
           $("#about").hide();
           $("#objectifs").hide();
-          $("#missions").show();
+          $("#boat").show();
           $("#contact").hide();
           break;
 
@@ -186,7 +186,7 @@
           $("#accueil").hide();
           $("#about").hide();
           $("#objectifs").hide();
-          $("#missions").hide();
+          $("#boat").hide();
           $("#contact").show();
           break;
 
@@ -240,7 +240,7 @@
             $("#accueil").show();
             $("#about").hide();
             $("#objectifs").hide();
-            $("#missions").hide();
+            $("#boat").hide();
             $("#contact").hide();
           break;
 
@@ -248,7 +248,7 @@
           $("#accueil").hide();
           $("#about").show();
           $("#objectifs").hide();
-          $("#missions").hide();
+          $("#boat").hide();
           $("#contact").hide();
           break;
 
@@ -256,7 +256,7 @@
           $("#accueil").hide();
           $("#about").hide();
           $("#objectifs").show();
-          $("#missions").hide();
+          $("#boat").hide();
           $("#contact").hide();
           break;
 
@@ -264,7 +264,7 @@
           $("#accueil").hide();
           $("#about").hide();
           $("#objectifs").hide();
-          $("#missions").show();
+          $("#boat").show();
           $("#contact").hide();
           break;
 
@@ -272,7 +272,7 @@
           $("#accueil").hide();
           $("#about").hide();
           $("#objectifs").hide();
-          $("#missions").hide();
+          $("#boat").hide();
           $("#contact").show();
           break;
 
@@ -418,7 +418,7 @@
 
           case 1:
             id = 'about';
-            span_text = 'Qui sommes-nous ?';
+            span_text = 'Présentation';
           break;
 
           case 2:
@@ -427,8 +427,8 @@
           break;
 
           case 3:
-            id = 'missions';
-            span_text = 'Missions';
+            id = 'boat';
+            span_text = 'Le navire';
           break;
 
           case 4:
@@ -467,7 +467,7 @@
       $("#accueil").hide();
       $("#about").hide();
       $("#objectifs").hide();
-      $("#missions").hide();
+      $("#boat").hide();
       $("#contact").hide();
       
       $(".onepage-pagination li a" + "[data-index='" + 1 + "']").click(function() {
@@ -537,12 +537,12 @@
       });
 
       $(".onepage-pagination li a" + "[data-index='" + 4 + "']").hover(function() {
-        $('#missions').show();
+        $('#boat').show();
       }, function() {
         if ($(".onepage-pagination li a" + "[data-index='" + 4 + "']").hasClass('active')) {
-          $('#missions').show();
+          $('#boat').show();
         } else {
-            $('#missions').hide();
+            $('#boat').hide();
         }
       })
 
@@ -600,7 +600,7 @@
             $('#accueil').show();
             $("#about").hide();
             $("#objectifs").hide();
-            $("#missions").hide();
+            $("#boat").hide();
             $("#contact").hide();
           break;
 
@@ -608,7 +608,7 @@
             $("#accueil").hide();
             $("#about").show();
             $("#objectifs").hide();
-            $("#missions").hide();
+            $("#boat").hide();
             $("#contact").hide();
           break;
 
@@ -616,7 +616,7 @@
             $("#accueil").hide();
             $("#about").hide();
             $("#objectifs").show();
-            $("#missions").hide();
+            $("#boat").hide();
             $("#contact").hide();
           break;
 
@@ -624,7 +624,7 @@
             $("#accueil").hide();
             $("#about").hide();
             $("#objectifs").hide();
-            $("#missions").show();
+            $("#boat").show();
             $("#contact").hide();
           break;
 
@@ -632,7 +632,7 @@
             $("#accueil").hide();
             $("#about").hide();
             $("#objectifs").hide();
-            $("#missions").hide();
+            $("#boat").hide();
             $("#contact").show();
           break;
 
