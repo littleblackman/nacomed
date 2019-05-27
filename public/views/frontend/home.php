@@ -41,7 +41,7 @@
                             <p class="about-title"><img src="https://img.icons8.com/dotty/50/000000/flounder-fish.png">Programme OBSenMER</p>
                             <p class="about-title">Missions Spéciales</p>
                     </div>
-                    <div class="col-lg-4"><img src="../img/logo_nacomed.jpg" alt="..." class="img-fluid rounded-circle d-block mx-auto about-logo"></div>
+                    <div class="col-lg-4"><img src="../img/logo_nacomed.png" alt="..." class="img-fluid rounded-circle d-block mx-auto about-logo"></div>
                     <div class="col-lg-4 ecology-boat">
                         <header class="text-center">
                             <h3 class="text-uppercase lined">Un navire écologique</h2>
@@ -132,7 +132,7 @@
                     <h2 class="text-uppercase lined">Contact</h2>
                 </header>
                 <div class="row">
-                    <div class="col-lg-12"><img src="../img/logo_nacomed.jpg" alt="..." class="img-fluid rounded-circle d-block mx-auto contact-logo"></div>
+                    <div class="col-lg-12"><img src="../img/logo_nacomed.png" alt="..." class="img-fluid rounded-circle d-block mx-auto contact-logo"></div>
                 </div>
                 <div class="row lined">
                     <div class="col-lg-6 person_infos text-center">
