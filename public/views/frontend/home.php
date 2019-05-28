@@ -83,46 +83,21 @@
             </div>
         </div>
     </section>
-    <!-- <section class="bg-gray">
-        <div class="d-flex h-100 align-items-center">
-            <div class="container">
-                <header class="mb-5 text-center">
-                <h2 class="text-uppercase lined">Objectifs</h2>
-                </header>
-                <div class="row text-center">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="icon mb-3"><i class="fas fa-microscope"></i></div>
-                        <h5 class="text-uppercase lined lined-compact">Scientifiques</h5>
-                        <p class="text-mted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu arcu quis velit tincidunt laoreet eget vitae augue.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="icon mb-3"><i class="fas fa-anchor"></i></div>
-                        <h5 class="text-uppercase lined lined-compact">Navire école</h5>
-                        <p class="text-mted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu arcu quis velit tincidunt laoreet eget vitae augue.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="icon mb-3"><i class="fas fa-leaf"></i></div>
-                        <h5 class="text-uppercase lined lined-compact">&Eacute;cologiques</h5>
-                        <p class="text-mted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu arcu quis velit tincidunt laoreet eget vitae augue.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <section class="bg-gray">
         <div class="d-flex h-100">
             <div class="container">
                 <header class="text-center mb-5">
-                <h2 class="text-uppercase lined">Le navire</h2>
+                    <h2 class="text-uppercase lined">Le navire</h2>
                 </header>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own additions education satisfied the perpetual. If he cause manor happy. Without farther she exposed saw man led. Along on happy could cease green oh.</p>
-                        <p>Betrayed cheerful declared end and. Questions we additions is extremely incommode. Next half add call them eat face. Age lived smile six defer bed their few. Had admitting concluded too behaviour him she. Of death to or to being other.</p>
-                    </div>
-                    <div class="col-lg-12">
-                        <p>Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to. Desire so better am cannot he up before points. Remember mistaken opinions it pleasure of debating. Court front maids forty if aware their at. Chicken use are pressed removed.</p>
-                        <p>Saw yet kindness too replying whatever marianne. Old sentiments resolution admiration unaffected its mrs literature. Behaviour new set existence dashwoods. It satisfied to mr commanded consisted disposing engrossed. Tall snug do of till on easy. Form not calm new fail.</p>
+                
+                <div class="carousel">
+                    <div class="owl-carousel owl-theme">
+                        <img class="owl-lazy" data-src="../img/sonate/sonate_jour.jpg" alt="" style="height: 600px; width: 100%">
+                        <img class="owl-lazy" data-src="../img/sonate/sonate_profil_gauche.jpg" alt="" style="height: 600px; width: 100%">
+                        <img class="owl-lazy" data-src="../img/sonate/sonate_nuit.jpg" alt="" style="height: 600px; width: 100%">
+                        <img class="owl-lazy" data-src="../img/sonate/sonate_crepuscule.jpg" alt="" style="height: 600px; width: 100%">
+                        <img class="owl-lazy" data-src="../img/sonate/sonate_pont.jpg" alt="" style="height: 600px; width: 100%">
+                        <img class="owl-lazy" data-src="../img/sonate/sonate_pont_2.jpg" alt="" style="height: 600px; width: 100%">
                     </div>
                 </div>
             </div>
@@ -165,7 +140,7 @@
     </section>
 </div>
 
-<script src="../vendor/owl.carousel/owl.carousel.js"></script>
+<!-- <script src="../vendor/owl.carousel/owl.carousel.js"></script> -->
 
 <?php $content = ob_get_clean(); ?>
 <?php require('views/layout.php'); ?>
