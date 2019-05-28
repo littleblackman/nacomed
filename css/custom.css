@@ -94,10 +94,58 @@ text-transform: uppercase;
   }
 }
 
-/*Section Présentation */
+/* Section 1 : Accueil */
+
+.welcome {
+  margin-bottom: 55px;
+}
+
+.nav_infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  left: 5%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.fa-angle-double-right {
+   padding-right: 20px;
+}
+
+.link-down {
+  color: white;
+  z-index: 2;
+  position: relative;
+  top: 55%;
+  right: 29%;
+}
+
+.position-relative {
+  top: 4%;
+}
+
+/*Section 2 Présentation */
+
+.about-logo {
+  position: relative;
+  top: 20%;
+}
+
+.about-subtitle {
+  padding-left: 100px; 
+  margin-left: 25%;
+}
 
 .about-title {
   text-align: left;
+  padding-left: 25px;
+}
+
+.fa-angle-right {
+  padding-right: 10px;
 }
 
 .about-title img {
@@ -105,8 +153,30 @@ text-transform: uppercase;
   padding-left: 45px;
 }
 
+.boat-info {
+  display: flex;
+  margin-bottom: 15px;
+  margin-left: 10%;
+}
+
+.boat-info p {
+  margin-bottom: 0px;
+}
+
+.short-p {
+  margin-top: 15px;
+}
+
 .sensibilisation, .technologie {
   margin-bottom: 0;
+}
+
+.special-div {
+  margin-bottom: 0px
+}
+
+.ecology {
+  margin-left: 25%;
 }
 
 .technologie {
@@ -115,6 +185,11 @@ text-transform: uppercase;
 
 .about-subtitle {
   margin-bottom: 0;
+}
+
+.science-boat, .ecology-boat {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .school-boat {
@@ -147,41 +222,6 @@ text-transform: uppercase;
 /*.onepage-pagination a:hover {
   visibility: visible;
 }*/
-
-/*Section 1*/
-
-.welcome {
-  margin-bottom: 55px;
-}
-
-.nav_infos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  left: 5%;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.fa-angle-double-right {
-   padding-right: 20px;
-}
-
-.link-down {
-  color: white;
-  z-index: 2;
-  position: relative;
-  top: 55%;
-  right: 29%;
-}
-
-/*Section 2*/
-
-.about-subtitle {
-  padding-left: 100px; 
-}
 
 /* Footer */
 
