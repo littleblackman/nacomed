@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
         <!-- OwlCarousel -->
         <link rel="stylesheet" href="../vendor/owl.carousel/assets/owl.carousel.css">
+        <link rel="stylesheet" href="../vendor/owl.carousel/assets/owl.theme.default.min.css">
         <!-- Lightbox-->
         <link rel="stylesheet" href="../vendor/lightbox2/css/lightbox.min.css">
         <!-- Font Awesome-->
@@ -80,9 +81,12 @@
         <script src="../vendor/jquery/jquery/jquery.min.js"></script>
         <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../vendor/onepage-scroll/jquery.onepage-scroll.js"></script>
+        <script src="../vendor/owl.carousel/owl.carousel.js"></script>
         <script src="../js/scroll_nav.js"></script>
         <script src="../vendor/lightbox2/js/lightbox.min.js"></script>
         <script src="../js/front.js"></script>
+
+        <script src="../js/main.js"></script>
         <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </body>
