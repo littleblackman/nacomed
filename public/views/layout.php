@@ -18,6 +18,8 @@
         <!-- Google fonts-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo:400,400i">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+        <!-- OwlCarousel -->
+        <link rel="stylesheet" href="../vendor/owl.carousel/assets/owl.carousel.css">
         <!-- Lightbox-->
         <link rel="stylesheet" href="../vendor/lightbox2/css/lightbox.min.css">
         <!-- Font Awesome-->
