@@ -174,7 +174,7 @@
           case 4:
           $("#accueil").hide();
           $("#about").hide();
-          $("#boat").hode();
+          $("#boat").hide();
           $("#contact").show();
           break;
 
