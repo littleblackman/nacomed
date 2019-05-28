@@ -29,31 +29,34 @@
         <div class="d-flex h-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 mb-4 mb-lg-0 science-boat">
+                    <div class="col-lg-5 science-boat">
                         <header class="text-center">
-                            <h3 class="text-uppercase lined">Un navire scientifique</h2>
+                            <h3 class="text-uppercase">Un navire scientifique</h2>
+                                <p class="lined">&Eacute;tudier le milieu marin</p>
                         </header>
-                        <!-- <p class="lead">Présentation de l'association</p> -->
-                            <p class="about-title"><img src="https://img.icons8.com/ios/50/000000/algae-filled.png">Relevé de plancton</p>
-                            <p class="about-title"><img src="../img/plancton.png">Relevé de microalgues</p>
-                            <p class="about-title"><img src="https://img.icons8.com/ios/50/000000/graph.png">Relevé de micro-plastique</p>
-                            <p class="about-title">...</p>
-                            <p class="about-title"><img src="https://img.icons8.com/dotty/50/000000/flounder-fish.png">Programme OBSenMER</p>
-                            <p class="about-title">Missions Spéciales</p>
+                            <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/microscope.png"><p class="about-title short-p">Accueillir des missions scientifiques</p></div>
+                            <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/graph.png"><p class="about-title">Effectuer des relevés en autonomie (plancton, micorplastique, accoustique</p></div>
+                            <div class="boat-info"><img src="../img/plancton.png"><p class="about-title short-p">S'intégrer à des programmes de recherches</p></div>
+                            <div class="boat-info"><img src="https://img.icons8.com/dotty/50/000000/flounder-fish.png"><p class="about-title">Participer aux réseaux de sciences participatives en mer (OBSenMER, ...)</p></div>
                     </div>
-                    <div class="col-lg-4"><img src="../img/logo_nacomed.png" alt="..." class="img-fluid rounded-circle d-block mx-auto about-logo"></div>
-                    <div class="col-lg-4 ecology-boat">
+                    <div class="col-lg-2"><img src="../img/logo_nacomed.png" alt="..." class="img-fluid rounded-circle d-block mx-auto about-logo"></div>
+                    <div class="col-lg-5 ecology-boat">
                         <header class="text-center">
-                            <h3 class="text-uppercase lined">Un navire écologique</h2>
+                            <h3 class="text-uppercase">Un navire écologique</h2>
+                            <p class="lined">Préserver et sensibiliser</p>
                         </header>
-                            <p class="about-title"><img src="https://img.icons8.com/dotty/50/000000/waste.png">Dépollutions</p>
-                            <p class="about-title sensibilisation"><img src="https://img.icons8.com/dotty/50/000000/commercial.png">Sensibilisation :</p>
-                                <p class="about-subtitle"><i class="fas fa-angle-right"></i>Dans les ports</p>
-                                <p class="about-subtitle"><i class="fas fa-angle-right"></i>Auprès des plaisanciers</p>
-                                <p class="about-subtitle"><i class="fas fa-angle-right"></i>Auprès des plagistes</p>
-                                <p class="about-subtitle"><i class="fas fa-angle-right"></i>Auprès des écoliers et étudiants</p>
-                            <p class="about-title technologie"><img src="https://img.icons8.com/dotty/50/000000/light-on.png">Technologie :</p>
-                                <p class="about-subtitle"><i class="fas fa-angle-right"></i>Low-tech, écologie, autonomie</p>
+                            <div class="boat-info ecology"><img src="https://img.icons8.com/dotty/50/000000/waste.png"><p class="about-title">Effectuer des dépollutions et des nettoyages</p></div>
+                            <div class="boat-info special-div ecology"><img src="https://img.icons8.com/dotty/50/000000/commercial.png">
+                                <!-- <div class="sensibilisation-div"> -->
+                                    <p class="about-title short-p">Sensibilisation :</p></div>
+                                        <p class="about-subtitle"><i class="fas fa-angle-right"></i>Dans les ports</p>
+                                        <p class="about-subtitle"><i class="fas fa-angle-right"></i>Auprès des plaisanciers</p>
+                                        <p class="about-subtitle"><i class="fas fa-angle-right"></i>Auprès des plagistes</p>
+                                        <p class="about-subtitle"><i class="fas fa-angle-right"></i>Auprès des écoliers et étudiants</p>
+                                <!-- </div> -->
+                            <div class="boat-info special-div ecology"><img src="https://img.icons8.com/dotty/50/000000/light-on.png">
+                                <p class="about-title short-p">Technologie :</p></div>
+                                <p class="about-subtitle"><i class="fas fa-angle-right"></i>Développer l'autonomie du navire grâce au Low-tech</p>
                     </div>
                 </div>
 
@@ -80,7 +83,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-gray">
+    <!-- <section class="bg-gray">
         <div class="d-flex h-100 align-items-center">
             <div class="container">
                 <header class="mb-5 text-center">
@@ -105,9 +108,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="bg-gray">
-        <div class="d-flex h-100 align-items-center">
+        <div class="d-flex h-100">
             <div class="container">
                 <header class="text-center mb-5">
                 <h2 class="text-uppercase lined">Le navire</h2>
@@ -161,6 +164,8 @@
         </div>
     </section>
 </div>
+
+<script src="../vendor/owl.carousel/owl.carousel.js"></script>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('views/layout.php'); ?>

@@ -153,7 +153,6 @@
           case 1:  
             $("#accueil").show();
             $("#about").hide();
-            $("#objectifs").hide();
             $("#boat").hide();
             $("#contact").hide();
           break;
@@ -161,7 +160,6 @@
           case 2:
           $("#accueil").hide();
           $("#about").show();
-          $("#objectifs").hide();
           $("#boat").hide();
           $("#contact").hide();
           break;
@@ -169,24 +167,14 @@
           case 3:
           $("#accueil").hide();
           $("#about").hide();
-          $("#objectifs").show();
-          $("#boat").hide();
+          $("#boat").show();
           $("#contact").hide();
           break;
 
           case 4:
           $("#accueil").hide();
           $("#about").hide();
-          $("#objectifs").hide();
-          $("#boat").show();
-          $("#contact").hide();
-          break;
-
-          case 5:
-          $("#accueil").hide();
-          $("#about").hide();
-          $("#objectifs").hide();
-          $("#boat").hide();
+          $("#boat").hode();
           $("#contact").show();
           break;
 
@@ -239,7 +227,6 @@
           case 1:  
             $("#accueil").show();
             $("#about").hide();
-            $("#objectifs").hide();
             $("#boat").hide();
             $("#contact").hide();
           break;
@@ -247,7 +234,6 @@
           case 2:
           $("#accueil").hide();
           $("#about").show();
-          $("#objectifs").hide();
           $("#boat").hide();
           $("#contact").hide();
           break;
@@ -255,24 +241,14 @@
           case 3:
           $("#accueil").hide();
           $("#about").hide();
-          $("#objectifs").show();
-          $("#boat").hide();
+          $("#boat").show();
           $("#contact").hide();
           break;
 
           case 4:
           $("#accueil").hide();
           $("#about").hide();
-          $("#objectifs").hide();
-          $("#boat").show();
-          $("#contact").hide();
-          break;
-
-          case 5:
-          $("#accueil").hide();
-          $("#about").hide();
-          $("#objectifs").hide();
-          $("#boat").hide();
+          $("#boat").hode();
           $("#contact").show();
           break;
 
@@ -422,16 +398,11 @@
           break;
 
           case 2:
-            id = 'objectifs';
-            span_text = 'Objectifs';
-          break;
-
-          case 3:
             id = 'boat';
             span_text = 'Le navire';
           break;
 
-          case 4:
+          case 3:
             id = 'contact';
             span_text = 'Contact';
           break;
@@ -466,7 +437,6 @@
 
       $("#accueil").hide();
       $("#about").hide();
-      $("#objectifs").hide();
       $("#boat").hide();
       $("#contact").hide();
       
@@ -499,13 +469,6 @@
         }
       });
 
-      $(".onepage-pagination li a" + "[data-index='" + 5 + "']").click(function() {
-        $('#mainNav').removeClass('is-visible');
-        if (!$('#mainNav').hasClass('is-fixed')) {
-          $('#mainNav').addClass('is-fixed');
-        }
-      });
-
       $(".onepage-pagination li a" + "[data-index='" + 1 + "']").hover(function() {
         $('#accueil').show();
       }, function() {
@@ -527,36 +490,24 @@
       });
 
       $(".onepage-pagination li a" + "[data-index='" + 3 + "']").hover(function() {
-        $('#objectifs').show();
-      }, function() {
-        if ($(".onepage-pagination li a" + "[data-index='" + 3 + "']").hasClass('active')) {
-          $('#objectifs').show();
-        } else {
-            $('#objectifs').hide();
-        }
-      });
-
-      $(".onepage-pagination li a" + "[data-index='" + 4 + "']").hover(function() {
         $('#boat').show();
       }, function() {
-        if ($(".onepage-pagination li a" + "[data-index='" + 4 + "']").hasClass('active')) {
+        if ($(".onepage-pagination li a" + "[data-index='" + 3 + "']").hasClass('active')) {
           $('#boat').show();
         } else {
             $('#boat').hide();
         }
-      })
+      });
 
-      $(".onepage-pagination li a" + "[data-index='" + 5 + "']").hover(function() {
+      $(".onepage-pagination li a" + "[data-index='" + 4 + "']").hover(function() {
         $('#contact').show();
       }, function() {
-        if ($(".onepage-pagination li a" + "[data-index='" + 5 + "']").hasClass('active')) {
+        if ($(".onepage-pagination li a" + "[data-index='" + 4 + "']").hasClass('active')) {
           $('#contact').show();
         } else {
             $('#contact').hide();
         }
       })
-
-
     }
 
     if(window.location.hash != "" && window.location.hash != "#1") {
@@ -596,44 +547,32 @@
         var page_index = $(this).data("index");
 
         switch (page_index) {
-          case 1:
-            $('#accueil').show();
+          case 1:  
+            $("#accueil").show();
             $("#about").hide();
-            $("#objectifs").hide();
             $("#boat").hide();
             $("#contact").hide();
           break;
 
           case 2:
-            $("#accueil").hide();
-            $("#about").show();
-            $("#objectifs").hide();
-            $("#boat").hide();
-            $("#contact").hide();
+          $("#accueil").hide();
+          $("#about").show();
+          $("#boat").hide();
+          $("#contact").hide();
           break;
 
           case 3:
-            $("#accueil").hide();
-            $("#about").hide();
-            $("#objectifs").show();
-            $("#boat").hide();
-            $("#contact").hide();
+          $("#accueil").hide();
+          $("#about").hide();
+          $("#boat").show();
+          $("#contact").hide();
           break;
 
           case 4:
-            $("#accueil").hide();
-            $("#about").hide();
-            $("#objectifs").hide();
-            $("#boat").show();
-            $("#contact").hide();
-          break;
-
-          case 5:
-            $("#accueil").hide();
-            $("#about").hide();
-            $("#objectifs").hide();
-            $("#boat").hide();
-            $("#contact").show();
+          $("#accueil").hide();
+          $("#about").hide();
+          $("#boat").hode();
+          $("#contact").show();
           break;
 
           default:
