@@ -154,6 +154,7 @@
             $("#accueil").show();
             $("#about").hide();
             $("#boat").hide();
+            $("#specs_boat").hide();
             $("#contact").hide();
           break;
 
@@ -161,6 +162,7 @@
           $("#accueil").hide();
           $("#about").show();
           $("#boat").hide();
+          $("#specs_boat").hide();
           $("#contact").hide();
           break;
 
@@ -168,6 +170,7 @@
           $("#accueil").hide();
           $("#about").hide();
           $("#boat").show();
+          $("#specs_boat").hide();
           $("#contact").hide();
           break;
 
@@ -175,6 +178,15 @@
           $("#accueil").hide();
           $("#about").hide();
           $("#boat").hide();
+          $("#specs_boat").show();
+          $("#contact").hide();
+          break;
+
+          case 5:
+          $("#accueil").hide();
+          $("#about").hide();
+          $("#boat").hide();
+          $("#specs_boat").hide();
           $("#contact").show();
           break;
 
@@ -228,6 +240,7 @@
             $("#accueil").show();
             $("#about").hide();
             $("#boat").hide();
+            $("#specs_boat").hide();
             $("#contact").hide();
           break;
 
@@ -235,6 +248,7 @@
           $("#accueil").hide();
           $("#about").show();
           $("#boat").hide();
+          $("#specs_boat").hide();
           $("#contact").hide();
           break;
 
@@ -242,13 +256,23 @@
           $("#accueil").hide();
           $("#about").hide();
           $("#boat").show();
+          $("#specs_boat").hide();
           $("#contact").hide();
           break;
 
           case 4:
           $("#accueil").hide();
           $("#about").hide();
-          $("#boat").hode();
+          $("#boat").hide();
+          $("#specs_boat").show();
+          $("#contact").hide();
+          break;
+
+          case 5:
+          $("#accueil").hide();
+          $("#about").hide();
+          $("#boat").hide();
+          $("#specs_boat").hide();
           $("#contact").show();
           break;
 
@@ -403,6 +427,11 @@
           break;
 
           case 3:
+            id = 'specs_boat';
+            span_text = 'Le navire en détails';
+          break;
+
+          case 4:
             id = 'contact';
             span_text = 'Contact';
           break;
@@ -438,6 +467,7 @@
       $("#accueil").hide();
       $("#about").hide();
       $("#boat").hide();
+      $("#specs_boat").hide();
       $("#contact").hide();
       
       $(".onepage-pagination li a" + "[data-index='" + 1 + "']").click(function() {
@@ -463,6 +493,13 @@
       });
 
       $(".onepage-pagination li a" + "[data-index='" + 4 + "']").click(function() {
+        $('#mainNav').removeClass('is-visible');
+        if (!$('#mainNav').hasClass('is-fixed')) {
+          $('#mainNav').addClass('is-fixed');
+        }
+      });
+
+      $(".onepage-pagination li a" + "[data-index='" + 5 + "']").click(function() {
         $('#mainNav').removeClass('is-visible');
         if (!$('#mainNav').hasClass('is-fixed')) {
           $('#mainNav').addClass('is-fixed');
@@ -500,14 +537,24 @@
       });
 
       $(".onepage-pagination li a" + "[data-index='" + 4 + "']").hover(function() {
-        $('#contact').show();
+        $('#specs_boat').show();
       }, function() {
         if ($(".onepage-pagination li a" + "[data-index='" + 4 + "']").hasClass('active')) {
+          $('#specs_boat').show();
+        } else {
+            $('#specs_boat').hide();
+        }
+      });
+
+      $(".onepage-pagination li a" + "[data-index='" + 5 + "']").hover(function() {
+        $('#contact').show();
+      }, function() {
+        if ($(".onepage-pagination li a" + "[data-index='" + 5 + "']").hasClass('active')) {
           $('#contact').show();
         } else {
             $('#contact').hide();
         }
-      })
+      });
     }
 
     if(window.location.hash != "" && window.location.hash != "#1") {
@@ -551,6 +598,7 @@
             $("#accueil").show();
             $("#about").hide();
             $("#boat").hide();
+            $("#specs_boat").hide();
             $("#contact").hide();
           break;
 
@@ -558,6 +606,7 @@
           $("#accueil").hide();
           $("#about").show();
           $("#boat").hide();
+          $("#specs_boat").hide();
           $("#contact").hide();
           break;
 
@@ -565,13 +614,23 @@
           $("#accueil").hide();
           $("#about").hide();
           $("#boat").show();
+          $("#specs_boat").hide();
           $("#contact").hide();
           break;
 
           case 4:
           $("#accueil").hide();
           $("#about").hide();
-          $("#boat").hode();
+          $("#boat").hide();
+          $("#specs_boat").show();
+          $("#contact").hide();
+          break;
+
+          case 5:
+          $("#accueil").hide();
+          $("#about").hide();
+          $("#boat").hide();
+          $("#specs_boat").hide();
           $("#contact").show();
           break;
 
