@@ -49,7 +49,7 @@ function reportCom($article_id, $com_id) {
 }
 
 function displayHome() {
-    require('../public/views/frontend/home.php');
+    require('./public/views/frontend/home.php');
 }
 
 function displayAbout() {
