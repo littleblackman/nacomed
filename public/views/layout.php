@@ -14,23 +14,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
         <!-- Bootstrap CSS-->
-        <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
         <!-- Google fonts-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo:400,400i">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
         <!-- OwlCarousel -->
-        <link rel="stylesheet" href="../vendor/owl.carousel/assets/owl.carousel.css">
-        <link rel="stylesheet" href="../vendor/owl.carousel/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.carousel.css">
+        <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.theme.default.min.css">
         <!-- Lightbox-->
-        <link rel="stylesheet" href="../vendor/lightbox2/css/lightbox.min.css">
+        <link rel="stylesheet" href="./vendor/lightbox2/css/lightbox.min.css">
         <!-- Font Awesome-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <!-- Parallax-->
-        <link rel="stylesheet" href="../vendor/onepage-scroll/onepage-scroll.css">
+        <link rel="stylesheet" href="./vendor/onepage-scroll/onepage-scroll.css">
         <!-- theme stylesheet-->
-        <link rel="stylesheet" href="../css/style.blue.css" id="theme-stylesheet">
+        <link rel="stylesheet" href="./css/style.blue.css" id="theme-stylesheet">
         <!-- Custom stylesheet - for your changes-->
-        <link rel="stylesheet" href="../css/custom.css">
+        <link rel="stylesheet" href="./css/custom.css">
         <!-- Favicon-->
         <link rel="shortcut icon" href="favicon.png">
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -41,7 +41,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="./index.php"><img src="/nacomed/img/logo_nacomed.png" />NACOMED</a>
+                <a class="navbar-brand" href="./index.php"><img src="./img/logo_nacomed.png" /></a>
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         Menu
                         <i class="fas fa-bars"></i>
@@ -78,15 +78,15 @@
         <!-- Contenu des pages -->
 
         <!-- JavaScript files-->
-        <script src="../vendor/jquery/jquery/jquery.min.js"></script>
-        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="../vendor/onepage-scroll/jquery.onepage-scroll.js"></script>
-        <script src="../vendor/owl.carousel/owl.carousel.js"></script>
-        <script src="../js/scroll_nav.js"></script>
-        <script src="../vendor/lightbox2/js/lightbox.min.js"></script>
-        <script src="../js/front.js"></script>
+        <script src="./vendor/jquery/jquery/jquery.min.js"></script>
+        <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./vendor/onepage-scroll/jquery.onepage-scroll.js"></script>
+        <script src="./vendor/owl.carousel/owl.carousel.js"></script>
+        <script src="./js/scroll_nav.js"></script>
+        <script src="./vendor/lightbox2/js/lightbox.min.js"></script>
+        <script src="./js/front.js"></script>
 
-        <script src="../js/main.js"></script>
+        <script src="./js/main.js"></script>
         <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </body>
