@@ -129,6 +129,20 @@ text-transform: uppercase;
 
 /*Section 2 Présentation */
 
+/*.first {
+  position: relative;
+  top: -10%;  
+}
+
+.second {
+  position: relative;
+  top: -14%;
+}*/
+
+.about_div {
+  margin-top: -4%;
+}
+
 .about-logo {
   position: relative;
   top: 20%;
@@ -163,6 +177,11 @@ text-transform: uppercase;
   margin-bottom: 0px;
 }
 
+.sized_img {
+  height: 50px;
+  margin: auto;
+}
+
 .short-p {
   margin-top: 15px;
 }
@@ -192,10 +211,6 @@ text-transform: uppercase;
   padding-right: 0px;
 }
 
-.school-boat {
-  margin-top: 35px;
-}
-
 /* Section 3 : Le navire */
 
 .owl-carousel.owl-loaded.owl-drag {
@@ -211,6 +226,10 @@ text-transform: uppercase;
 
 #boat {
   width: 65px;
+}
+
+#specs_boat {
+  width: 135px;
 }
 
 .onepage-pagination span {
