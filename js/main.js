@@ -6,3 +6,9 @@ $('.owl-carousel').owlCarousel({
     dots:true,
     margin:10
 });
+
+$(document).click(function(event) { 
+    if(!$(event.target).closest('#mainNav').length) {
+        $('#mainNav').removeClass('is-visible');
+    } 
+});
