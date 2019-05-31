@@ -7,7 +7,7 @@
         <div class="dark-overlay"></div>
             <div class="position-relative z-index-1">
                 <div class="container welcome text-center text-white">
-                    <p class="font-italic lead">Bienvenue sur le site de : </p>
+                    <p class="font-italic lead">Bienvenue sur le site de</p>
                     <h1 class="text-uppercase my-4">NACOMED</h1>
                     <h2>Navire d'&Eacute;tudes Corse Méditerranée</h2>
                     <p class="font-italic lead">Un savant mélange d’années passées dans la navigation de plaisance, la marine marchande, en école et en asso…</p>
@@ -60,8 +60,8 @@
                         <header class="text-center">
                             <h3 class="text-uppercase lined">UN NAVIRE &Eacute;COLE</h3>
                         </header>
-                        <div class="row school-boat-text">
-                            <div class="text-center col-lg-4">
+                        <div class="row">
+                            <div class="text-center school-boat-text col-lg-12">
                                 <h5>Tous les niveaux sont acceptés !</h5>
                                     <p><strong>Les éco-volontaires</strong> (du débutant curieux à l’amateur confirmé) se joindront au bord pour découvrir, apprendre, se perfectionner 
                                     et s’affirmer.<br>
@@ -71,13 +71,13 @@
                                     plus sûre et la préserver ; cela grâce à des navigations encadrées sur un navire spécialisé. Ils sont les futurs acteurs du milieu maritime !
                                     </p>
                             </div>
-                            <div class="text-center col-lg-4">
+                            <div class="text-center school-boat-text col-lg-12">
                                 <h5>Pas de passagers ! Que des équipiers !</h5>
                                     <p>Il est très important de pouvoir transmettre ces connaissances du milieu à tous ceux qui souhaitent passer du temps sur l'eau; pour rendre la 
                                     mer plus sûre, pour savoir l'apprécier et pour la respecter.
                                     </p>
                             </div>
-                            <div class="text-center col-lg-4">    
+                            <div class="text-center school-boat-text col-lg-12">    
                                 <h5>Partager nos connaissances et nos expériences, une priorité !</h5>
                                     <p>La bonne ambiance à bord est essentielle, et nous entretiendrons un échange permanent et convivial entre tous les membres du navire, afin que
                                     chacun puisse apporter ses compétences et ses savoirs pour l’enrichissement personnel et le bon déroulement de chacune  des missions.<br>
@@ -131,7 +131,7 @@
           </div>
         </div>
     </section>
-    <section>
+    <section class="scrollable">
         <div class="d-flex h-100">
             <div class="container">
                 <header class="text-center mb-5">
