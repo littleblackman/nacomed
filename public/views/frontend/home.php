@@ -38,18 +38,18 @@
                                 <p class="lined">&Eacute;tudier le milieu marin</p>
                         </header>
                             <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/microscope.png"><p class="about-title short-p">Accueillir des missions scientifiques</p></div>
-                            <div class="boat-info"><img class="sized_img" src="https://img.icons8.com/ios/50/000000/graph.png"><p class="about-title">Effectuer des relevés en autonomie (plancton, micorplastique, accoustique</p></div>
+                            <div class="boat-info"><img class="sized_img" src="https://img.icons8.com/ios/50/000000/graph.png"><p class="about-title short-p">Effectuer des relevés en autonomie (plancton, micorplastique, accoustique</p></div>
                             <div class="boat-info"><img src="./img/plancton.png"><p class="about-title short-p">S'intégrer à des programmes de recherches</p></div>
                             <div class="boat-info"><img class="sized_img" src="https://img.icons8.com/dotty/50/000000/flounder-fish.png"><p class="about-title short-p">Participer aux réseaux de sciences participatives en mer (OBSenMER, ...)</p></div>
                     </div>
-                    <div class="col-lg-2"><img src="./img/logo_nacomed.png" alt="..." class="img-fluid rounded-circle d-block mx-auto about-logo"></div>
+                    <div class="col-lg-2 logo-div"><img src="./img/logo_nacomed.png" alt="..." class="img-fluid rounded-circle d-block mx-auto about-logo"></div>
                     <div class="col-lg-5 ecology-boat">
                         <header class="text-center">
                             <h3 class="text-uppercase">Un navire écologique</h2>
                             <p class="lined">Préserver et sensibiliser</p>
                         </header>
                             <div class="boat-info"><img src="https://img.icons8.com/dotty/50/000000/compass.png"><p class="about-title short-p">Naviguer et s’avitailler de manière éco-responsable</p></div>
-                            <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/atom-editor.png"><p class="about-title">Développer l’autonomie du navire grâce aux low-techs</p></div>
+                            <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/atom-editor.png"><p class="about-title short-p">Développer l’autonomie du navire grâce aux low-techs</p></div>
                             <div class="boat-info"><img class="sized_img" src="https://img.icons8.com/dotty/50/000000/commercial.png"><p class="about-title"> Mener des actions de sensibilisation auprès des plaisanciers, des plagistes, des écoliers et étudiants, et du grand public</p></div>
                             <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/recycle-sign.png"><p class="about-title short-p">Effectuer des dépollutions et nettoyages</p></div>
                     </div>
@@ -136,9 +136,9 @@
             </header>
             <div class="row">
                 <div class="col-lg-4">
-                    <img src="./img/sonate/plan_sonate1_resized.jpg" alt="plan du bateau la sonate">
+                    <img class="boat-plan" src="./img/sonate/plan_sonate1_resized.jpg" alt="plan du bateau la sonate">
                 </div>
-                <div class="details-text col-lg-4">
+                <div class="details-text col-lg-4 col-sm-12">
                     <h5>Matériel de navigation :</h5>
                     1 VHF fixe Navicom 550<br>
                     1 portable Horizon HX 400<br>
@@ -155,7 +155,7 @@
                     Eolienne, hydro génératrice<br>
                     Toutes les ampoules sont à LED<br><br>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-12">
                     <h5>Divers :</h5>
                     Eclairage cockpit<br>
                     Plateforme de bain avec douche<br>
@@ -183,7 +183,7 @@
                     <h2 class="text-uppercase lined">Contact</h2>
                 </header>
                 <div class="row">
-                    <div class="col-lg-12"><img src="./img/logo_nacomed.png" alt="..." class="img-fluid rounded-circle d-block mx-auto contact-logo"></div>
+                    <div class="contact-logo-div col-lg-12"><img class="contact-logo" src="./img/logo_nacomed.png" alt="..." class="img-fluid rounded-circle d-block mx-auto contact-logo"></div>
                 </div>
                 <div class="row lined">
                     <div class="col-lg-6 person_infos text-center">
