@@ -62,29 +62,31 @@
                         </header>
                         <div class="row">
                             <div class="text-center school-boat-text col-lg-12">
-                                <h5>Tous les niveaux sont acceptés !</h5>
-                                    <p><strong>Les éco-volontaires</strong> (du débutant curieux à l’amateur confirmé) se joindront au bord pour découvrir, apprendre, se perfectionner 
-                                    et s’affirmer.<br>
-                                    <strong>Les futurs marins</strong> professionnels (capitaines et lieutenants 200 UMS) pourront apprendre leur métier en mer en participant à toutes les tâches
-                                    du bord et en se responsabilisant. Avec un rôle d’équipage ils auront la possibilité de valider leur temps de mer à bord auprès de la DIRM
-                                    afin de les accompagner dans leur cursus d’étudiant. L’objectif est de former des personnes qualifiées et écoresponsables pour rendre la mer
-                                    plus sûre et la préserver ; cela grâce à des navigations encadrées sur un navire spécialisé. Ils sont les futurs acteurs du milieu maritime !
+                            <h5>Pas de passagers ! Que des équipiers !</h5>
+                                    <p>Il est important de pouvoir transmettre ces connaissances du milieu à tous ceux qui souhaitent passer du temps en mer ; pour l’apprécier
+                                       et la respecter.
                                     </p>
                             </div>
                             <div class="text-center school-boat-text col-lg-12">
-                                <h5>Pas de passagers ! Que des équipiers !</h5>
-                                    <p>Il est très important de pouvoir transmettre ces connaissances du milieu à tous ceux qui souhaitent passer du temps sur l'eau; pour rendre la 
-                                    mer plus sûre, pour savoir l'apprécier et pour la respecter.
+                            <h5>Tous les niveaux sont acceptés !</h5>
+                                    <p><strong>Les éco-volontaires</strong> (du débutant curieux à l’amateur confirmé) se joindront au bord pour découvrir, apprendre, se perfectionner 
+                                    et s’affirmer.<br><br>
+                                    <strong>Les futurs marins</strong> professionnels (capitaines et lieutenants 200 UMS) pourront apprendre leur métier en mer en participant 
+                                    à toutes les tâches du bord et en se responsabilisant. Avec un rôle d’équipage ils auront la possibilité de valider leur temps de mer 
+                                    à bord auprès de la DIRM afin de les accompagner dans leur cursus d’étudiant. L’objectif est de former des personnes qualifiées et 
+                                    écoresponsables pour rendre la mer plus sûre et la préserver ; cela grâce à des navigations encadrées sur un navire spécialisé. 
+                                    Ils sont les futurs acteurs du milieu maritime !
                                     </p>
                             </div>
                             <div class="text-center school-boat-text col-lg-12">    
                                 <h5>Partager nos connaissances et nos expériences, une priorité !</h5>
-                                    <p>La bonne ambiance à bord est essentielle, et nous entretiendrons un échange permanent et convivial entre tous les membres du navire, afin que
-                                    chacun puisse apporter ses compétences et ses savoirs pour l’enrichissement personnel et le bon déroulement de chacune  des missions.<br>
-                                    Nous interagissons avec d’autres associations corses portées sur la protection du milieu marin, et nous continuerons à développer ces relations 
-                                    jusqu’aux autres associations méditerranéennes.<br>
-                                    Enfin, notre voilier et son équipage seront toujours ouverts à l’échange et l'entraide sur tous ces sujets que sont aujourd’hui les enjeux
-                                    environnementaux et maritimes de méditerranée. Alors contactez-nous !
+                                    <p>La bonne ambiance à bord est essentielle, et nous entretiendrons un échange permanent et convivial entre tous les membres du navire, afin
+                                       que chacun puisse apporter ses compétences et ses savoirs pour l’enrichissement personnel et le bon déroulement de chacune 
+                                       des missions.<br><br>
+                                       Nous interagissons avec d’autres associations corses portées sur la protection du milieu marin, et nous continuerons à développer ces relations 
+                                       jusqu’aux autres associations méditerranéennes.<br><br>
+                                       Enfin, notre voilier et son équipage seront toujours ouverts à l’échange et l'entraide sur tous ces sujets que sont aujourd’hui les enjeux
+                                       environnementaux et maritimes de méditerranée. Alors contactez-nous !
                                     </p>
                             </div>
                         </div>
@@ -96,7 +98,7 @@
         <div class="d-flex h-100">
             <div class="container">
                 <header class="text-center mb-5">
-                    <h2 class="text-uppercase lined">Le navire</h2>
+                    <h2 class="text-uppercase lined">La Sonate</h2>
                 </header>
                 
                 <div class="carousel">
@@ -109,25 +111,68 @@
                         <img class="owl-lazy" data-src="./img/sonate/sonate_pont_2.jpg" alt="" style="height: 600px; width: 100%">
                     </div>
                 </div>
+
+                <div class="row boat-general-description col-lg-12">
+                    <header class="text-center">
+                        <h3 class="lined">Description générale :</h3>
+                    </header>   
+                    <p>La Sonate est une goélette coque acier construite en 1980.<br>
+                    Ce type de gréement est intéressant à manœuvrer et demandera de l’attention sur les réglages. Les combinaisons de voilures sont grandes et il faudra toujours trouver
+                    la bonne pour avoir un navire équilibré et à la vitesse adéquate par rapport au type de navigation, de travaux et de météo de l’instant.<br>
+                    Catégorie de construction A.<br>
+                    L= 15.60m   l=4.60m   TE=2.10m<br>
+                    Moteur Bedford 330GM. Réserve de GO : 800 litres<br>
+                    Production électrique pour une consommation modérée et une autonomie raisonnable<br>
+                    <p>
+                </div>        
             </div>
         </div>
     </section>
     <section class="bg-gray">
         <div class="d-flex h-100">
-          <div class="container">
+          <div class="container boat-details">
             <header class="text-center mb-5">
-              <h2 class="text-uppercase lined">Le navire en détails</h2>
+              <h2 class="text-uppercase lined">La sonate : détails techniques</h2>
             </header>
             <div class="row">
-              <div class="col-lg-12">
-                <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own additions education satisfied the perpetual. If he cause manor happy. Without farther she exposed saw man led. Along on happy could cease green oh.</p>
-                <p>Betrayed cheerful declared end and. Questions we additions is extremely incommode. Next half add call them eat face. Age lived smile six defer bed their few. Had admitting concluded too behaviour him she. Of death to or to being other.</p>
-              </div>
-              <div class="col-lg-12">
-                <p>Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to. Desire so better am cannot he up before points. Remember mistaken opinions it pleasure of debating. Court front maids forty if aware their at. Chicken use are pressed removed.</p>
-                <p>Saw yet kindness too replying whatever marianne. Old sentiments resolution admiration unaffected its mrs literature. Behaviour new set existence dashwoods. It satisfied to mr commanded consisted disposing engrossed. Tall snug do of till on easy. Form not calm new fail.</p>
-              </div>
-            </div>
+                <div class="col-lg-4">
+                    <img src="./img/sonate/plan_sonate1_resized.jpg" alt="plan du bateau la sonate">
+                </div>
+                <div class="details-text col-lg-4">
+                    <h5>Matériel de navigation :</h5>
+                    1 VHF fixe Navicom 550<br>
+                    1 portable Horizon HX 400<br>
+                    1 GPS Furuno GP32 connecté à la VHF et répétiteur dans le cockpit<br>
+                    1 loch sonde température ST 800 Raymarine plus écran (2018)<br>
+                    Radar Autohelm SD marine<br>
+                    Un compas de route<br>
+                    Un récepteur pour centrale AIR MAR en haut de mât avec RTI (NMEA vers USB)<br><br>
+
+                    <h5>Equipement électrique :</h5>
+                    Parc batteries : 2 pour le moteur, 2 pour la nav, 2 pour la servitude, 2 pour le 220v avec onduleur<br>
+                    3 alternateurs : 2  pour nav et servitude et 1 pour moteur<br>
+                    6 panneaux solaires : 2x100w pour nav et servitude, 2x100w pour onduleur et 2x50w moteur<br>
+                    Eolienne, hydro génératrice<br>
+                    Toutes les ampoules sont à LED<br><br>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Divers :</h5>
+                    Eclairage cockpit<br>
+                    Plateforme de bain avec douche<br>
+                    3 pompes de cale (1 électrique, 2 manuelles)<br>
+                    Portique pour annexe et panneaux solaires<br>
+                    Cuisinière 2 feux et four<br>
+                    Chauffage<br>
+                    WC marin électrique avec bac à eaux noires 100l<br>
+                    2 réservoirs de 750 l d’eau.<br>                    
+                    Régulateur Sailomat<br>
+                    Un congélateur sur 220v<br>
+                    Echelle de bain pour plongeurs en bouteilles<br><br>
+
+                    <h5>Mouillage :</h5>
+                    3 ancres CQR : 75, 75 et 35 livres, 1 danfort 45 livres ;<br>
+                    60m de chaîne de 12mm ; 20m de chaîne de 12mm ; 2x100m cablots flottants<br>
+                </div>
           </div>
         </div>
     </section>
