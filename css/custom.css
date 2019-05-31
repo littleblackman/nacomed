@@ -263,6 +263,7 @@ text-transform: uppercase;
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
   }
+
   #mainNav.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
@@ -292,4 +293,80 @@ text-transform: uppercase;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+}
+
+/* Section 1 : accueil */
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    text-align: center;
+    position: relative;
+    bottom: 10%;
+  }
+
+  .hero {
+    margin-top: 15%;
+  }
+  
+  .nav_infos {
+    left: 30%;
+  }
+
+  .logo {
+    position: relative;
+    margin-right: auto;
+  }
+  
+  .menu_btn {
+    position: relative;
+    margin-left: auto;
+    bottom: 65px;
+  }
+}
+
+/* Section 2 */
+
+@media (max-width: 992px) {
+  .logo-div {
+    display: none;
+  }
+
+  .sized_img {
+    margin: 0;
+  }
+
+  .science-boat, .ecology-boat {
+    margin-bottom: 50px;
+  }
+
+  .boat-plan {
+    width: 100%;
+  }
+
+  .details-text {
+    margin-left: 0;
+  }
+}
+
+/* Section 5 : contact */
+
+@media (max-width: 992px) {
+  .contact-logo-div {
+    display: flex;
+  }
+  
+  .contact-logo {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .person_infos {
+    padding-left: 0px;
+  }
+
+  .person_pic {
+    padding-right: 0px;
+  }
+
 }
