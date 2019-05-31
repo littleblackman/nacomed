@@ -28,6 +28,10 @@ body, .onepage-wrapper, html {
   height: 100%;
 }
 
+.onepage-wrapper .section.scrollable {
+  overflow: auto;
+}
+
 .onepage-pagination {
   position: absolute;
   right: 10px;
