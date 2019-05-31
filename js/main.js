@@ -12,3 +12,15 @@ $(document).click(function(event) {
         $('#mainNav').removeClass('is-visible');
     } 
 });
+
+$('.scrollable').on('mouseover', function(event) {
+    $(document).unbind('mousewheel');
+});
+
+$('.scrollable').on('mouseleave', function(event) {
+    $(document).bind('mousewheel', function(event) {
+      event.preventDefault();
+        var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+        init_scroll(event, delta);
+    });
+  });

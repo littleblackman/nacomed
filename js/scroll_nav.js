@@ -11,7 +11,7 @@
   });
 
   // Show the navbar when the page is scrolled up
-  var MQL = 1000;
+  var MQL = 942;
 
   //primary navigation slide-in effect
   if ($(window).width() > MQL) {
@@ -36,7 +36,7 @@
             $('#mainNav').addClass('is-fixed');
         }
         this.previousTop = currentTop;
-      });
+      }
+    });
   }
-
-})(jQuery); // End of use strict
+}); // End of use strict
