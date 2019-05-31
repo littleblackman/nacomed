@@ -149,8 +149,25 @@ text-transform: uppercase;
   flex-direction: column;
 }
 
+.boat-general-description {
+  flex-direction: column;
+  margin-top: 2%;
+}
+
 .owl-nav, .owl-dots {
   margin: auto;
+}
+
+/* Section 4 : détails techniques */
+
+.boat-details {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+}
+
+.details-text {
+  margin-left: -4%;
 }
 
 /*Section pagination */
