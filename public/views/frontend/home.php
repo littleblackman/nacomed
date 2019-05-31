@@ -28,7 +28,7 @@
 
         <div class="scroll-btn link-scroll"><i class="fas fa-angle-down"></i></div>
     </section>
-    <section>
+    <section class="scrollable">
         <div class="d-flex h-100">
             <div class="container about_div">
                 <div class="row">
@@ -60,32 +60,39 @@
                         <header class="text-center">
                             <h3 class="text-uppercase lined">UN NAVIRE &Eacute;COLE</h3>
                         </header>
-                        <div class="text-center">
-                            <h5>Pas de passagers ! Que des équipiers !</h5>
-                                <p>Il est très important de pouvoir transmettre ces connaissances du milieu à tous ceux qui souhaitent passer du temps sur l'eau; pour rendre la 
-                                   mer plus sûre, pour savoir l'apprécier et pour la respecter.
-                                </p>
-                            <h5>Tous les niveaux sont acceptés !</h5>
-                                <p><strong>Les éco-volontaires</strong> (du débutant curieux à l’amateur confirmé) se joindront au bord pour découvrir, apprendre, se perfectionner 
-                                   et s’affirmer.<br>
-                                   <strong>Les futurs marins</strong> professionnels (capitaines et lieutenants 200 UMS) pourront apprendre leur métier en mer en participant à toutes les tâches
-                                   du bord et en se responsabilisant. Avec un rôle d’équipage ils auront la possibilité de valider leur temps de mer à bord auprès de la DIRM
-                                   afin de les accompagner dans leur cursus d’étudiant. L’objectif est de former des personnes qualifiées et écoresponsables pour rendre la mer
-                                   plus sûre et la préserver ; cela grâce à des navigations encadrées sur un navire spécialisé. Ils sont les futurs acteurs du milieu maritime !
-                                </p>
-                            <h5>Partager nos connaissances et nos expériences, une priorité !</h5>
-                                <p>La bonne ambiance à bord est essentielle, et nous entretiendrons un échange permanent et convivial entre tous les membres du navire, afin que
-                                   chacun puisse apporter ses compétences et ses savoirs pour l’enrichissement personnel et le bon déroulement de chacune  des missions.<br>
-                                   Nous interagissons avec d’autres associations corses portées sur la protection du milieu marin, et nous continuerons à développer ces relations 
-                                   jusqu’aux autres associations méditerranéennes.<br>
-                                   Enfin, notre voilier et son équipage seront toujours ouverts à l’échange et l'entraide sur tous ces sujets que sont aujourd’hui les enjeux
-                                   environnementaux et maritimes de méditerranée. Alors contactez-nous !
-                                </p>
+                        <div class="row school-boat-text">
+                            <div class="text-center col-lg-4">
+                                <h5>Tous les niveaux sont acceptés !</h5>
+                                    <p><strong>Les éco-volontaires</strong> (du débutant curieux à l’amateur confirmé) se joindront au bord pour découvrir, apprendre, se perfectionner 
+                                    et s’affirmer.<br>
+                                    <strong>Les futurs marins</strong> professionnels (capitaines et lieutenants 200 UMS) pourront apprendre leur métier en mer en participant à toutes les tâches
+                                    du bord et en se responsabilisant. Avec un rôle d’équipage ils auront la possibilité de valider leur temps de mer à bord auprès de la DIRM
+                                    afin de les accompagner dans leur cursus d’étudiant. L’objectif est de former des personnes qualifiées et écoresponsables pour rendre la mer
+                                    plus sûre et la préserver ; cela grâce à des navigations encadrées sur un navire spécialisé. Ils sont les futurs acteurs du milieu maritime !
+                                    </p>
+                            </div>
+                            <div class="text-center col-lg-4">
+                                <h5>Pas de passagers ! Que des équipiers !</h5>
+                                    <p>Il est très important de pouvoir transmettre ces connaissances du milieu à tous ceux qui souhaitent passer du temps sur l'eau; pour rendre la 
+                                    mer plus sûre, pour savoir l'apprécier et pour la respecter.
+                                    </p>
+                            </div>
+                            <div class="text-center col-lg-4">    
+                                <h5>Partager nos connaissances et nos expériences, une priorité !</h5>
+                                    <p>La bonne ambiance à bord est essentielle, et nous entretiendrons un échange permanent et convivial entre tous les membres du navire, afin que
+                                    chacun puisse apporter ses compétences et ses savoirs pour l’enrichissement personnel et le bon déroulement de chacune  des missions.<br>
+                                    Nous interagissons avec d’autres associations corses portées sur la protection du milieu marin, et nous continuerons à développer ces relations 
+                                    jusqu’aux autres associations méditerranéennes.<br>
+                                    Enfin, notre voilier et son équipage seront toujours ouverts à l’échange et l'entraide sur tous ces sujets que sont aujourd’hui les enjeux
+                                    environnementaux et maritimes de méditerranée. Alors contactez-nous !
+                                    </p>
+                            </div>
                         </div>
+                    </div>
             </div>
         </div>
     </section>
-    <section class="bg-gray">
+    <section class="bg-gray scrollable">
         <div class="d-flex h-100">
             <div class="container">
                 <header class="text-center mb-5">
