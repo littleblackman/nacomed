@@ -138,6 +138,9 @@
       }else {
         pos = (index * 100) * -1;
       }
+
+
+
       if (typeof settings.beforeMove == 'function') settings.beforeMove( next.data("index"));
       current.removeClass("active");
       next.addClass("active");
@@ -335,6 +338,7 @@
       }
 
       //end modification
+
       if (valForTest) {
         $("body").addClass("disabled-onepage-scroll");
         $(document).unbind('mousewheel DOMMouseScroll MozMousePixelScroll');
@@ -355,9 +359,13 @@
         });
 
         $(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
-          event.preventDefault();
+          //event.preventDefault();
+          var section = $("body .section.active");
           var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-          init_scroll(event, delta);
+          var sectionScroll = section.scrollTop() + section.innerHeight()>=section[0].scrollHeight;
+          if(delta > 0) sectionScroll = false;
+          if(section.scrollTop() == 0 && delta > 0) sectionScroll = true;
+          if(!$("body").hasClass("disabled-onepage-scroll") && !section.hasClass('scrollable') || sectionScroll) init_scroll(event, delta);
         });
       }
     }
@@ -444,12 +452,22 @@
     });
 
     el.swipeEvents().bind("swipeDown",  function(event){
-      if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
-      el.moveUp();
+      var section = $("body .section.active");
+      var sectionScroll = section.scrollTop() == 0 ? true: false;
+      if (!$("body").hasClass("disabled-onepage-scroll") && section.hasClass('scrollable') && !sectionScroll) {
+        event.preventDefault();
+      }else{
+        el.moveUp();
+      }
     }).bind("swipeUp", function(event){
-      if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
-      el.moveDown();
-    });
+      var section = $("body .section.active");
+      var sectionScroll = section.scrollTop() + section.innerHeight()>=section[0].scrollHeight;
+      if (!$("body").hasClass("disabled-onepage-scroll") && section.hasClass('scrollable') && !sectionScroll){
+        event.preventDefault();
+      }else{
+        el.moveDown();
+      }
+});
 
     // Create Pagination and Display Them
     if (settings.pagination == true) {
@@ -642,12 +660,17 @@
       });
     }
 
-
-    $(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
-      event.preventDefault();
-      var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-      if(!$("body").hasClass("disabled-onepage-scroll")) init_scroll(event, delta);
-    });
+    if ($('.section.active').hasClass('scrollable')) {
+      $(document).off('mousewheel DOMMouseScroll MozMousePixelScroll');
+    }
+    /*$(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+      //event.preventDefault();
+      if ($('.scrollable' + ":hover").length <= 0) {
+        event.preventDefault();
+        var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+        init_scroll(event, delta);
+        }
+    });*/
 
 
     if(settings.responsiveFallback != false) {
