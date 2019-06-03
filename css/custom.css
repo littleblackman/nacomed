@@ -267,6 +267,15 @@ text-transform: uppercase;
   margin-right: auto;
 }
 
+.pdf-download {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Responsive */
 
