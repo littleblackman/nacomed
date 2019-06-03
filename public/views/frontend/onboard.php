@@ -80,7 +80,19 @@
             <div class=container>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>La vie à bord...</p>
+                        <p>Qu'est ce qu'un éco-marin ?</p>
+                        <p>Aliquam odio justo, gravida non suscipit et, porta eu mauris. Aenean sed luctus metus. Nulla malesuada vehicula mi, id finibus nisl auctor quis. 
+                        Vivamus non erat maximus, faucibus lorem sit amet, imperdiet mauris. Vestibulum pharetra massa vel orci semper convallis. Etiam efficitur mollis eros, sit amet hendrerit
+                        massa imperdiet nec. Nulla magna nisl, faucibus vel tempor non, tincidunt ac tortor. Etiam facilisis gravida nulla, ac varius quam pretium ac. Vivamus fermentum ipsum et 
+                        tincidunt commodo. Vestibulum dictum nisi non tristique fringilla. Aenean tristique nunc varius felis interdum euismod. Nam varius quam vitae nulla euismod vehicula. 
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <header class="text-center">
+                            <h2>Description de la vie à bord<h2>
+                        </header>
                         <p>Aliquam odio justo, gravida non suscipit et, porta eu mauris. Aenean sed luctus metus. Nulla malesuada vehicula mi, id finibus nisl auctor quis. 
                         Vivamus non erat maximus, faucibus lorem sit amet, imperdiet mauris. Vestibulum pharetra massa vel orci semper convallis. Etiam efficitur mollis eros, sit amet hendrerit
                         massa imperdiet nec. Nulla magna nisl, faucibus vel tempor non, tincidunt ac tortor. Etiam facilisis gravida nulla, ac varius quam pretium ac. Vivamus fermentum ipsum et 
@@ -96,11 +108,15 @@
                         massa imperdiet nec. Nulla magna nisl, faucibus vel tempor non, tincidunt ac tortor. Etiam facilisis gravida nulla, ac varius quam pretium ac. Vivamus fermentum ipsum et 
                         tincidunt commodo. Vestibulum dictum nisi non tristique fringilla. Aenean tristique nunc varius felis interdum euismod. Nam varius quam vitae nulla euismod vehicula. 
                         </p>
-                        <p>Aliquam odio justo, gravida non suscipit et, porta eu mauris. Aenean sed luctus metus. Nulla malesuada vehicula mi, id finibus nisl auctor quis. 
-                        Vivamus non erat maximus, faucibus lorem sit amet, imperdiet mauris. Vestibulum pharetra massa vel orci semper convallis. Etiam efficitur mollis eros, sit amet hendrerit
-                        massa imperdiet nec. Nulla magna nisl, faucibus vel tempor non, tincidunt ac tortor. Etiam facilisis gravida nulla, ac varius quam pretium ac. Vivamus fermentum ipsum et 
-                        tincidunt commodo. Vestibulum dictum nisi non tristique fringilla. Aenean tristique nunc varius felis interdum euismod. Nam varius quam vitae nulla euismod vehicula. 
-                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 pdf-download">
+                        <header class="text-center">
+                            <h3>Documents PDF à télécharger</h3>
+                        </header>
+                        <a class="pdf" href="./public/pdf/impératifs_embarquement.pdf" target="_blank">Impératifs pour embarquer</a>
+                        <a class="pdf" href="./public/pdf/monter_à_bord_A_Z.pdf" target="_blank">Comment monter à bord</a>
                     </div>
                 </div>
             </div>
