@@ -52,6 +52,10 @@ function displayHome() {
     require('./public/views/frontend/home.php');
 }
 
+function displayOnboard() {
+    require('./public/views/frontend/onboard.php');
+}
+
 function displayAbout() {
     require('./views/frontend/about.php');
 }
