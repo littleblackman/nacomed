@@ -31,6 +31,8 @@ letter-spacing: 1px;
 text-transform: uppercase;
 }
 
+
+/* PAGE D'ACCUEIL */
 /* Section 1 : Accueil */
 
 .welcome {
@@ -210,9 +212,16 @@ text-transform: uppercase;
 
 /* Section contact */
 
+.contact-logo-div {
+  display: flex;
+}
+
 .contact-logo {
   width: 13%;
+  height: 70%;
   margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .person_infos p {
@@ -226,6 +235,38 @@ text-transform: uppercase;
 .person_pic {
   padding-right: 315px;
 }
+
+/* FIN PAGE D'ACCUEIL*/
+
+/* PAGE EMBARQUEMENT */
+
+#mainNav.onboard-nav .navbar-brand {
+  color: #212529;
+}
+#mainNav.onboard-nav .navbar-brand:focus, #mainNav.onboard-nav .navbar-brand:hover {
+  color: #0085A1;
+}
+#mainNav.onboard-nav .navbar-nav > li.nav-item > a {
+  color: #212529;
+}
+#mainNav.onboard-nav .navbar-nav > li.nav-item > a:focus, #mainNav.onboard-nav .navbar-nav > li.nav-item > a:hover {
+  color: #0085A1;
+}
+
+#mainNav.onboard-nav .navbar-nav > li.nav {
+  color: black;
+}
+
+.eco-volunteer {
+  margin-top: 150px;
+}
+
+.onboard-carousel {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* Responsive */
 
@@ -293,6 +334,10 @@ text-transform: uppercase;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+
+  #mainNav.is-fixed .navbar-nav > li.nav {
+    color: black;
+  }
 }
 
 /* Section 1 : accueil */
@@ -357,6 +402,7 @@ text-transform: uppercase;
   
   .contact-logo {
     width: 60%;
+    height: 80%;
     margin-left: auto;
     margin-right: auto;
   }
