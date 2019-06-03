@@ -8,6 +8,10 @@
                 displayHome();
             break;
 
+            case 'displayOnboard':
+                displayOnboard();
+            break;
+            
             default:
                 displayHome();
         }
