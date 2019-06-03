@@ -358,11 +358,20 @@
           el.moveDown();
         });
 
+        /*$(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+          if ($('.scrollable' + ":hover").length <= 0) {
+            //event.preventDefault();
+            var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+            init_scroll(event, delta);
+          }
+        });*/
+
         $(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
-          //event.preventDefault();
-          var section = $("body .section.active");
+
+          var section = $(".main .section.active");
           var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
           var sectionScroll = section.scrollTop() + section.innerHeight()>=section[0].scrollHeight;
+          console.log('sectionScroll = ' + sectionScroll);
           if(delta > 0) sectionScroll = false;
           if(section.scrollTop() == 0 && delta > 0) sectionScroll = true;
           if(!$("body").hasClass("disabled-onepage-scroll") && !section.hasClass('scrollable') || sectionScroll) init_scroll(event, delta);
@@ -376,8 +385,8 @@
         var timeNow = new Date().getTime();
         // Cancel scroll if currently animating or within quiet period
         if(timeNow - lastAnimation < quietPeriod + settings.animationTime) {
-            event.preventDefault();
-            return;
+          document.addEventListener('mousewheel DOMMouseScroll', { passive: false });
+          return;
         }
 
         if (deltaOfInterest < 0) {
@@ -659,19 +668,6 @@
         el.moveTo(page_index);
       });
     }
-
-    if ($('.section.active').hasClass('scrollable')) {
-      $(document).off('mousewheel DOMMouseScroll MozMousePixelScroll');
-    }
-    /*$(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
-      //event.preventDefault();
-      if ($('.scrollable' + ":hover").length <= 0) {
-        event.preventDefault();
-        var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-        init_scroll(event, delta);
-        }
-    });*/
-
 
     if(settings.responsiveFallback != false) {
       $(window).resize(function() {
