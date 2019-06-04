@@ -1,10 +1,9 @@
-<?php $title = 'Association Nacomed : Embarquement'; ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Association Nacomed : Accueil</title>
+        <title>Association Nacomed : Embarquement</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
@@ -117,6 +116,134 @@
                         </header>
                         <a class="pdf" href="./public/pdf/impératifs_embarquement.pdf" target="_blank">Impératifs pour embarquer</a>
                         <a class="pdf" href="./public/pdf/monter_à_bord_A_Z.pdf" target="_blank">Comment monter à bord</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <header class="text-center">
+                            <h3>Programme du navire</h3>
+                        </header>
+                        <table class="table_program">
+                            <thead>
+                                <tr class="head">
+                                    <th>MOIS</th>
+                                    <th>SEMAINE</th>
+                                    <th>MISSION</th>
+                                    <th>DETAILS MISSION</th>
+                                    <th>LOCALISATION</th>
+                                    <th>NBRE DE BANNETTES DISPO.</th>
+                                    <th>REMARQUES</th>
+                                <tr>
+                            <thead>
+
+                            <tbody>
+                                <!-- Mois de mai -->
+                                <tr>
+                                    <td>MAI</td>
+                                    <td>3</td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td>4</td>
+                                </tr>
+                                
+                                <!-- Mois de juin -->
+                                <tr>
+                                    <td>JUIN</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>4</td>
+                                </tr>
+
+                                <!-- Mois de juillet -->
+                                <tr>
+                                    <td>JUILLET</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>4</td>
+                                </tr>
+
+                                <!-- Mois d'août -->
+                                <tr>
+                                    <td>AOUT</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>4</td>
+                                </tr>
+
+                                <!-- Mois de septembre -->
+                                <tr>
+                                    <td>SEPTEMBRE</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>4</td>
+                                </tr>
+
+                                <!-- Mois d'octobre -->
+                                <tr>
+                                    <td>OCTOBRE</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>4</td>
+                                </tr>
+                            <tbody>
+
+
+                        </table>
                     </div>
                 </div>
             </div>
