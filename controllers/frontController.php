@@ -56,12 +56,12 @@ function displayOnboard() {
     require('./public/views/frontend/onboard.php');
 }
 
-function displayAbout() {
-    require('./views/frontend/about.php');
+function displayContact() {
+    require('./public/views/frontend/contact.php');
 }
 
-function displayContact() {
-    require('./views/frontend/contact.php');
+function displayAbout() {
+    require('./views/frontend/about.php');
 }
 
 function displayLoginView() {

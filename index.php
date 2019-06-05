@@ -11,7 +11,11 @@
             case 'displayOnboard':
                 displayOnboard();
             break;
-            
+
+            case 'displayContact':
+                displayContact();
+            break;
+           
             default:
                 displayHome();
         }
