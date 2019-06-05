@@ -85,6 +85,9 @@
                         </header>
                         <a class="pdf" href="./public/pdf/impératifs_embarquement.pdf" target="_blank">Impératifs pour embarquer</a>
                         <a class="pdf" href="./public/pdf/monter_à_bord_A_Z.pdf" target="_blank">Comment monter à bord</a>
+                        <a class="pdf" href="./public/pdf/copains_des_mers.pdf" target="_blank">Les copains des mers : l'équipement</a>
+                        <a class="pdf" href="./public/pdf/carte_pratique_corse.pdf" target="_blank">Carte pratique de la Corse</a>
+                        <a class="pdf" href="./public/pdf/just_for_fun.pdf" target="_blank">Juste pour rire</a>
                     </div>
                 </div>
             </div>
