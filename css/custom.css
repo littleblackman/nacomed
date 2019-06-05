@@ -277,6 +277,20 @@ text-transform: uppercase;
   margin-right: auto;
 }
 
+/* FIN PAGE EMBARUQEMENT */
+
+/* PAGE CONTACT */
+
+.conteneur {
+  position: relative;
+  top: 150px;
+}
+
+#sendMessageButton {
+  position: relative;
+  left: 89%;
+}
+
 /* Responsive */
 
 /* Menu de navigation*/
