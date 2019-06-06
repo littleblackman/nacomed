@@ -24,6 +24,7 @@
     </head>
     <body>
 
+        <!-- Navigation -->
         <?php require('./public/views/header.php'); ?>
 
         <div class="conteneur">
