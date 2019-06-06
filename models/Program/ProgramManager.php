@@ -1,85 +1,100 @@
 <?php
-class Program {
-    
-    // Décalaration des attributs
-    private $_prog_id;
-    private $_prog_mission;
-    private $_prog_details_mission;
-    private $_prog_location;
-    private $_prog_available_beds;
-    private $_prog_comments;
 
-    public function __construct(array $data) {
-        $this->hydrate($data);
+//namespace App\Program;
+
+class ProgramManager {
+
+    private $_db;
+
+    public function __construct($db) {
+        $this->setDb($db);
     }
 
-    // Hydratation
-    public function hydrate(array $data) {
-        foreach ($data as $key => $value) {
-            $method = 'set'.ucfirst($key);
+    public function getProg_may() {
+        $row = [];
 
-            if (method_exists($this, $method)) {
-                $this->$method($value);
-            }
-        }
+        $q = $this->_db->prepare('SELECT * FROM prog_may ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
     }
 
-    // Déclaration des getters (accesseurs)
-    public function prog_id() {
-        return $this->_prog_id;
+    public function getProg_jun() {
+        $row = [];
+
+        $q = $this->_db->prepare('SELECT * FROM prog_jun ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
     }
 
-    public function prog_mission() {
-        return $this->_prog_mission;
+    public function getProg_jul() {
+        $row = [];
+
+        $q = $this->_db->prepare('SELECT * FROM prog_jul ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
     }
 
-    public function prog_details_mission() {
-        return $this->_prog_details_mission;
+    public function getProg_aug() {
+        $row = [];
+
+        $q = $this->_db->prepare('SELECT * FROM prog_aug ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
     }
 
-    public function prog_location() {
-        return $this->_prog_location;
+    public function getProg_sep() {
+        $row = [];
+
+        $q = $this->_db->prepare('SELECT * FROM prog_sep ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
     }
 
-    public function prog_available_beds() {
-        return $this->_prog_available_beds;
+    public function getProg_oct() {
+        $row = [];
+
+        $q = $this->_db->prepare('SELECT * FROM prog_oct ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
     }
 
-    public function prog_comments() {
-        return $this->_prog_comments;
-    }
-
-    // Déclaration des setters (mutateurs)
-    public function setProg_id($art_id) {
-        $art_id = (int) $prog_id;
-        if ($prog_id > 0) {
-            $this->_prog_id = $prog_id;
-        }
-    }
-
-    public function setProg_mission($prog_mission) {
-        if (is_string($prog_mission)) {
-            $this->_prog_mission = $prog_mission;
-        } 
-    }
-
-    public function setProg_details_mission($prog_details_mission) {
-        if (is_string($prog_details_mission)) {
-            $this->_prog_details_mission = $prog_details_mission;
-        }
-    }
-
-    public function setProg_location($prog_location) {
-        if (is_string($prog_location)) {
-            $this->_prog_location = $prog_location;
-        }
-    }
-
-    public function setProg_available_beds($prog_available_beds) {
-        $this->_prog_available_beds = $prog_available_beds;
-    }
-
-    public function setProg_comments($prog_comments) {
-        $this->_prog_comments = $prog_comments;
+    public function setDb(PDO $db) {
+        $this->_db = $db;
     }
 }
