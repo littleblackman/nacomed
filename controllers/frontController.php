@@ -1,5 +1,8 @@
 <?php
-    use App\models\Articles;
+    //use App\models\Articles;
+    //use App\models\Program;
+    require('./models/Program/Program.php');
+    require('./models/Program/ProgramManager.php');
 
 function listLastArticles() {
     $db = setDb();
@@ -48,13 +51,29 @@ function reportCom($article_id, $com_id) {
     require('./views/frontend/postView.php');
 }
 
+/* Fonction de Program */
+
+function displayOnBoard() {
+    $db = setDb();
+    $progMayManager = new ProgramManager($db);
+    $prog_may = $progMayManager->getProg_may();
+    $prog_jun = $progMayManager->getProg_jun();
+    $prog_jul = $progMayManager->getProg_jul();
+    $prog_aug = $progMayManager->getProg_aug();
+    $prog_sep = $progMayManager->getProg_sep();
+    $prog_oct = $progMayManager->getProg_oct();
+    require('./public/views/frontend/onboard.php');
+}
+
+/* Fonction d'affichage simple */
+
 function displayHome() {
     require('./public/views/frontend/home.php');
 }
 
-function displayOnboard() {
-    require('./public/views/frontend/onboard.php');
-}
+/*function displayOnboard() {
+    //require('./public/views/frontend/onboard.php');
+}*/
 
 function displayContact() {
     require('./public/views/frontend/contact.php');
@@ -69,7 +88,7 @@ function displayLoginView() {
 }
 
 function setDb() {
-    $db = new PDO('mysql:host=localhost;dbname=blog_jf;charset=utf8', 'root', 'mysqlpwd1234');
+    $db = new PDO('mysql:host=localhost;dbname=nacomed;charset=utf8', 'root', 'mysqlpwd1234');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     return $db;
 }
