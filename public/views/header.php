@@ -12,19 +12,19 @@
                     <a class="nav-link" href="./index.php">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=displayContact">Actualités</a>
+                    <a class="nav-link" href="./index.php?action=displayContact">Actualités</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=displayOnboard">Embarquement</a>
+                    <a class="nav-link" href="./index.php?action=displayOnboard">Embarquement</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=displayContact">Nous soutenir</a>
+                    <a class="nav-link" href="./index.php?action=displayContact">Nous soutenir</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="index.php?action=displayContact">Contact</a>
+                <a class="nav-link" href="./index.php?action=displayContact">Contact</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="index.php?action=displayContact">Communauté</a>
+                <a class="nav-link" href="./index.php?action=displayContact">Communauté</a>
                 </li>
             </ul>
         </div>
