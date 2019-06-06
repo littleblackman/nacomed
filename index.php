@@ -9,7 +9,7 @@
             break;
 
             case 'displayOnboard':
-                displayOnboard();
+                displayOnBoard();
             break;
 
             case 'displayContact':
