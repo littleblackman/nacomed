@@ -98,7 +98,7 @@
                         <header class="text-center">
                             <h3>Programme du navire</h3>
                         </header>
-                        <table class="table_program">
+                        <table style="width: 100%"class="table_program text-center">
                             <thead>
                                 <tr class="head">
                                     <th>MOIS</th>
@@ -106,119 +106,113 @@
                                     <th>MISSION</th>
                                     <th>DETAILS MISSION</th>
                                     <th>LOCALISATION</th>
-                                    <th>NBRE DE BANNETTES DISPO.</th>
+                                    <th class="banets">NBRE DE BANNETTES DISPO.</th>
                                     <th>REMARQUES</th>
                                 <tr>
-                            <thead>
+                            </thead>
 
                             <tbody>
                                 <!-- Mois de mai -->
                                 <tr>
                                     <td>MAI</td>
-                                    <td>3</td>
-                                </tr>
-
-                                <tr>
-                                    <td></td>
-                                    <td>4</td>
+                                    <?php foreach ($prog_may as $prog) {
+                                            echo '<td>' . $prog['id'] . '</td>';
+                                            echo '<td>' . $prog['mission'] . '</td>';
+                                            echo '<td>' . $prog['details_mission'] . '</td>';
+                                            echo '<td>' . $prog['location'] . '</td>';
+                                            echo '<td>' . $prog['available_beds'] . '</td>';
+                                            echo '<td>' . $prog['comments'] . '</td>';
+                                            echo '<tr></tr>';
+                                            echo '<td></td>';
+                                        }
+                                    ?>
                                 </tr>
                                 
                                 <!-- Mois de juin -->
                                 <tr>
                                     <td>JUIN</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>4</td>
+                                    <?php foreach ($prog_jun as $prog) {
+                                            echo '<td>' . $prog['id'] . '</td>';
+                                            echo '<td>' . $prog['mission'] . '</td>';
+                                            echo '<td>' . $prog['details_mission'] . '</td>';
+                                            echo '<td>' . $prog['location'] . '</td>';
+                                            echo '<td>' . $prog['available_beds'] . '</td>';
+                                            echo '<td>' . $prog['comments'] . '</td>';
+                                            echo '<tr></tr>';
+                                            echo '<td></td>';
+                                        }
+                                    ?>
                                 </tr>
 
                                 <!-- Mois de juillet -->
                                 <tr>
                                     <td>JUILLET</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>4</td>
+                                    <?php foreach ($prog_jul as $prog) {
+                                            echo '<td>' . $prog['id'] . '</td>';
+                                            echo '<td>' . $prog['mission'] . '</td>';
+                                            echo '<td>' . $prog['details_mission'] . '</td>';
+                                            echo '<td>' . $prog['location'] . '</td>';
+                                            echo '<td>' . $prog['available_beds'] . '</td>';
+                                            echo '<td>' . $prog['comments'] . '</td>';
+                                            echo '<tr></tr>';
+                                            echo '<td></td>';
+                                        }
+                                    ?>
                                 </tr>
 
                                 <!-- Mois d'août -->
                                 <tr>
                                     <td>AOUT</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>4</td>
+                                    <?php foreach ($prog_aug as $prog) {
+                                            echo '<td>' . $prog['id'] . '</td>';
+                                            echo '<td>' . $prog['mission'] . '</td>';
+                                            echo '<td>' . $prog['details_mission'] . '</td>';
+                                            echo '<td>' . $prog['location'] . '</td>';
+                                            echo '<td>' . $prog['available_beds'] . '</td>';
+                                            echo '<td>' . $prog['comments'] . '</td>';
+                                            echo '<tr></tr>';
+                                            echo '<td></td>';
+                                        }
+                                    ?>
                                 </tr>
 
                                 <!-- Mois de septembre -->
                                 <tr>
                                     <td>SEPTEMBRE</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>4</td>
+                                    <?php foreach ($prog_sep as $prog) {
+                                            echo '<td>' . $prog['id'] . '</td>';
+                                            echo '<td>' . $prog['mission'] . '</td>';
+                                            echo '<td>' . $prog['details_mission'] . '</td>';
+                                            echo '<td>' . $prog['location'] . '</td>';
+                                            echo '<td>' . $prog['available_beds'] . '</td>';
+                                            echo '<td>' . $prog['comments'] . '</td>';
+                                            echo '<tr></tr>';
+                                            echo '<td></td>';
+                                        }
+                                    ?>
                                 </tr>
 
                                 <!-- Mois d'octobre -->
                                 <tr>
                                     <td>OCTOBRE</td>
-                                    <td>1</td>
+                                    <?php foreach ($prog_oct as $prog) {
+                                            echo '<td>' . $prog['id'] . '</td>';
+                                            echo '<td>' . $prog['mission'] . '</td>';
+                                            echo '<td>' . $prog['details_mission'] . '</td>';
+                                            echo '<td>' . $prog['location'] . '</td>';
+                                            echo '<td>' . $prog['available_beds'] . '</td>';
+                                            echo '<td>' . $prog['comments'] . '</td>';
+                                            echo '<tr></tr>';
+                                            echo '<td></td>';
+                                        }
+                                    ?>
                                 </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>4</td>
-                                </tr>
-                            <tbody>
-
-
+                            </tbody>
                         </table>
                     </div>
                 </div>
             </div>
+        <?php require('./public/views/footer.php'); ?>
         </div>
 
         <script src="./vendor/jquery/jquery/jquery.min.js"></script>
