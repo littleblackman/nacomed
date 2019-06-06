@@ -34,12 +34,15 @@
     </ul>
     <!-- Social buttons -->
 
+  <div class="text-center">
+    <p>ATTENTION : SITE EN CONSTRUCTION. POUR TOUTE QUESTION CONTACTEZ-NOUS (PAGE CONTACT)</p>
+  </div>
   </div>
   <!-- Footer Elements -->
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2019 Copyright :
-    <a href="https://mdbootstrap.com/education/bootstrap/"> NACOMED</a>
+    <a href="./index.php?action=displayContact"> NACOMED</a>
   </div>
   <!-- Copyright -->
 
