@@ -277,6 +277,18 @@ text-transform: uppercase;
   margin-right: auto;
 }
 
+table.table-program {
+  width: 100%;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+.banets {
+  width: 16%;
+}
+
 /* FIN PAGE EMBARUQEMENT */
 
 /* PAGE CONTACT */
