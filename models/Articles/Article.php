@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Articles;
-
 class Article {
     
     // Décalaration des attributs
