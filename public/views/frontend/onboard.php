@@ -212,13 +212,20 @@
                     </div>
                 </div>
             </div>
+
+            <div id="map">
+
+            </div>
         <?php require('./public/views/footer.php'); ?>
         </div>
 
+        <!-- JavaScript files-->                                    
         <script src="./vendor/jquery/jquery/jquery.min.js"></script>
         <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="./js/scroll_nav2.js"></script>
         <script src="./vendor/owl.carousel/owl.carousel.js"></script>
+        <script src="https://cdn.jsdelivr.net/gmap3/7.2.0/gmap3.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMYjmQOsX1wZFkHJECVFrCZet0FJYK9kg&region=FR"></script>
         <script src="./js/onboard.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </body>
