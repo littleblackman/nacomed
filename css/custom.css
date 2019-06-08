@@ -238,6 +238,17 @@ text-transform: uppercase;
 
 /* FIN PAGE D'ACCUEIL*/
 
+/* PAGE ACTUALITES */
+
+.welcome-news {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.post-news {
+  margin-left: 0;
+}
+
 /* PAGE EMBARQUEMENT */
 
 #mainNav.onboard-nav .navbar-brand {
@@ -289,7 +300,16 @@ table, td, th {
   width: 16%;
 }
 
-/* FIN PAGE EMBARUQEMENT */
+/* Map */
+
+#map {
+  height: 650px;
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FIN PAGE EMBARQUEMENT */
 
 /* PAGE CONTACT */
 
