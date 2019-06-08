@@ -16,6 +16,10 @@
                 displayContact();
             break;
            
+            case 'displayNews':
+                displayNews();
+            break;
+
             default:
                 displayHome();
         }
