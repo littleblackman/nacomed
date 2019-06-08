@@ -1,1 +1,4 @@
-/vendor/
+vendor/
+img/
+
+frontController_online.php
