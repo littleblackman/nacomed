@@ -45,7 +45,7 @@
                             <a class="nav-link" href="./index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.php?action=displayContact">Actualités</a>
+                            <a class="nav-link" href="./index.php?action=displayNews">Actualités</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./index.php?action=displayOnboard">Embarquement</a>
