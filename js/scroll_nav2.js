@@ -37,5 +37,11 @@
           this.previousTop = currentTop;
         });
     }
+
+    $(document).click(function(event) { 
+      if(!$(event.target).closest('#mainNav').length) {
+          $('#mainNav').removeClass('is-visible');
+      } 
+  });
   
   })(jQuery); // End of use strict
