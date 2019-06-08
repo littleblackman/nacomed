@@ -1,4 +1,5 @@
 <?php
+header( 'content-type: text/html; charset=utf-8' );
 // Check for empty fields
 if(empty($_POST['name'])      ||
    empty($_POST['email'])     ||
@@ -20,7 +21,7 @@ $to = 'mlauvergeat@gmail.com'; // Add your email address inbetween the '' replac
 $email_subject = "Demande de contact NACOMED :  $name";
 $email_body = "Vous avez reçu un message via le formulaire de contact de votre blog.\n\n"."Voici les détails:\n\nNom: $name\n\nEmail: $email_address\n\nTéléphone: $phone\n\nMessage:\n$message";
 $headers = "From: noreply@gmail.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";   
+$headers .= "Content-Type: text/plain; charset=UTF-8\nReply-To: $email_address";   
 mail($to,$email_subject,$email_body,$headers);
 return true;         
 ?>
