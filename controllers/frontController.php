@@ -3,6 +3,9 @@
     //use App\models\Program;
     require('./models/Program/Program.php');
     require('./models/Program/ProgramManager.php');
+    require('./models/Articles/Article.php');
+    require('./models/Articles/ArticlesManager.php');
+
 
 function listLastArticles() {
     $db = setDb();
@@ -74,6 +77,13 @@ function displayHome() {
 /*function displayOnboard() {
     //require('./public/views/frontend/onboard.php');
 }*/
+
+function displayNews() {
+    $db = setDb();
+    $articlesManager = new ArticlesManager($db);    
+    $articles = $articlesManager->listArticles();
+    require('./public/views/frontend/articles.php');
+}
 
 function displayContact() {
     require('./public/views/frontend/contact.php');
