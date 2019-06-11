@@ -12,18 +12,3 @@ $(document).click(function(event) {
         $('#mainNav').removeClass('is-visible');
     } 
 });
-
-
-var center = [9.012893, 42.039604];
-var bastia = [9.666595, 42.653909];
-$('#map')
-    .gmap3({
-        center: center,
-        address: "Corte, France",
-        zoom: 8,
-        mapTypeId : google.maps.MapTypeId.ROADMAP
-    })
-    .marker({
-        position: center,
-        icon: 'https://maps.google.com/mapfiles/marker_green.png'
-    });
