@@ -1,5 +1,10 @@
 <?php
-    require('./vendor/autoload.php');
+    require_once('./models/Program/Program.php');
+    require_once('./models/Program/ProgramManager.php');
+    require_once('./models/Articles/Article.php');
+    require_once('./models/Articles/ArticlesManager.php');
+    require_once('./models/Users/User.php');
+    require_once('./models/Users/UsersManager.php');
 
 function listArticlesToEdit() {
     $db = setDb();
@@ -11,7 +16,7 @@ function listArticlesToEdit() {
 function addNews($art_title, $art_content, $art_author) {
     $db = setDb();
     $articlesManager = new ArticlesManager($db);
-    $article = $articlesManager->addArticle($art_title, $art_content, $art_author);
+    $article = $articlesManager->addNews    ($art_title, $art_content, $art_author);
     $articleId = $article->art_id();
     return $articleId;
     require('./public/views/backend/newsCreationView.php');
@@ -62,8 +67,13 @@ function logUser($login, $password) {
     $usersManager = new UsersManager($db);
     $userToLog = $usersManager->logUser($login, $password);
     return $userToLog; 
-    require('./views/backend/adminBoardView.php');
+    require('./public/views/backend/adminView.php');
 }
+
+function displayLoginView() {
+    require('./public/views/backend/loginView.php');
+}
+    
 
 function displayArticleCreationView() {
     require('./views/backend/articleCreationView.php');
