@@ -1,5 +1,7 @@
 /* your styles go here */
 
+
+/* Menu de navigation */
 #mainNav {
 position: absolute;
 border-bottom: 1px solid #e9ecef;
@@ -29,6 +31,11 @@ font-size: 12px;
 font-weight: 800;
 letter-spacing: 1px;
 text-transform: uppercase;
+}
+
+.login {
+  position: relative;
+  left: 30%;
 }
 
 
@@ -199,10 +206,6 @@ text-transform: uppercase;
   display: block;
 }
 
-/*.onepage-pagination a:hover {
-  visibility: visible;
-}*/
-
 /* Footer */
 
 .page-footer {
@@ -321,6 +324,27 @@ table, td, th {
 #sendMessageButton {
   position: relative;
   left: 89%;
+}
+
+/* FIN PAGE CONTACT */
+
+/* PAGE D'ADMINISTRATION */
+
+.admin_interfacen, .news-creation {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.mgmt {
+  margin-bottom: 5%;
+}
+
+/* FIN PAGE D'ADMINISTRATION */
+
+/* PAGE DE CREATION DE NEWS */
+
+.article_form {
+  width : 100%
 }
 
 /* Responsive */
