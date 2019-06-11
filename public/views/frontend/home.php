@@ -59,7 +59,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./index.php?action=displayContact">Communauté</a>
                         <li class="nav-item login">
-                            <a class="nav-link" href="./index.php?action=displayAdmin">Connexion</a>
+                            <a class="nav-link" href="./index.php?action=login">Connexion</a>
                         </li>
 
                     </li>
