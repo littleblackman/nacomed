@@ -21,10 +21,13 @@
                     <a class="nav-link" href="./index.php?action=displayContact">Nous soutenir</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="./index.php?action=displayContact">Contact</a>
+                    <a class="nav-link" href="./index.php?action=displayContact">Contact</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="./index.php?action=displayContact">Communauté</a>
+                    <a class="nav-link" href="./index.php?action=displayContact">Communauté</a>
+                </li>
+                <li class="nav-item login">
+                    <a class="nav-link" href="./index.php?action=displayAdmin">Connexion</a>
                 </li>
             </ul>
         </div>
