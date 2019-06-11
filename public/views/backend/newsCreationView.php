@@ -1,3 +1,9 @@
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -42,8 +48,8 @@
                 </div>
             </div>
 
-            <div class="row">
-                <form class="article_form" action="./index.php?action=addNews" method="post">
+            <div class="row text-center">
+                <form class="article_form" action="/nacomed/index.php?action=addNews" method="post">
                     <p>Titre du billet :</p>
                         <textarea class="content" id="art_title" name="title"></textarea></br>
                     <p>Contenu du billet :</p>
@@ -53,7 +59,24 @@
             <div>
         </div>
 
+        <div id="modal_create" class="modal">
+            <div class="modal_content">
+                <p id="modal_text"></p>
+            </div>
+        </div>
+
+        <script>tinymce.init({ selector: 'content' });</script>
         <?php require('../footer.php'); ?>
 
+        <!-- JavaScript files-->
+        <script src="/nacomed/vendor/jquery/jquery/jquery.min.js"></script>
+        <script src="/nacomed/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script>$(function() {
+                    var artToAdd = Object.create(articleToAdd);
+                    artToAdd.init();
+                });
+        </script>
+        <script>var sUser = '<?php echo $_SESSION['user']; ?>'; console.log(sUser);</script>
+        <script src="/nacomed/js/newsAdder.js"></script>
     </body>
 </html>
