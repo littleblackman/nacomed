@@ -330,7 +330,7 @@ table, td, th {
 
 /* PAGE D'ADMINISTRATION */
 
-.admin_interfacen, .news-creation {
+.admin_interface, .news-creation, .login-div {
   margin-top: 10%;
   margin-bottom: 5%;
 }
@@ -345,6 +345,13 @@ table, td, th {
 
 .article_form {
   width : 100%
+}
+
+/* FOOTER */
+
+.page-footer {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Responsive */
