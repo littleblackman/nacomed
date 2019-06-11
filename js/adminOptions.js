@@ -6,10 +6,8 @@ var option = {
     init: function() {
         var self = this;
 
-        tinymce.init({ selector: 'content' });
-
         self.newsMgmtBtn.click(function() {
-            window.location.replace('/nacomed/public/views/backend/newsCreationView.php');
+            window.location.href = "/nacomed/public/views/backend/newsCreationView.php";
         });
     }
 
