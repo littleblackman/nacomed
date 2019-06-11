@@ -8,13 +8,13 @@ function listArticlesToEdit() {
     require('./views/backend/articleEditionView.php');
 }
 
-function addArticle($art_title, $art_content, $art_author) {
+function addNews($art_title, $art_content, $art_author) {
     $db = setDb();
     $articlesManager = new ArticlesManager($db);
     $article = $articlesManager->addArticle($art_title, $art_content, $art_author);
     $articleId = $article->art_id();
     return $articleId;
-    require('./views/backend/articleCreationView.php');
+    require('./public/views/backend/newsCreationView.php');
 }
 
 function editArticle($article_id) {
@@ -67,6 +67,10 @@ function logUser($login, $password) {
 
 function displayArticleCreationView() {
     require('./views/backend/articleCreationView.php');
+}
+
+function displayAdmin() {
+    require('./public/views/backend/adminView.php');
 }
 
 /*function setDb() {
