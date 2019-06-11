@@ -78,6 +78,7 @@ function displayHome() {
     //require('./public/views/frontend/onboard.php');
 }*/
 
+/* Affichage de la page des articles (news) */
 function displayNews() {
     $db = setDb();
     $articlesManager = new ArticlesManager($db);    
