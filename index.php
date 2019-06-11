@@ -20,6 +20,14 @@
                 displayNews();
             break;
 
+            case 'displayAdmin';
+                displayAdmin();
+            break;
+
+            case 'addNews';
+                addNews();
+            break;
+
             default:
                 displayHome();
         }
