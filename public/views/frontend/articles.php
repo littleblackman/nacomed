@@ -12,9 +12,6 @@
         <!-- Google fonts-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo:400,400i">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-        <!-- OwlCarousel -->
-        <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.carousel.css">
-        <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.theme.default.min.css">
         <!-- Font Awesome-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <!-- Custom stylesheet - for your changes-->
@@ -45,9 +42,7 @@
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="post-preview">
                         <?php
-                            $i = 0;
-                            foreach ($articles as $value) {   
-                            $i++;                          
+                            foreach ($articles as $value) {                           
                         ?>
 
                                     <div class="post">
@@ -64,10 +59,9 @@
                                         Publié le : <?php echo $value->date_fr(); ?>  
                                         </p> 
                                     </div>
-                            <?php
-                                
-                                var_dump($i);}
-                            ?>
+                        <?php
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
