@@ -31,3 +31,4 @@ $(document).click(function(event) {
         $('#mainNav').removeClass('is-visible');
     } 
 });
+
