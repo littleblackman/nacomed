@@ -94,9 +94,9 @@ function displayAbout() {
     require('./views/frontend/about.php');
 }
 
-function displayLoginView() {
+/*function displayLoginView() {
     require('./views/backend/adminLoginView.php');
-}
+}*/
 
 function setDb() {
     $db = new PDO('mysql:host=localhost;dbname=nacomed;charset=utf8', 'root', 'mysqlpwd1234');
