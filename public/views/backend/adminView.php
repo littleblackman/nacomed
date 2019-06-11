@@ -1,3 +1,9 @@
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -70,4 +76,10 @@
     <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./js/scroll_nav.js"></script>
     <script src="./js/adminOptions.js"></script>
-    <script src="./js/admin.js"></script>
+    <script>$(function() {
+                var opt = Object.create(option);
+                opt.init();
+            });
+    </script>
+    </body>
+</html>
