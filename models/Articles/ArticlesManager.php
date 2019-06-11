@@ -20,7 +20,7 @@ class ArticlesManager {
         return $article;
     }
 
-    public function addArticle($art_title, $art_content, $art_author) {
+    public function addNews($art_title, $art_content, $art_author) {
         $q = $this->_db->prepare('INSERT INTO articles (art_title, art_content, art_author, art_creation_date) VALUES (?, ?, ?, NOW())');
         $articleToAdd = $q->execute(array($art_title, $art_content, $art_author));
 
