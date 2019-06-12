@@ -16,7 +16,7 @@ function listArticlesToEdit() {
 function addNews($art_title, $art_content, $art_author) {
     $db = setDb();
     $articlesManager = new ArticlesManager($db);
-    $article = $articlesManager->addNews    ($art_title, $art_content, $art_author);
+    $article = $articlesManager->addNews($art_title, $art_content, $art_author);
     $articleId = $article->art_id();
     return $articleId;
     require('./public/views/backend/newsCreationView.php');
