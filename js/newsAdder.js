@@ -57,7 +57,7 @@ var articleToAdd = {
                         break;
 
                         default:
-                            self.modalText.text('Votre billet a bien été ajouté');
+                            self.modalText.text('Votre news a bien été ajouté');
                             self.modalCreate.show();
                             self.modalCreate.fadeOut(4000, function() {
                                 self.modalText.text('');
