@@ -7,7 +7,7 @@ var option = {
         var self = this;
 
         self.newsMgmtBtn.click(function() {
-            window.location.href = "/nacomed/public/views/backend/newsCreationView.php";
+            window.location.href = "/nacomed/public/views/backend/newsManagementView.php";
         });
     }
 
