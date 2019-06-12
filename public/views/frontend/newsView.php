@@ -54,7 +54,7 @@
             <form id="com_form" action="/nacomed/index.php?action=addComment" method="post">
                 <div>
                     <label for="com_author">Pseudo : </label>
-                    <input class="com_author" type="text" id="author" name="com_author" placeholder="Votre pseudo" required/>
+                    <textarea class="com_author" id="author" name="com_author" placeholder="Votre pseudo" required></textarea>
                     <span id="missPseudo"></span>
                 </div>
 
@@ -66,13 +66,13 @@
 
                 <input type="hidden" id="art_id" name="art_id" value="<?php echo $article->art_id(); ?>" />
 
-                <div>
+                <div class="sub-btn">
                     <input id="com_submit_btn" type="submit" />
                 </div>
             </form>
 
             <div id="comments">
-                <p class="com_heading">Commentaires du billet :</p>
+                <p class="com_heading">Commentaires :</p>
                     <?php foreach ($comments as $comment) {
                         $censoredCommentClass = $comment->com_report_number() > 0 ? "comment_censored" : "";
                         $censoredSpanClass = $comment->com_report_number() > 0 ? "span_censored" : "";
