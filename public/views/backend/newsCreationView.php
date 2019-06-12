@@ -65,12 +65,13 @@
             </div>
         </div>
 
-        <script>tinymce.init({ selector: 'content' });</script>
+        
         <?php require('../footer.php'); ?>
 
         <!-- JavaScript files-->
         <script src="/nacomed/vendor/jquery/jquery/jquery.min.js"></script>
         <script src="/nacomed/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script>tinymce.init({ selector: 'content' });</script>
         <script>$(function() {
                     var artToAdd = Object.create(articleToAdd);
                     artToAdd.init();
