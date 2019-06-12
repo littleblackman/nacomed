@@ -29,7 +29,12 @@
             break;
 
             case 'displayAdmin';
-                displayAdmin();
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    displayAdmin();
+                } else {
+                    displayLoginView();
+                }
             break;
 
             case 'login':
@@ -100,6 +105,13 @@
                     exit;
                 }
             }
+
+            case 'signOut':
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    session_destroy();
+                }
+            break;
 
             default:
                 displayHome();
