@@ -72,12 +72,8 @@
         <script src="/nacomed/vendor/jquery/jquery/jquery.min.js"></script>
         <script src="/nacomed/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script>tinymce.init({ selector: 'content' });</script>
-        <script>$(function() {
-                    var artToAdd = Object.create(articleToAdd);
-                    artToAdd.init();
-                });
-        </script>
         <script>var sUser = '<?php echo $_SESSION['user']; ?>'; console.log(sUser);</script>
         <script src="/nacomed/js/newsAdder.js"></script>
+        <script src="/nacomed/js/controllers/newsAdder.js"></script>
     </body>
 </html>
