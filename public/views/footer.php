@@ -48,3 +48,15 @@
 
 </footer>
 <!-- Footer -->
+
+<div id="modal_logout" class="modal">
+    <div class="modal_content">
+        <p id="modal_text">A bientôt <?php echo $sessionUser; ?></p>
+    </div>
+</div>
+
+<!-- JavaScript files--> 
+<script src="./vendor/jquery/jquery/jquery.min.js"></script>
+<script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/nacomed/js/signOut.js"></script>
+<script src="/nacomed/js/controllers/signOut.js"></script>
