@@ -347,6 +347,14 @@ table, td, th {
   width : 100%
 }
 
+/* FIN PAGE DE CREATION DE NEWS */
+
+/* PAGE DE NEWS (UNE NEWS) */
+
+.news-view {
+  margin-top: 10%;
+}
+
 /* FOOTER */
 
 .page-footer {
