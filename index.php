@@ -7,6 +7,7 @@
             case 'getArticle':
                 if (isset($_GET['article_id']) && $_GET['article_id'] > 0) {
                     getArtCom($_GET['article_id']);
+                    exit;
                 } else {
                     echo 'Valeur d\'id incorrect';
                 }
