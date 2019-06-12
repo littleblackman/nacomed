@@ -2,7 +2,9 @@
 /vendor/
 /pdf/
 /.vscode/
+/controllers/
 
 composer.json
 composer.phar
 frontController_online.php
+/public/views/frontend/onboard.php
