@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Comments;
-
 class CommentsManager {
 
     private $_db;

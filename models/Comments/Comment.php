@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Comments;
-
 class Comment {
     
     // Décalaration des attributs
