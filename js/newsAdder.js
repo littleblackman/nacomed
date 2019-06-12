@@ -14,13 +14,15 @@ var articleToAdd = {
             } 
         });*/
 
-        this.artSubmitBtn.click('submit', function(e) {
+        self.artSubmitBtn.click(function(e) {
+            e.stopPropagation();
             e.preventDefault();
+
             var artTitle = tinyMCE.get('art_title').getContent();
             var artContent = tinyMCE.get('art_content').getContent();  
             
             $.ajax({
-                url: './index.php?action=addNews',
+                url: '/nacomed/index.php?action=addNews',
                 type: 'POST',
                 data: 'title=' + artTitle + '&content=' + artContent + '&user=' + self.sessionUser,
                 dataType: 'text',
@@ -32,7 +34,7 @@ var articleToAdd = {
                             self.modalCreate.fadeOut(4000, function() {
                                 self.modalText.text('');
                                 self.modalCreate.hide();
-                            })
+                            });
                         break;
 
                         case 'content_missing':
@@ -41,7 +43,7 @@ var articleToAdd = {
                             self.modalCreate.fadeOut(4000, function() {
                                 self.modalText.text('');
                                 self.modalCreate.hide();
-                        })
+                            });
                         break;
 
                         case 'failed':
@@ -51,7 +53,7 @@ var articleToAdd = {
                             self.modalCreate.fadeOut(4000, function() {
                                 self.modalText.text('');
                                 self.modalCreate.hide();
-                        })
+                            });
                         break;
 
                         default:
@@ -60,12 +62,12 @@ var articleToAdd = {
                             self.modalCreate.fadeOut(4000, function() {
                                 self.modalText.text('');
                                 self.modalCreate.hide();
-                                window.location.href = "index.php?action=getArticle&article_id=" + data;
-                            })
+                                window.location.href = "/nacomed/index.php?action=getArticle&article_id=" + data;
+                            });
                              
                     }
                 }
             });
         });
     }
-}
+};
