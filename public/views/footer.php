@@ -56,7 +56,7 @@
 </div>
 
 <!-- JavaScript files--> 
-<script src="./vendor/jquery/jquery/jquery.min.js"></script>
-<script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/nacomed/vendor/jquery/jquery/jquery.min.js"></script>
+<script src="/nacomed/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/nacomed/js/signOut.js"></script>
 <script src="/nacomed/js/controllers/signOut.js"></script>
