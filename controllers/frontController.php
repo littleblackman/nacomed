@@ -5,6 +5,8 @@
     require('./models/Program/ProgramManager.php');
     require('./models/Articles/Article.php');
     require('./models/Articles/ArticlesManager.php');
+    require('./models/Comments/Comment.php');
+    require('./models/Comments/CommentsManager.php');
 
 
 function listLastArticles() {
@@ -28,7 +30,7 @@ function getArtCom($article_id) {
 
     $commentsManager = new CommentsManager($db);
     $comments = $commentsManager->getComFromArticle($article_id);
-    require('./views/frontend/postView.php');
+    require('./public/views/frontend/newsView.php');
 }
 
 function addComment($com_content, $com_author, $article_id) {
