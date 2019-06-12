@@ -66,8 +66,8 @@
         <?php require('../footer.php'); ?>
 
     <!-- JavaScript files-->
-    <script src="./js/scroll_nav.js"></script>
-    <script src="./js/adminOptions.js"></script>
+    <script src="/nacomed/js/scroll_nav.js"></script>
+    <script src="/nacomed/js/adminOptions.js"></script>
     <script>$(function() {
                 var opt = Object.create(option);
                 opt.init();
