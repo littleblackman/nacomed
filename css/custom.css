@@ -38,6 +38,13 @@ text-transform: uppercase;
   left: 30%;
 }
 
+/* HEADER */
+
+.admin-link, .logout {
+  position: relative;
+  left: 15%;
+}
+
 
 /* PAGE D'ACCUEIL */
 /* Section 1 : Accueil */
@@ -204,13 +211,6 @@ text-transform: uppercase;
 
 .onepage-pagination a.active {
   display: block;
-}
-
-/* Footer */
-
-.page-footer {
-  position: relative;
-  top: 125px;
 }
 
 /* Section contact */
@@ -388,6 +388,8 @@ table, td, th {
 .page-footer {
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  top: 125px;
 }
 
 /* MODALS */
