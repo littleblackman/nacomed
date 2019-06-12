@@ -7,12 +7,12 @@ var articleToAdd = {
     init: function() {
         var self = this;
 
-        /*$(document).click(function(event) { 
+        $(document).click(function(event) { 
             if(!$(event.target).closest(self.modal).length) {
                 self.modalCreate.hide();
                 self.modalCreate.stop(true, true).fadeOut();
             } 
-        });*/
+        });
 
         self.artSubmitBtn.click(function(e) {
             e.stopPropagation();

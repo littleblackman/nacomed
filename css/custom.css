@@ -407,11 +407,24 @@ table, td, th {
   display: flex;
 }
 
+.modal_edit_content {
+  flex-direction: column;
+}
+
+#buttons {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #modal_text {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20%;
+  margin-top: 10%;
+}
+
+.close {
+  margin-left: auto;
 }
 
 /* Responsive */

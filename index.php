@@ -64,6 +64,59 @@
                 }
             break;
 
+            case 'listArticlesToEdit':
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    listArticlesToEdit();
+                } else {
+                    displayLoginView();
+                }
+            break;
+
+            case 'editArticle':
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    if (isset($_GET['article_id']) && $_GET['article_id'] > 0) {
+                        editArticle($_GET['article_id']);
+                    } else {
+                        echo 'Erreur d\'id d\'article : aucun id envoyé ou id inexistant';
+                    }
+                } else {
+                    displayLoginView();
+                }
+            break;
+
+            case 'updateArticle':
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    if (isset($_GET['article_id']) && $_GET['article_id'] > 0) {
+                        $title = trim($_POST['title']);
+                        $content = trim($_POST['content']);
+
+                        if (!empty($title) && !empty($content)) {
+                            updateArticle($title, $content, $_GET['article_id']);
+                            echo $_GET['article_id'];
+                        } else if (empty($title) && empty($content)) {
+                            echo 'failed';
+                        } else if (empty($title) && !empty($content)) {
+                            echo 'title_missing';
+                        } else if (!empty($title) && empty($content)) {
+                            echo 'content_missing';
+                        } else {
+                            echo 'erreur non gérée';
+                        }
+                    }
+                } else {
+                    displayLoginView();
+                }
+            break;
+
+            case "deleteArticle":
+                if (isset($_GET['article_id']) && $_GET['article_id'] > 0) {
+                    deleteArticle($_GET['article_id']);
+                }
+            break;
+
             case 'addComment':
                 $content = trim($_POST['com_content']);
                 $author = trim($_POST['com_author']);

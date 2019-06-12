@@ -9,7 +9,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Association Nacomed : Votre news</title>
+        <title>Association Nacomed : Gestion des news</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
@@ -56,7 +56,7 @@
                 <div class="col-lg-6 text-center">
                     <header>
                         <h4>Editer une news<br>(mise à jour, suppression)</h4>
-                            <button id="map-mgmt">Edition</button>
+                            <button id="edit-mgmt">Edition</button>
                     </header>
                 </div>
             </div>
@@ -68,11 +68,6 @@
     <!-- JavaScript files-->
     <script src="/nacomed/js/scroll_nav.js"></script>
     <script src="/nacomed/js/adminOptions.js"></script>
-    <script>$(function() {
-                var opt = Object.create(option);
-                opt.init();
-            });
-    </script>
-
+    <script src="/nacomed/js/controllers/adminOptions.js"></script>
     </body>
 </html>
