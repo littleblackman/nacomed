@@ -72,8 +72,6 @@
         <?php require('./public/views/footer.php'); ?>
 
         <!-- JavaScript files-->
-        <script src="/nacomed/vendor/jquery/jquery/jquery.min.js"></script>
-        <script src="/nacomed/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="/nacomed/js/login.js"></script>
         <script>$(function() {
                     var login = Object.create(loginValid);

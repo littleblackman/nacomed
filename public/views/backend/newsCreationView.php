@@ -69,8 +69,6 @@
         <?php require('../footer.php'); ?>
 
         <!-- JavaScript files-->
-        <script src="/nacomed/vendor/jquery/jquery/jquery.min.js"></script>
-        <script src="/nacomed/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script>tinymce.init({ selector: 'content' });</script>
         <script>var sUser = '<?php echo $_SESSION['user']; ?>'; console.log(sUser);</script>
         <script src="/nacomed/js/newsAdder.js"></script>

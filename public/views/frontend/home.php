@@ -277,8 +277,6 @@
         </div>
 
     <!-- JavaScript files-->
-    <script src="./vendor/jquery/jquery/jquery.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./js/scroll_nav.js"></script>
     <script src="./vendor/owl.carousel/owl.carousel.js"></script>
     <script src="./vendor/onepage-scroll/jquery.onepage-scroll.js"></script>

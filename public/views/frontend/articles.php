@@ -70,8 +70,6 @@
         <?php require('./public/views/footer.php'); ?>
 
         <!-- JavaScript files-->
-        <script src="./vendor/jquery/jquery/jquery.min.js"></script>
-        <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="./js/scroll_nav2.js"></script>
     </body>
 </html>

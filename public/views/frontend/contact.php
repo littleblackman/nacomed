@@ -93,8 +93,6 @@
 
         <?php require('./public/views/footer.php'); ?>
 
-        <script src="./vendor/jquery/jquery/jquery.min.js"></script>
-        <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="./js/jqBootstrapValidation.js"></script>
         <script src="./js/contact_me.js"></script>
         <script src="./js/scroll_nav.js"></script>
