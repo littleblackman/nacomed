@@ -11,7 +11,7 @@ class ArticlesManager {
     public function getArticle($article_ID) {
         $article = [];
 
-        $q = $this->_db->prepare('SELECT art_id, art_title, art_content, art_author, DATE_FORMAT(art_modified_date, \'%d/%m/%Y à %Hh%imin%ss\') AS modified_date_fr, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles WHERE art_id = ?');
+        $q = $this->_db->prepare('SELECT art_id, art_title, art_content, url_img, art_author, DATE_FORMAT(art_modified_date, \'%d/%m/%Y à %Hh%imin%ss\') AS modified_date_fr, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles WHERE art_id = ?');
         $q->execute(array($article_ID));
         
         while ($data = $q->fetch(PDO::FETCH_ASSOC)) {
@@ -20,12 +20,12 @@ class ArticlesManager {
         return $article;
     }
 
-    public function addNews($art_title, $art_content, $art_author) {
-        $q = $this->_db->prepare('INSERT INTO articles (art_title, art_content, art_author, art_creation_date) VALUES (?, ?, ?, NOW())');
-        $articleToAdd = $q->execute(array($art_title, $art_content, $art_author));
+    public function addNews($art_title, $art_content, $url_img, $art_author) {
+        $q = $this->_db->prepare('INSERT INTO articles (art_title, art_content, url_img, art_author, art_creation_date) VALUES (?, ?, ?, ?, NOW())');
+        $articleToAdd = $q->execute(array($art_title, $art_content, $url_img, $art_author));
 
         $addedArticle = [];
-        $req = $this->_db->prepare('SELECT art_title, art_content, art_author, art_id, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles WHERE art_title = ?');
+        $req = $this->_db->prepare('SELECT art_title, art_content, url_img, art_author, art_id, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles WHERE art_title = ?');
         $req->execute(array($art_title));
 
         while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
@@ -58,7 +58,7 @@ class ArticlesManager {
 
     public function listArticles() {
         $articles = [];
-        $q = $this->_db->query('SELECT art_id, art_title, art_content, art_author, DATE_FORMAT(art_modified_date, \'%d/%m/%Y à %Hh%imin%ss\') AS modified_date_fr, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles ORDER BY art_creation_date ASC');
+        $q = $this->_db->query('SELECT art_id, art_title, art_content, url_img, art_author, DATE_FORMAT(art_modified_date, \'%d/%m/%Y à %Hh%imin%ss\') AS modified_date_fr, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles ORDER BY art_creation_date ASC');
 
         while ($data = $q->fetch(PDO::FETCH_ASSOC)) {
             $articles[] = new Article($data);
