@@ -59,10 +59,8 @@
                                 <p class="post-content">
                                     <?php echo $value->art_content(); ?>
                                 </p>
-
-                                        
-                                        <!-- <input class="delete_btn" type="button" value="Supprimer" /> -->
-                                        <!-- <input type="hidden" class="hidden_input" id="<?php echo $value->art_id(); ?>" /> -->
+                            </div>
+                            <div class="edit-btn-div">
                                 <input class="edit_btn" type="button" name="<?php echo $value->art_id(); ?>" value="Editer" />
                             </div>
                         <?php
