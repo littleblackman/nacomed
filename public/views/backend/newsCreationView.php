@@ -49,11 +49,13 @@
             </div>
 
             <div class="row text-center">
-                <form class="article_form" action="/nacomed/index.php?action=addNews" method="post">
+                <form class="article_form" id="NcrForm" action="/nacomed/index.php?action=addNews" method="post" enctype="multipart/form-data">
                     <p>Titre du billet :</p>
                         <textarea class="content" id="art_title" name="title"></textarea></br>
                     <p>Contenu du billet :</p>
                         <textarea class="content" id="art_content" name="content"></textarea></br>
+                    <p>Sélectionner une image :</p>
+                    <input type="file" name="img" id="img" /><br>
                     <input id="art_submit_btn" name="art_send" type="submit" value="Envoyer" />
                 </form>
             <div>
