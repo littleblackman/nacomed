@@ -1,4 +1,5 @@
 var option = {
+    mapMgmtBtn: $('#map-mgmt'),
     editMgmtBtn: $('#edit-mgmt'),
     newsMgmtBtn: $('#news-mgmt'),
     mapMgmtBtn: $('#map-mgmt'),
@@ -18,6 +19,10 @@ var option = {
 
         self.editMgmtBtn.click(function() {
             window.location.href = "/nacomed/index.php?action=listArticlesToEdit";
+        });
+    
+        self.mapMgmtBtn.click(function() {
+            window.location.href = "/nacomed/index.php?action=displayMapMgmt";
         });
     }
 
