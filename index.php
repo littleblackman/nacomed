@@ -47,17 +47,32 @@
                 $artContent = trim($_POST['content']);
 
                 if (isset($_SESSION['user'])) {
-                    if (!empty($artTitle) && !empty($artContent)) {
-                        $artId = addNews($artTitle, $artContent, $_SESSION['user']);
+                    if (!empty($artTitle) && !empty($artContent) && !empty($_FILES)) {
+                        $img = $_FILES['img'];
+                        $url_img = "img/news/".$img['name'];
+                        $ext = strtolower(substr($img['name'],-3));
+                        $allow_ext = array("jpg",'png','gif');
+                        if(in_array($ext,$allow_ext)) {
+                            move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
+                        } else {
+                            echo "Votre fichier n'est pas une image";
+                        }
+                        
+
+                        $artId = addNews($artTitle, $artContent, $url_img, $_SESSION['user']);
                         echo $artId;
                     } else if (empty($artTitle) && empty($artContent)) {
                         echo 'failed';
+                        exit;
                     } else if (empty($artTitle) && !empty($artContent)) {
                         echo 'title_missing';
+                        exit;
                     } else if (!empty($artTitle) && empty($artContent)) {
                         echo 'content_missing';
+                        exit;
                     } else {
                         echo 'erreur non gérée';
+                        exit;
                     }
                 } else {
                     displayLoginView();
