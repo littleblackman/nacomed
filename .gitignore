@@ -4,6 +4,8 @@
 /.vscode/
 /controllers/
 
+/js/gmap.js
+
 composer.json
 composer.phar
 frontController_online.php
