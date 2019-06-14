@@ -38,17 +38,15 @@
         </div>
 
         <div class="container post-news">
+            <?php
+                foreach ($articles as $value) {                           
+            ?>
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="post-preview">
-                        <?php
-                            foreach ($articles as $value) {                           
-                        ?>
+                        
                             <div class="post-list">
                                 <div class="post post-item">
-                                    <div class="image-news">
-                                        <img src="<?php echo $value->url_img(); ?>" />
-                                    </div>
                                     <a href="index.php?action=getArticle&amp;article_id=<?php echo $value->art_id(); ?>">
                                         <h2 class="post-title">
                                             <?php echo $value->art_title(); ?>
@@ -62,12 +60,18 @@
                                     Publié le : <?php echo $value->date_fr(); ?> par <?php echo $value->art_author(); ?>.
                                 </p>
                             </div> 
-                        <?php
-                            }
-                        ?>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="image-news">
+                        <img src="<?php echo $value->url_img(); ?>" />
                     </div>
                 </div>
             </div>
+            <?php
+                }
+            ?>
         </div>
 
         <?php require('./public/views/footer.php'); ?>
