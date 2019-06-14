@@ -6,6 +6,7 @@ class Article {
     private $_art_id;
     private $_art_title;
     private $_art_content;
+    private $_url_img;
     private $_art_author;
     private $_art_creation_date;
     private $_date_fr;
@@ -38,6 +39,10 @@ class Article {
 
     public function art_content() {
         return $this->_art_content;
+    }
+
+    public function url_img() {
+        return $this->_url_img;
     }
 
     public function art_author() {
@@ -77,6 +82,12 @@ class Article {
     public function setArt_content($art_content) {
         if (is_string($art_content)) {
             $this->_art_content = $art_content;
+        }
+    }
+
+    public function setUrl_img($url_img) {
+        if (is_string($url_img)) {
+            $this->_url_img = $url_img;
         }
     }
 
