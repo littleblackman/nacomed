@@ -248,8 +248,8 @@ text-transform: uppercase;
   margin-bottom: 5%;
 }
 
-.post-news {
-  margin-left: 0;
+.image-news img {
+  width: 350px;
 }
 
 /* PAGE EMBARQUEMENT */
