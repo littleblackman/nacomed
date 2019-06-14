@@ -44,21 +44,24 @@
                         <?php
                             foreach ($articles as $value) {                           
                         ?>
-
-                                    <div class="post">
-                                        <a href="index.php?action=getArticle&amp;article_id=<?php echo $value->art_id(); ?>">
-                                            <h2 class="post-title">
-                                                <?php echo $value->art_title(); ?>
-                                            </h2>
-                                            <p class="post-content">
-                                                <?php echo $value->art_content(); ?>
-                                            </p>
-                                        </a>
-                                        
-                                        <p class="post-meta">
-                                        Publié le : <?php echo $value->date_fr(); ?>  
-                                        </p> 
+                            <div class="post-list">
+                                <div class="post post-item">
+                                    <div class="image-news">
+                                        <img src="<?php echo $value->url_img(); ?>" />
                                     </div>
+                                    <a href="index.php?action=getArticle&amp;article_id=<?php echo $value->art_id(); ?>">
+                                        <h2 class="post-title">
+                                            <?php echo $value->art_title(); ?>
+                                        </h2>
+                                        <p class="post-content">
+                                            <?php echo $value->art_content(); ?>
+                                        </p>
+                                    </a>
+                                </div>
+                                <p class="post-meta">
+                                    Publié le : <?php echo $value->date_fr(); ?> par <?php echo $value->art_author(); ?>.
+                                </p>
+                            </div> 
                         <?php
                             }
                         ?>
