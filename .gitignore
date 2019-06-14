@@ -4,7 +4,7 @@
 /.vscode/
 /controllers/
 
-/js/gmap.js
+/public/views/backend/mapsManagementView.php
 
 composer.json
 composer.phar

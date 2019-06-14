@@ -43,20 +43,12 @@
             </div>
 
             <div>
-                <form id="login_form" action="./index.php?action=adminLogin" method="post">
-                    <div>
-                        <label for="user">Login : </label>
-                        <input type="text" id="user_login" name="user" required />
-                    </div>
-
-                    <div>
-                        <label for="password">Mot de passe : </label>
-                        <input type="password" id="user_password" name="password" required />
-                    </div>
-
-                    <div>
-                        <input id="login_btn" type="submit" value="Se connecter" />
-                    </div>
+                <form class="text-center" id="login_form" action="./index.php?action=adminLogin" method="post">
+                    <label for="user">Login : </label>
+                    <input class="form-control" type="text" id="user_login" name="user" required /><br/>
+                    <label for="password">Mot de passe : </label>
+                    <input class="form-control" type="password" id="user_password" name="password" required /><br/>
+                    <input id="login_btn" type="submit" value="Se connecter" />
                 </form>
             </div>
 
