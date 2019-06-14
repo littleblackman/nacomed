@@ -54,13 +54,11 @@
                         $allow_ext = array("jpg",'png','gif');
                         if(in_array($ext,$allow_ext)) {
                             move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
+                            $artId = addNews($artTitle, $artContent, $url_img, $_SESSION['user']);
+                            echo $artId;
                         } else {
                             echo "Votre fichier n'est pas une image";
                         }
-                        
-
-                        $artId = addNews($artTitle, $artContent, $url_img, $_SESSION['user']);
-                        echo $artId;
                     } else if (empty($artTitle) && empty($artContent)) {
                         echo 'failed';
                         exit;
