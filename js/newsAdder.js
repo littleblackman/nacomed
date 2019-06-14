@@ -1,5 +1,6 @@
 var articleToAdd = {
     sessionUser: sUser,
+    NcrForm: $('#NcrForm'),
     artSubmitBtn: $('#art_submit_btn'),
     modalCreate: $('#modal_create'),
     modalText: $('#modal_text'),
@@ -14,19 +15,20 @@ var articleToAdd = {
             } 
         });
 
-        self.artSubmitBtn.click(function(e) {
+        self.NcrForm.on('submit', function(e) {
             e.stopPropagation();
-            e.preventDefault();
-
-            var artTitle = tinyMCE.get('art_title').getContent();
-            var artContent = tinyMCE.get('art_content').getContent();  
+            e.preventDefault();  
             
             $.ajax({
                 url: '/nacomed/index.php?action=addNews',
                 type: 'POST',
-                data: 'title=' + artTitle + '&content=' + artContent + '&user=' + self.sessionUser,
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData:false,
                 dataType: 'text',
                 success: function(data) {
+                    console.log(data);
                     switch (data) {
                         case 'title_missing':
                             self.modalText.text('Veuillez écrire un titre');
