@@ -243,7 +243,7 @@ text-transform: uppercase;
 
 /* PAGE ACTUALITES */
 
-.welcome-news {
+.welcome-news, .welcome-map {
   margin-top: 10%;
   margin-bottom: 5%;
 }
@@ -413,6 +413,14 @@ table, td, th {
   margin-top: 4%;
   margin-bottom: 5%
 }
+
+/* PAGE DE GESTION DE LA MAP */
+
+/*#map-form label {
+  display: block;
+  width: 150px;
+  float: left;
+}*/
 
 /* FOOTER */
 
