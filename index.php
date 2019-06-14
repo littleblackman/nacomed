@@ -27,7 +27,39 @@
             case 'displayNews':
                 displayNews();
             break;
+            
+            /* COMMENTAIRES */
+            case 'addComment':
+                $content = trim($_POST['com_content']);
+                $author = trim($_POST['com_author']);
 
+                if (isset($_POST['art_id']) && $_POST['art_id'] > 0) {
+                    if (!empty($content) && !empty($author)) {
+                        echo 'success';
+                        addComment($content, $author, $_POST['art_id']);
+                    } else if (empty($author)) {
+                        echo 'author_missing';
+                    } else if (empty($content)) {
+                        echo 'content_missing';
+                    }
+                } else {
+                    echo 'id_error';
+                }
+            break;
+
+            case 'reportCom':
+                if ((isset($_GET['article_id']) && $_GET['article_id'] > 0) && isset($_GET['com_id'])) {
+                    reportCom($_GET['article_id'], $_GET['com_id']);
+                } else {
+                    echo 'erreur sur article_id ou com_id';
+                }
+            break;
+
+            /* BACKOFFICE */
+
+
+            /* VUES ADMIN */
+            /* DASHBOARD */
             case 'displayAdmin';
                 session_start();
                 if (isset($_SESSION['user'])) {
@@ -37,10 +69,47 @@
                 }
             break;
 
+            /* MAP */
+
+            case 'displayMapMgmt';
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    displayMgmtMap();
+                } else {
+                    displayLoginView();
+                }
+            break;
+
+
+            /* LOGIN */
             case 'login':
                 displayLoginView();
             break;
 
+            case 'adminLogin':
+            if (!empty($_POST['user']) && (!empty($_POST['password']))) {
+                if (logUser($_POST['user'], $_POST['password']) == true) {
+                    logUser($_POST['user'], $_POST['password']);
+                    
+                    session_start();
+                    $_SESSION['user'] = $_POST['user'];
+                    
+                    echo 'success';
+                    exit;
+                } else {
+                    echo 'failed';
+                    exit;
+                }
+            }
+
+            case 'signOut':
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    session_destroy();
+                }
+            break;
+
+            /* GESTION DES NEWS */
             case 'addNews';
                 session_start();
                 $artTitle = trim($_POST['title']);
@@ -127,55 +196,6 @@
             case "deleteArticle":
                 if (isset($_GET['article_id']) && $_GET['article_id'] > 0) {
                     deleteArticle($_GET['article_id']);
-                }
-            break;
-
-            case 'addComment':
-                $content = trim($_POST['com_content']);
-                $author = trim($_POST['com_author']);
-
-                if (isset($_POST['art_id']) && $_POST['art_id'] > 0) {
-                    if (!empty($content) && !empty($author)) {
-                        echo 'success';
-                        addComment($content, $author, $_POST['art_id']);
-                    } else if (empty($author)) {
-                        echo 'author_missing';
-                    } else if (empty($content)) {
-                        echo 'content_missing';
-                    }
-                } else {
-                    echo 'id_error';
-                }
-            break;
-
-            case 'reportCom':
-                if ((isset($_GET['article_id']) && $_GET['article_id'] > 0) && isset($_GET['com_id'])) {
-                    reportCom($_GET['article_id'], $_GET['com_id']);
-                } else {
-                    echo 'erreur sur article_id ou com_id';
-                }
-            break;
-
-            case 'adminLogin':
-            if (!empty($_POST['user']) && (!empty($_POST['password']))) {
-                if (logUser($_POST['user'], $_POST['password']) == true) {
-                    logUser($_POST['user'], $_POST['password']);
-                    
-                    session_start();
-                    $_SESSION['user'] = $_POST['user'];
-                    
-                    echo 'success';
-                    exit;
-                } else {
-                    echo 'failed';
-                    exit;
-                }
-            }
-
-            case 'signOut':
-                session_start();
-                if (isset($_SESSION['user'])) {
-                    session_destroy();
                 }
             break;
 
