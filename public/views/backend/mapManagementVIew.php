@@ -44,11 +44,11 @@
                 </div>
 
                 <div class="col-lg-10 area-map">
-                    <form class="form-group" id="map-form" method="post" action="/nacomed/index.php?action=addMarker">
+                    <form class="form-group" id="map-form" method="post" action="/nacomed/index.php?action=addEvent">
                         <label for="name">Nom de l'évènement : </label><input class="form-control" type="text" id="name" name="name" /><br/>
                         <label for="lng">Longitude : </label><input class="form-control" type="text" id="lng" name="lng" /><br/>
                         <label for="lat">Lattitude : </label><input class="form-control" type="text" id="lat" name="lat" /><br>
-                        <label for="ville">Ville : </label><input class="form-control" type="text" id="ville" name="ville" /><br>
+                        <label for="city">Ville : </label><input class="form-control" type="text" id="city" name="city" /><br>
 
                         <input type="submit" id="mapFormSubmit" name="mapFormSubmit" value="Envoyer" />
                     </form>
@@ -59,14 +59,19 @@
             </div>
         </div>
 
+    <div id="modal_map" class="modal">
+        <div class="modal_content">
+            <p id="modal_text"></p>
+        </div>
+    </div>
 
     <?php require('./public/views/footer.php'); ?>
 
     <!-- JavaScript files-->
-    <script src="/nacomed/js/gmap.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMYjmQOsX1wZFkHJECVFrCZet0FJYK9kg&callback=initMap"></script>
-    
-
+    <script src="/nacomed/js/gmap.js"></script>
+    <script src="/nacomed/js/eventAdder.js"></script>
+    <script src="/nacomed/js/controllers/eventAdder.js"></script>
     
     
     </body>
