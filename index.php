@@ -60,7 +60,7 @@
 
             /* VUES ADMIN */
             /* DASHBOARD */
-            case 'displayAdmin';
+            case 'displayAdmin':
                 session_start();
                 if (isset($_SESSION['user'])) {
                     displayAdmin();
@@ -71,10 +71,46 @@
 
             /* MAP */
 
-            case 'displayMapMgmt';
+            case 'displayMapMgmt':
                 session_start();
                 if (isset($_SESSION['user'])) {
                     displayMgmtMap();
+                } else {
+                    displayLoginView();
+                }
+            break;
+
+            case 'displayMapEvents':
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    displayMapEvents();
+                } else {
+                    displayLoginView();
+                }
+            break;
+
+            case 'addEvent':
+                session_start();
+                $name = $_POST['name'];
+                $lat = $_POST['lat'];
+                $lng = $_POST['lng'];
+
+                if (isset($_SESSION['user'])) {
+                    if (!empty($name) && !empty($lat) && !empty($lng)) {
+                        addEvent($name, $lat, $lng);
+                    } else if (empty($name)) {
+                        echo 'name_missing';
+                        exit;
+                    } else if (empty($lat)) {
+                        echo 'lat_missing';
+                        exit;
+                    } else if (empty($lng)) {
+                        echo 'lng_missing';
+                        exit;
+                    } else {
+                        echo 'fatal_error';
+                        exit;
+                    }
                 } else {
                     displayLoginView();
                 }
@@ -110,7 +146,7 @@
             break;
 
             /* GESTION DES NEWS */
-            case 'addNews';
+            case 'addNews':
                 session_start();
                 $artTitle = trim($_POST['title']);
                 $artContent = trim($_POST['content']);
