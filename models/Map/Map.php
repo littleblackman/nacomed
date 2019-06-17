@@ -3,10 +3,10 @@
 class Map {
     
     // Décalaration des attributs
-    private $_id;
-    private $_name;
-    private $_lat;
-    private $_lng;
+    private $_event_id;
+    private $_event_name;
+    private $_event_lat;
+    private $_event_lng;
 
     public function __construct(array $data) {
         $this->hydrate($data);
@@ -24,42 +24,42 @@ class Map {
     }
 
     // Déclaration des getters (accesseurs)
-    public function id() {
-        return $this->_id;
+    public function event_id() {
+        return $this->_event_id;
     }
 
-    public function name() {
-        return $this->_name;
+    public function event_name() {
+        return $this->_event_name;
     }
 
-    public function lat() {
-        return $this->_lat;
+    public function event_lat() {
+        return $this->_event_lat;
     }
 
-    public function lng() {
-        return $this->_lng;
+    public function event_lng() {
+        return $this->_event_lng;
     }
 
     // Déclaration des setters (mutateurs)
-    public function setId($id) {
-        $id = (int) $id;
-        if ($id > 0) {
-            $this->_id = $id;
+    public function setEvent_id($event_id) {
+        $event_id = (int) $event_id;
+        if ($event_id > 0) {
+            $this->_event_id = $event_id;
         }
     }
 
-    public function setName($name) {
-        if (is_string($$name)) {
-            $this->_name = $name;
+    public function setEvent_name($event_name) {
+        if (is_string($event_name)) {
+            $this->_event_name = $event_name;
         }
     }
-    public function setLat($lat) {
-        $lat = floatval($lat);
-            $this->_lat = $lat;
+    public function setEvent_lat($event_lat) {
+        $lat = floatval($event_lat);
+            $this->_event_lat = $event_lat;
     }
 
-    public function setLng($lng) {
-        $lng = floatval($lng);
-            $this->_lng = $lng;
+    public function setEvent_lng($event_lng) {
+        $lng = floatval($event_lng);
+            $this->_event_lng = $event_lng;
     }
 }
