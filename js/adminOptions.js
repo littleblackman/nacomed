@@ -5,6 +5,7 @@ var option = {
     mapMgmtBtn: $('#map-mgmt'),
     comMgmtBtn: $('#com-mgmt'),
     newsCreationBtn: $('#news-creation'),
+    listEventsBtn: $('#events-list'),
 
     init: function() {
         var self = this;
@@ -23,6 +24,10 @@ var option = {
     
         self.mapMgmtBtn.click(function() {
             window.location.href = "/nacomed/index.php?action=displayMapMgmt";
+        });
+
+        self.listEventsBtn.click(function() {
+            window.location.href = "/nacomed/index.php?action=listMapEvents";
         });
     }
 
