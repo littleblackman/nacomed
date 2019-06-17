@@ -80,7 +80,7 @@
                 }
             break;
 
-            case 'displayMapEvents':
+            case 'listMapEvents':
                 session_start();
                 if (isset($_SESSION['user'])) {
                     displayMapEvents();
