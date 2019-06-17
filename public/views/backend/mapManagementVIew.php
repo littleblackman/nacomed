@@ -1,3 +1,9 @@
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,7 +38,7 @@
                     <header>
                         <h1>Bienvenue sur la page de gestion de la map</h1>
                     </header>    
-                    <p>Placez un nouveau marqueur ou consulter la liste existante pour les éditer</p>
+                    <p class="font-italic">Placez un nouveau marqueur ou consulter la liste existante pour les éditer</p>
                 </div>
             </div>
         </div>
@@ -40,7 +46,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 actions">
-                    <button id="event-list">Liste des events</button>
+                    <button id="events-list">Liste des events</button>
                 </div>
 
                 <div class="col-lg-10 area-map">
@@ -70,6 +76,8 @@
     <!-- JavaScript files-->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMYjmQOsX1wZFkHJECVFrCZet0FJYK9kg&callback=initMap"></script>
     <script src="/nacomed/js/gmap.js"></script>
+    <script src="/nacomed/js/adminOptions.js"></script>
+    <script src="/nacomed/js/controllers/adminOptions.js"></script>
     <script src="/nacomed/js/eventAdder.js"></script>
     <script src="/nacomed/js/controllers/eventAdder.js"></script>
     
