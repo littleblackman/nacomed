@@ -284,11 +284,16 @@ text-transform: uppercase;
 .pdf-download {
   display: flex;
   flex-direction: column;
+  margin-top: 5%
 }
 
 .pdf {
   margin-left: auto;
   margin-right: auto;
+}
+
+.boat-program {
+  margin-top: 5%;
 }
 
 table.table-program {
@@ -305,11 +310,8 @@ table, td, th {
 
 /* Map */
 
-#map {
-  height: 650px;
-  width: 650px;
-  margin-left: auto;
-  margin-right: auto;
+.onboard-events-map {
+  margin-top: 5%;
 }
 
 /* FIN PAGE EMBARQUEMENT */
@@ -337,6 +339,10 @@ table, td, th {
 
 .mgmt {
   margin-bottom: 5%;
+}
+
+.program-div {
+  margin-top: 5%;
 }
 
 /* FIN PAGE D'ADMINISTRATION */
@@ -414,7 +420,7 @@ table, td, th {
   margin-bottom: 5%
 }
 
-/* PAGE DEs EVENTS DE LA MAP */
+/* PAGE DES EVENTS DE LA MAP */
 
 .events table {
   width: 100%;
@@ -426,6 +432,12 @@ table, td, th {
 .buttons-map {
   display: flex;
   justify-content: space-around;
+}
+
+/* PAGE DE GESTION DU PROGRAMME DU BATEAU */
+
+.welcome-program {
+  margin-top: 20%;
 }
 
 /* FOOTER */
@@ -461,11 +473,15 @@ table, td, th {
   margin-right: auto;
 }
 
-#modal_text {
+#modal_text, #modal_text_edit {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
+}
+
+#edit_buttons {
+  text-align: center;
 }
 
 .close {
