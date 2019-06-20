@@ -1,4 +1,5 @@
 var option = {
+    programMgmtBtn: $('#program-mgmt'),
     mapMgmtBtn: $('#map-mgmt'),
     editMgmtBtn: $('#edit-mgmt'),
     newsMgmtBtn: $('#news-mgmt'),
@@ -24,6 +25,10 @@ var option = {
     
         self.mapMgmtBtn.click(function() {
             window.location.href = "/nacomed/index.php?action=displayMapMgmt";
+        });
+
+        self.programMgmtBtn.click(function() {
+            window.location.href = "/nacomed/index.php?action=displayProgMgmt";
         });
 
         self.listEventsBtn.click(function() {
