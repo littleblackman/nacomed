@@ -54,6 +54,7 @@
                         <label for="name">Nom de l'évènement : </label><input class="form-control" type="text" id="name" name="name" /><br/>
                         <label for="lng">Longitude : </label><input class="form-control" type="text" id="lng" name="lng" /><br/>
                         <label for="lat">Lattitude : </label><input class="form-control" type="text" id="lat" name="lat" /><br>
+                        <label for="on_date">Date d'embarquement : </label><input class="form-control" type="text" id="on_date" name="on_date" /><br>
                         <label for="city">Ville : </label><input class="form-control" type="text" id="city" name="city" /><br>
 
                         <input type="submit" id="mapFormSubmit" name="mapFormSubmit" value="Envoyer" />
