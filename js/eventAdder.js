@@ -59,13 +59,22 @@ var eventToAdd = {
                             });
                         break;
 
+                        case 'date_missing':
+                            self.modalText.text('Veuillez indiquer une date d\'embarquement');
+                            self.modalMap.show();
+                            self.modalMap.fadeOut(4000, function() {
+                                self.modalText.text('');
+                                self.modalMap.hide();
+                            });
+                        break;
+
                         default:
                             self.modalText.text('L\'évènement a bien été créé');
                             self.modalMap.show();
                             self.modalMap.fadeOut(4000, function() {
                                 self.modalText.text('');
                                 self.modalMap.hide();
-                                window.location.href = "/nacomed/index.php?action=displayMapMgmt";
+                                window.location.href = "/nacomed/index.php?action=listMapEvents";
                             });
                     }
 
