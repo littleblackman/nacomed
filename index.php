@@ -94,10 +94,11 @@
                 $name = $_POST['name'];
                 $lat = $_POST['lat'];
                 $lng = $_POST['lng'];
+                $date = $_POST['on_date'];
 
                 if (isset($_SESSION['user'])) {
-                    if (!empty($name) && !empty($lat) && !empty($lng)) {
-                        addEvent($name, $lat, $lng);
+                    if (!empty($name) && !empty($lat) && !empty($lng) && !empty($date)) {
+                        addEvent($name, $lat, $lng, $date);
                     } else if (empty($name)) {
                         echo 'name_missing';
                         exit;
@@ -106,6 +107,9 @@
                         exit;
                     } else if (empty($lng)) {
                         echo 'lng_missing';
+                        exit;
+                    } else if (empty($date)) {
+                        echo 'date_missing';
                         exit;
                     } else {
                         echo 'fatal_error';
@@ -116,6 +120,54 @@
                 }
             break;
 
+            case 'displayUpdateView':
+                session_start();
+                $id = $_GET['event_id'];
+
+                if (isset($_SESSION['user'])) {
+                    displayEventUpdateView($id);
+                    exit;
+                } else {
+                    displayLoginView();
+                }
+            break;
+
+            case 'updateEvent':
+            session_start();
+            $name = $_POST['name'];
+            $lat = $_POST['lat'];
+            $lng = $_POST['lng'];
+            $date = $_POST['on_date'];
+            $id = $_POST['event_id'];
+
+                if (isset($_SESSION['user'])) {
+                    if (!empty($name) && !empty($lat) && !empty($lng) && !empty($date)) {
+                        updateEvent($name, $lat, $lng, $date, $id);
+                    } else if (empty($name)) {
+                        echo 'name_missing';
+                    } else if (empty($lat)) {
+                        echo 'lat_missing';
+                    } else if (empty($lng)) {
+                        echo 'lng_missing';
+                    } else if (empty($date)) {
+                        echo 'date_missing';
+                    } else {
+                        echo 'fatal_error';
+                    }
+                } else {
+                    displayLoginView();
+                }
+            break;
+
+            case 'deleteEvent':
+            session_start();
+            if (isset($_SESSION['user'])) {
+                deleteEvent($_POST['event_id']);
+            } else {
+                displayLoginView();
+            }
+            break;
+            
 
             /* LOGIN */
             case 'login':
@@ -234,6 +286,16 @@
                     deleteArticle($_GET['article_id']);
                 }
             break;
+
+            /* GESTION DU PROGRAMME DU BATEAU */
+            case 'displayProgMgmt':
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    displayProgMgmt();
+                    exit;
+                } else {
+                    displayLoginView();
+                }
 
             default:
                 displayHome();
