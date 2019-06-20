@@ -66,6 +66,17 @@
                             <button id="com-mgmt">Gérer</button>
                     </header>
                 </div>
+            </div>
+
+            <div class="row program-div">
+                <div class="col-lg-12 text-center">
+                    <header>
+                        <h4>Gestion du programme</h4>
+                            <button id="program-mgmt">Gérer</button>
+                    </header>
+                </div>
+            </div>
+
         </div>
 
 
