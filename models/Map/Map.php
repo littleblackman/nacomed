@@ -7,6 +7,7 @@ class Map {
     private $_event_name;
     private $_event_lat;
     private $_event_lng;
+    private $_onboarding_date;
 
     public function __construct(array $data) {
         $this->hydrate($data);
@@ -40,6 +41,10 @@ class Map {
         return $this->_event_lng;
     }
 
+    public function onboarding_date() {
+        return $this->_onboarding_date;
+    }
+
     // Déclaration des setters (mutateurs)
     public function setEvent_id($event_id) {
         $event_id = (int) $event_id;
@@ -61,5 +66,11 @@ class Map {
     public function setEvent_lng($event_lng) {
         $lng = floatval($event_lng);
             $this->_event_lng = $event_lng;
+    }
+
+    public function setOnboarding_date($onboarding_date) {
+        if (is_string($onboarding_date)) {
+            $this->_onboarding_date = $onboarding_date;
+        }
     }
 }
