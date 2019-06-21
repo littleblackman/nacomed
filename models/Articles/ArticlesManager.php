@@ -34,9 +34,9 @@ class ArticlesManager {
         return $addedArticle;
     }
 
-    public function updateArticle($art_title, $art_content, $art_id) {
-        $q = $this->_db->prepare('UPDATE articles SET art_title = ?, art_content = ?, art_modified_date = NOW() WHERE art_id = ?');
-        $articleToUpdate = $q->execute(array($art_title, $art_content, $art_id));
+    public function updateArticle($art_title, $art_content, $url_img, $art_id) {
+        $q = $this->_db->prepare('UPDATE articles SET art_title = ?, art_content = ?, url_img = ? WHERE art_id = ?');
+        $articleToUpdate = $q->execute(array($art_title, $art_content, $url_img, $art_id));
         return $articleToUpdate;
     }
 
