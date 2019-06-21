@@ -27,6 +27,8 @@
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+        <!-- Google Map -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMYjmQOsX1wZFkHJECVFrCZet0FJYK9kg&callback=initMap"></script>
     </head>
     <body>
         <!-- Navigation -->
@@ -36,9 +38,9 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <header>
-                        <h1>Bienvenue sur la page de gestion de la map</h1>
+                        <h1>Page de mise à jour de la map</h1>
                     </header>    
-                    <p class="font-italic">Placez un nouveau marqueur ou consulter la liste existante pour les éditer</p>
+                    <p class="font-italic">Mettez à jour votre évènement en modifiant ses informations</p>
                 </div>
             </div>
         </div>
@@ -77,7 +79,6 @@
     <?php require('./public/views/footer.php'); ?>
 
     <!-- JavaScript files-->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMYjmQOsX1wZFkHJECVFrCZet0FJYK9kg&callback=initMap"></script>
     <script src="/nacomed/js/gmapEditEvent.js"></script>
     <script src="/nacomed/js/adminOptions.js"></script>
     <script src="/nacomed/js/controllers/adminOptions.js"></script>
