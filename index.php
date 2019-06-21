@@ -168,6 +168,120 @@
             }
             break;
             
+            /* GESTIONNAIRE PROGRAMME BATEAU */
+
+            case 'addProgInfos':
+                session_start();
+
+                $month = $_POST['month'];
+                $week = $_POST['week'];
+
+                $mission = $_POST['mission'];
+                $details_mission = $_POST['details-mission'];
+                $location = $_POST['location'];
+                $available_beds = $_POST['available-beds'];
+                $comments = $_POST['comments'];
+
+                if (isset($_SESSION['user'])) {
+                    if (empty($mission) && empty($details_mission) && empty($location) && empty($available_beds) && empty($comments)) {
+                        echo 'missing_infos';
+                    } else {
+                        if ($month === 'Mai') {
+                            if ($week === '3') {
+                                addProgMayInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'May3';
+                            } else if ($week === '4') {
+                                addProgMayInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'May4';
+                            } else echo 'badMayWeek';
+                        } else if ($month === 'Juin') {
+                            if ($week === '1') {
+                                addProgJunInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jun1';
+                            } else if ($week === '2') {
+                                addProgJunInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jun2';
+                            } else if ($week === '3') {
+                                addProgJunInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jun3';
+                            } else if ($week === '4') {
+                                addProgJunInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jun4';
+                            } else {
+                                echo 'badJuneWeek';
+                            }
+                        } else if ($month === 'Juillet') {
+                            if ($week === '1') {
+                                addProgJulInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jul1';
+                            } else if ($week === '2') {
+                                addProgJulInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jun2';
+                            } else if ($week === '3') {
+                                addProgJulInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jul3';
+                            } else if ($week === '4') {
+                                addProgJulInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jul4';
+                            } else {
+                                echo 'badJulyWeek';
+                            }
+                        } else if ($month === 'Aout') {
+                            if ($week === '1') {
+                                addProgAugInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Aug1';
+                            } else if ($week === '2') {
+                                addProgAugInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Aug2';
+                            } else if ($week === '3') {
+                                addProgAugInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Aug3';
+                            } else if ($week === '4') {
+                                addProgJulInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Aug4';
+                            } else {
+                                echo 'badAugWeek';
+                            }
+                        } else if ($month === 'Septembre') {
+                            if ($week === '1') {
+                                addProgSepInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Sep1';
+                            } else if ($week === '2') {
+                                addProgSepInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Sep2';
+                            } else if ($week === '3') {
+                                addProgSepInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Sep3';
+                            } else if ($week === '4') {
+                                addProgSepInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Sep4';
+                            } else {
+                                echo 'badSepWeek';
+                            } 
+                        } else if ($month === 'Octobre') {
+                            if ($week === '1') {
+                                addProgOctInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Oct1';
+                            } else if ($week === '2') {
+                                addProgOctInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Oct2';
+                            } else if ($week === '3') {
+                                addProgOctInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Oct3';
+                            } else if ($week === '4') {
+                                addProgOctInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Oct4';
+                            } else {
+                                echo 'badOctWeek';
+                            }
+                    } else {
+                        echo 'badMonth';
+                    }}   
+                } else {
+                    displayLoginView();
+                }
+            break;
+
 
             /* LOGIN */
             case 'login':
@@ -204,7 +318,7 @@
                 $artContent = trim($_POST['content']);
 
                 if (isset($_SESSION['user'])) {
-                    if (!empty($artTitle) && !empty($artContent) && !empty($_FILES)) {
+                    if (!empty($artTitle) && !empty($artContent)) {
                         $img = $_FILES['img'];
                         $url_img = "img/news/".$img['name'];
                         $ext = strtolower(substr($img['name'],-3));
@@ -258,14 +372,25 @@
 
             case 'updateArticle':
                 session_start();
+                $art_id = $_POST['art_id'];
+
                 if (isset($_SESSION['user'])) {
-                    if (isset($_GET['article_id']) && $_GET['article_id'] > 0) {
+                    if (isset($art_id) && $art_id > 0) {
                         $title = trim($_POST['title']);
                         $content = trim($_POST['content']);
 
                         if (!empty($title) && !empty($content)) {
-                            updateArticle($title, $content, $_GET['article_id']);
-                            echo $_GET['article_id'];
+                        $img = $_FILES['img'];
+                        $url_img = "img/news/".$img['name'];
+                        $ext = strtolower(substr($img['name'],-3));
+                        $allow_ext = array("jpg",'png','gif');
+                        if(in_array($ext,$allow_ext)) {
+                            move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
+                            $artId = updateArticle($title, $content, $url_img, $art_id);
+                            echo $art_id;
+                        } else {
+                            echo "Votre fichier n'est pas une image";
+                        }
                         } else if (empty($title) && empty($content)) {
                             echo 'failed';
                         } else if (empty($title) && !empty($content)) {
