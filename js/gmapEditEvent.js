@@ -58,9 +58,7 @@ $(function() {
     });
 
     var event_id = $('#event_id').attr('value');
-    console.log(event_id);
 
-    console.log($('#updateFormSubmit'));
     $('#event-update-form').on('submit', function(e) {
         e.preventDefault(); 
         
@@ -74,8 +72,6 @@ $(function() {
             processData:false,
             dataType: 'text',
             success: function(data) {
-                console.log(data);
-                
                 switch(data) {
                     case 'name_missing':
                         $('#modal_text').text('Renseignez un nom pour l\'event');
@@ -122,7 +118,6 @@ $(function() {
                             window.location.href = "/nacomed/index.php?action=listMapEvents";
                         });
                 }
-    
             },
             error: function() {
                 console.log('erreur ajax');
