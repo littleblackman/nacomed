@@ -90,6 +90,8 @@ $(function() {
                     data: 'event_id=' + event_id,
                     dataType: 'text',
                     success: function(data) {
+                        $('#yes').hide();
+                        $('#no').hide();
                         $('#modal_text_edit').text('L\'évènement a bien été supprimé');
                         $('#modal_edit').show();
                         $('#modal_edit').fadeOut(4000, function() {
@@ -102,13 +104,15 @@ $(function() {
             });
 
             $('#no').click(function() {
+                $('#yes').hide();
+                $('#no').hide();
                 $('#modal_text_edit').text('L\'évènement n\'a pas été supprimé');
-                    $('#modal_edit').show();
-                    $('#modal_edit').fadeOut(4000, function() {
-                        $('#modal_text_edit').text('');
-                        $('#modal_edit').hide();
-                        window.location.href = "/nacomed/index.php?action=listMapEvents";
-                    });
+                $('#modal_edit').show();
+                $('#modal_edit').fadeOut(4000, function() {
+                    $('#modal_text_edit').text('');
+                    $('#modal_edit').hide();
+                    window.location.href = "/nacomed/index.php?action=listMapEvents";
+                });
             });
 
         });

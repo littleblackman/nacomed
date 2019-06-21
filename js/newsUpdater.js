@@ -1,6 +1,7 @@
 var articleToUpdate = {
     sessionUser: sUser,
     articleId: $('#art_id').val(),
+    newsUpdateForm: $('#news-update-form'),
     artUpdateBtn: $('#art_update_btn'),
     modalUpdate: $('#modal_update'),
     modalText: $('#modal_text'),
@@ -15,16 +16,19 @@ var articleToUpdate = {
             } 
         });
 
-        self.artUpdateBtn.click(function(e) {
+        self.newsUpdateForm.on('submit', function(e) {
             e.preventDefault();
 
             var artTitle = tinyMCE.get('art_title').getContent();
             var artContent = tinyMCE.get('art_content').getContent();
 
             $.ajax({
-                url: './index.php?action=updateArticle&article_id=' + self.articleId,
+                url: './index.php?action=updateArticle',
                 type: 'POST',
-                data: 'title=' + artTitle + '&content=' + artContent,
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData:false,
                 dataType: 'text',
                 success: function(data) {
                     switch (data) {
