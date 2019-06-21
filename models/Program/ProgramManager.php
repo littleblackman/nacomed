@@ -94,6 +94,36 @@ class ProgramManager {
         return $row;
     }
 
+    public function addProgMay($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_may SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
+    public function addProgJun($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_jun SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
+    public function addProgJul($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_jul SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
+    public function addProgAug($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_aug SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
+    public function addProgSep($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_sep SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
+    public function addProgOct($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_oct SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
     public function setDb(PDO $db) {
         $this->_db = $db;
     }
