@@ -46,33 +46,45 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <form class="form-group" id="program-form" method="post" action="/nacomed/index.php?action=addProgramInfos">
+                    <form class="form-group" id="program-form" method="post" action="/nacomed/index.php?action=addProgInfos">
                         <label for="month">Sélectionner un mois</label>
-                            <select>
-                                <option>Mai</option>
-                                <option>Juin</option>
-                                <option>Juillet</option>
-                                <option>Août</option>
-                                <option>Septembre</option>
-                                <option>Octobre</option>
+                            <select name="month" id="month">
+                                <option id="may">Mai</option>
+                                <option id="jun">Juin</option>
+                                <option id="jul">Juillet</option>
+                                <option id="aug">Aout</option>
+                                <option id="sep">Septembre</option>
+                                <option id="oct">Octobre</option>
                             </select><br>
                         <label for="week">Sélectionner un numéro de semaine</label>
-                            <select>
-                                <option>Semaine 1</option>
-                                <option>Semaine 2</option>
-                                <option>Semaine 3</option>
-                                <option>Semaine 4</option>
+                            <select name="week" id="week">
+                                <option id="week1">1</option>
+                                <option id="week2">2</option>
+                                <option id="week3">3</option>
+                                <option id="week4">4</option>
                             </select><br>
                         <label for="mission">Mission :</label><input class="form-control" type="text" id="mission" name="mission" placeholder="Infos de mission" /><br>
                         <label for="details-mission">Détails de mission :</label><input class="form-control" type="text" id="details-mission" name="details-mission" placeholder="Détails de mission" /><br>
                         <label for="location">Localisation :</label><input class="form-control" type="text" id="location" name="location" placeholder="Localisation" /><br>
                         <label for="available-beds">Nombre de banettes disponible(s) :</label><input class="form-control" type="text" id="available-beds" name="available-beds" placeholder="nombre de banettes" /><br>
                         <label for="comments">Remarques :</label><input class="form-control" type="text" id="comments" name="comments" placeholder="Remarques" /><br>
+                        <input type="submit" id="progFormSubmit" value="Envoyer" />
                     </form>
                 </div>
             </div>
 
+            <div id="modal_prog" class="modal">
+                <div class="modal_content">
+                    <p id="modal_text"></p>
+                </div>
+            </div>
+        </div>
+
 
         <?php require('./public/views/footer.php'); ?>
+
+        <!-- JavaScript files-->
+        <script src="/nacomed/js/programInfosAdder.js"></script>
+        <script src="/nacomed/js/controllers/programInfosAdder.js"></script>
     </body>
 </html>
