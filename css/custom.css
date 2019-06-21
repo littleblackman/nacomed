@@ -304,6 +304,10 @@ table, td, th {
   border: 1px solid black;
 }
 
+.end-tr {
+  display: table-column-group;
+}
+
 .banets {
   width: 16%;
 }
@@ -369,10 +373,31 @@ table, td, th {
 
 /* PAGE DE NEWS (UNE NEWS) */
 
+.news-display {
+  display: flex;
+  flex-direction: column;
+}
+
 .news-view {
   display: flex;
   flex-direction: column;
   margin-top: 10%;
+}
+
+.news-img {
+  display: flex;
+}
+
+.news-img img {
+  position: relative;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news-heading {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #add_com {
@@ -399,6 +424,24 @@ table, td, th {
 
 #com_submit_btn {
   margin-left: auto;
+}
+
+#comments {
+  background-color: cornflowerblue;
+  margin-top: 5%;
+}
+
+.com_heading {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.comment_content {
+  background-color: aliceblue;
+  padding: 25px;
+  border-radius: 25px;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 /* PAGE D'EDITION DES NEWS */
