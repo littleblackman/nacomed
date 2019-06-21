@@ -50,7 +50,7 @@
             </div>
 
             <div class="row text-center">
-                <form class="article_form" action="./index.php?action=updateArticle&amp;article_id=<?php echo $_GET['article_id']; ?>" method="post">
+                <form id="news-update-form" class="article_form" action="./index.php?action=updateArticle" method="post" enctype="multipart/form-data">
                     <p>Titre du billet :</p>
                         <textarea class="content" id="art_title" name="title">
                             <?php echo $article->art_title(); ?>
@@ -59,6 +59,7 @@
                         <textarea class="content" id="art_content" name="content">
                             <?php echo $article->art_content(); ?> 
                         </textarea></br>
+                        <input type="file" name="img" id="img" /><br>   
                         <input type="hidden" name="art_id" id="art_id" value="<?php echo $article->art_id(); ?>" />
                         <input id="art_update_btn" name="art_send" type="submit" value="Envoyer" />
                 </form>
