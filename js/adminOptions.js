@@ -27,6 +27,10 @@ var option = {
             window.location.href = "./index.php?action=displayMapMgmt";
         });
 
+        self.comMgmtBtn.click(function() {
+            window.location.href = "./index.php?action=displayRepComs";
+        });
+
         self.programMgmtBtn.click(function() {
             window.location.href = "./index.php?action=displayProgMgmt";
         });
