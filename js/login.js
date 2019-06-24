@@ -1,4 +1,5 @@
 var loginValid = {
+    loginForm: $('#login_form'),
     userLogin: $('#user_login'),
     userPass: $('#user_password'),
     loginBtn: $('#login_btn'),
@@ -8,7 +9,8 @@ var loginValid = {
 
     init: function() {
         var self = this;
-        self.loginBtn.click(function(e) {
+
+        self.loginForm.on('submit', function(e) {
             e.stopPropagation();
             e.preventDefault();
 
@@ -26,16 +28,20 @@ var loginValid = {
             
 
             $.ajax({                
-                url: 'index.php?action=adminLogin',
+                url: './index.php?action=adminLogin',
                 type: 'POST',
-                data: 'user=' + self.userLogin.val() + '&password=' + self.userPass.val(),
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData:false,
                 dataType: 'text',
                 success: function(data) {
+                    console.log(data);
                     if (data == 'success') {
                         self.modalText.text('Heureux de vous revoir ' + self.userLogin.val() + '.');
                         self.modal.show();
                         self.modal.fadeOut(4000, function() {
-                            window.location.href = "index.php?action=displayAdmin";
+                            window.location.href = "./index.php?action=displayAdmin";
                         });
                     } else if (data == 'failed') {
                         self.modalText.text('Echec d\'authentfication : mauvais identifiants.');

@@ -68,10 +68,10 @@
                         <?php
                             if (isset($_SESSION['user'])) {
                                 $sessionUser = $_SESSION['user'];
-                                echo '<li class="nav-item admin-link"><a class="nav-link" href="/nacomed/index.php?action=displayAdmin">Administration</a></li>';
-                                echo '<li class="nav-item logout"><a id ="signOut_link" class="nav-link" href="/nacomed/index.php?action=signOut">Déconnexion</a></li>';
+                                echo '<li class="nav-item admin-link"><a class="nav-link" href="./index.php?action=displayAdmin">Administration</a></li>';
+                                echo '<li class="nav-item logout"><a id ="signOut_link" class="nav-link" href="./index.php?action=signOut">Déconnexion</a></li>';
                             } else {
-                                echo '<li class="nav-item login"><a class="nav-link" href="/nacomed/index.php?action=login">Connexion</a></li>';
+                                echo '<li class="nav-item login"><a class="nav-link" href="./index.php?action=login">Connexion</a></li>';
                             }
                         ?>
                     </ul>

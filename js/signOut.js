@@ -13,12 +13,12 @@ var signOut = {
             self.modalLogOut.show();
 
             $.ajax({
-                url: '/nacomed/index.php?action=signOut',
+                url: './index.php?action=signOut',
                 type: 'GET',
                 success: function() {
                     self.modalLogOut.fadeOut(4000, function() {
                         self.modalLogOut.hide();
-                        window.location.href = "/nacomed/index.php";
+                        window.location.href = "./index.php";
                     });
                 }
             });

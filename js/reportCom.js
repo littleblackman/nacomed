@@ -21,7 +21,7 @@ var comToReport = {
             self.resetModal();
 
             $.ajax({
-                url: '/nacomed/index.php?action=reportCom',
+                url: './index.php?action=reportCom',
                 type: 'GET',
                 data: 'article_id=' + artId + '&com_id=' + comId,
                 dataType: 'text',
@@ -31,7 +31,7 @@ var comToReport = {
                     self.modalCom.fadeOut(4000, function() {
                         self.modalText.text('');
                         self.modalCom.hide();
-                        window.location.href = "/nacomed/index.php?action=getArticle&article_id=" + self.artId;
+                        window.location.href = "./index.php?action=getArticle&article_id=" + self.artId;
                     });
                 }
             });

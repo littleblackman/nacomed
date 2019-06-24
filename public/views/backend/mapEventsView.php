@@ -107,7 +107,7 @@
     <?php require('./public/views/footer.php'); ?>
 
     <!-- JavaScript files-->
-    <script src="/nacomed/js/gmapEvents.js"></script>
+    <script src="./js/gmapEvents.js"></script>
 
     </body>
 </html>

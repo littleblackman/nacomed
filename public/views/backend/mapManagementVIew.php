@@ -77,11 +77,11 @@
     <?php require('./public/views/footer.php'); ?>
 
     <!-- JavaScript files-->
-    <script src="/nacomed/js/gmap.js"></script>
-    <script src="/nacomed/js/adminOptions.js"></script>
-    <script src="/nacomed/js/controllers/adminOptions.js"></script>
-    <script src="/nacomed/js/eventAdder.js"></script>
-    <script src="/nacomed/js/controllers/eventAdder.js"></script>
+    <script src="./js/gmap.js"></script>
+    <script src="./js/adminOptions.js"></script>
+    <script src="./js/controllers/adminOptions.js"></script>
+    <script src="./js/eventAdder.js"></script>
+    <script src="./js/controllers/eventAdder.js"></script>
     
     
     </body>

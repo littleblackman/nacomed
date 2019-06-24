@@ -84,7 +84,7 @@
         <?php require('./public/views/footer.php'); ?>
 
         <!-- JavaScript files-->
-        <script src="/nacomed/js/programInfosAdder.js"></script>
-        <script src="/nacomed/js/controllers/programInfosAdder.js"></script>
+        <script src="./js/programInfosAdder.js"></script>
+        <script src="./js/controllers/programInfosAdder.js"></script>
     </body>
 </html>

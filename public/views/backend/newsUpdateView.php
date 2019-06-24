@@ -14,14 +14,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
         <!-- Bootstrap CSS-->
-        <link rel="stylesheet" href="/nacomed/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
         <!-- Google fonts-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo:400,400i">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
         <!-- Font Awesome-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <!-- Custom stylesheet - for your changes-->
-        <link rel="stylesheet" href="/nacomed/css/custom.css">
+        <link rel="stylesheet" href="./css/custom.css">
         <!-- Favicon-->
         <link rel="shortcut icon" href="favicon.png">
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -29,7 +29,7 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
         <!-- TinyMCE -->
         <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=0ofr5ymckej6ac4mcq2doqoozjut2zifnyjjfp067bqy5s12"></script>
-        <script src="/nacomed/js/tinymce/default_editor.js"></script>
+        <script src="./js/tinymce/default_editor.js"></script>
     </head>
 
     <body>
@@ -78,8 +78,8 @@
 
         <script>tinymce.init({ selector: 'content' });</script>
         <script>var sUser = '<?php echo $_SESSION['user']; ?>'; console.log(sUser);</script>
-        <script src="/nacomed/js/scroll_nav.js"></script>
-        <script src="/nacomed/js/newsUpdater.js"></script>
-        <script src="/nacomed/js/controllers/newsUpdater.js"></script>
+        <script src="./js/scroll_nav.js"></script>
+        <script src="./js/newsUpdater.js"></script>
+        <script src="./js/controllers/newsUpdater.js"></script>
     </body>
 </html>

@@ -79,9 +79,9 @@
     <?php require('./public/views/footer.php'); ?>
 
     <!-- JavaScript files-->
-    <script src="/nacomed/js/gmapEditEvent.js"></script>
-    <script src="/nacomed/js/adminOptions.js"></script>
-    <script src="/nacomed/js/controllers/adminOptions.js"></script>
+    <script src="./js/gmapEditEvent.js"></script>
+    <script src="./js/adminOptions.js"></script>
+    <script src="./js/controllers/adminOptions.js"></script>
     
     </body>
 </html>

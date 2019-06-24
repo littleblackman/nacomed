@@ -8,14 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
         <!-- Bootstrap CSS-->
-        <link rel="stylesheet" href="/nacomed/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
         <!-- Google fonts-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo:400,400i">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
         <!-- Font Awesome-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <!-- Custom stylesheet - for your changes-->
-        <link rel="stylesheet" href="/nacomed/css/custom.css">
+        <link rel="stylesheet" href="./css/custom.css">
         <!-- Favicon-->
         <link rel="shortcut icon" href="favicon.png">
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -64,7 +64,7 @@
         <?php require('./public/views/footer.php'); ?>
 
         <!-- JavaScript files-->
-        <script src="/nacomed/js/login.js"></script>
+        <script src="./js/login.js"></script>
         <script>$(function() {
                     var login = Object.create(loginValid);
                     login.init();

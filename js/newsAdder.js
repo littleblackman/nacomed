@@ -20,7 +20,7 @@ var articleToAdd = {
             e.preventDefault();  
             
             $.ajax({
-                url: '/nacomed/index.php?action=addNews',
+                url: '../../../index.php?action=addNews',
                 type: 'POST',
                 data: new FormData(this),
                 contentType: false,
@@ -64,7 +64,7 @@ var articleToAdd = {
                             self.modalCreate.fadeOut(4000, function() {
                                 self.modalText.text('');
                                 self.modalCreate.hide();
-                                window.location.href = "/nacomed/index.php?action=getArticle&article_id=" + data;
+                                window.location.href = "../../../index.php?action=getArticle&article_id=" + data;
                             });
                              
                     }

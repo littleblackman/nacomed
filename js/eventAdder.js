@@ -21,7 +21,7 @@ var eventToAdd = {
             e.preventDefault(); 
 
             $.ajax({
-                url: '/nacomed/index.php?action=addEvent',
+                url: './index.php?action=addEvent',
                 type: 'POST',
                 data: new FormData(this),
                 contentType: false,
@@ -74,7 +74,7 @@ var eventToAdd = {
                             self.modalMap.fadeOut(4000, function() {
                                 self.modalText.text('');
                                 self.modalMap.hide();
-                                window.location.href = "/nacomed/index.php?action=listMapEvents";
+                                window.location.href = "./index.php?action=listMapEvents";
                             });
                     }
 

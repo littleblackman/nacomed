@@ -56,7 +56,7 @@ $(function() {
             e.preventDefault();
 
             $.ajax({
-                url: '/nacomed/index.php?action=displayUpdateView',
+                url: './index.php?action=displayUpdateView',
                 type: 'POST',
                 data: 'event_id=' + event_id,
                 dataType: 'text',
@@ -66,7 +66,7 @@ $(function() {
                         $('#modal_map').fadeOut(4000, function() {
                             $('#modal_text').text('');
                             $('#modal_map').hide();
-                            window.location.href = "/nacomed/index.php?action=displayUpdateView&event_id=" + event_id;
+                            window.location.href = "./index.php?action=displayUpdateView&event_id=" + event_id;
                         });
                 }
             });
@@ -85,7 +85,7 @@ $(function() {
                 e.preventDefault();
 
                 $.ajax({
-                    url: '/nacomed/index.php?action=deleteEvent',
+                    url: './index.php?action=deleteEvent',
                     type: 'POST',
                     data: 'event_id=' + event_id,
                     dataType: 'text',
@@ -97,7 +97,7 @@ $(function() {
                         $('#modal_edit').fadeOut(4000, function() {
                             $('#modal_text_edit').text('');
                             $('#modal_edit').hide();
-                            window.location.href = "/nacomed/index.php?action=listMapEvents";
+                            window.location.href = "./index.php?action=listMapEvents";
                         });
                     }
                 });
@@ -111,7 +111,7 @@ $(function() {
                 $('#modal_edit').fadeOut(4000, function() {
                     $('#modal_text_edit').text('');
                     $('#modal_edit').hide();
-                    window.location.href = "/nacomed/index.php?action=listMapEvents";
+                    window.location.href = "./index.php?action=listMapEvents";
                 });
             });
 

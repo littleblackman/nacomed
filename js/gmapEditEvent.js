@@ -64,7 +64,7 @@ $(function() {
         
     
         $.ajax({
-            url: '/nacomed/index.php?action=updateEvent',
+            url: './index.php?action=updateEvent',
             type: 'POST',
             data: new FormData(this),
             contentType: false,
@@ -115,7 +115,7 @@ $(function() {
                         $('#modal_map').fadeOut(4000, function() {
                             $('#modal_text').text('');
                             $('#modal_map').hide();
-                            window.location.href = "/nacomed/index.php?action=listMapEvents";
+                            window.location.href = "./index.php?action=listMapEvents";
                         });
                 }
             },

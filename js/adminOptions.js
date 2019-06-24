@@ -12,27 +12,27 @@ var option = {
         var self = this;
 
         self.newsMgmtBtn.click(function() {
-            window.location.href = "/nacomed/public/views/backend/newsManagementView.php";
+            window.location.href = "./public/views/backend/newsManagementView.php";
         });
 
         self.newsCreationBtn.click(function() {
-            window.location.href = "/nacomed/public/views/backend/newsCreationView.php";
+            window.location.href = "./newsCreationView.php";
         });
 
         self.editMgmtBtn.click(function() {
-            window.location.href = "/nacomed/index.php?action=listArticlesToEdit";
+            window.location.href = "../../../index.php?action=listArticlesToEdit";
         });
     
         self.mapMgmtBtn.click(function() {
-            window.location.href = "/nacomed/index.php?action=displayMapMgmt";
+            window.location.href = "./index.php?action=displayMapMgmt";
         });
 
         self.programMgmtBtn.click(function() {
-            window.location.href = "/nacomed/index.php?action=displayProgMgmt";
+            window.location.href = "./index.php?action=displayProgMgmt";
         });
 
         self.listEventsBtn.click(function() {
-            window.location.href = "/nacomed/index.php?action=listMapEvents";
+            window.location.href = "./index.php?action=listMapEvents";
         });
     }
 

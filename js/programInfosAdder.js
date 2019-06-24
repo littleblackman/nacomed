@@ -17,7 +17,7 @@ var programInfos = {
             e.preventDefault(); 
 
             $.ajax({
-                url: '/nacomed/index.php?action=addProgInfos',
+                url: './index.php?action=addProgInfos',
                 type: 'POST',
                 data: new FormData(this),
                 contentType: false,

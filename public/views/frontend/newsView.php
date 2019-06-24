@@ -76,7 +76,7 @@
                 </div>
             </form>
 
-            <div id="comments">
+            <div id="comments-area">
                 <p class="com_heading">Commentaires :</p>
                     <?php foreach ($comments as $comment) {
                         $censoredCommentClass = $comment->com_report_number() > 0 ? "comment_censored" : "";
@@ -105,7 +105,7 @@
         <!-- JavaScript files-->
         <script src="./js/scroll_nav.js"></script>
         <script src="./js/commentAdder.js"></script>
-        <script src="/nacomed/js/reportCom.js"></script>
+        <script src="./js/reportCom.js"></script>
         <script src="./js/controllers/newsView.js"></script>
 
     </body>
