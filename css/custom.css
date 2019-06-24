@@ -477,6 +477,36 @@ table, td, th {
   justify-content: space-around;
 }
 
+/* PAGE DES COMMENTAIRES SIGANLES */
+
+.reported_comments {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20%;
+}
+
+.rep-coms-list {
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reported-com {
+  display: flex;
+  flex-direction: column;
+}
+
+.del_btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal_del_content {
+  display: flex;
+  flex-direction: column;
+}
+
 /* PAGE DE GESTION DU PROGRAMME DU BATEAU */
 
 .welcome-program {
