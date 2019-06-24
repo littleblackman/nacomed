@@ -69,6 +69,27 @@
                 }
             break;
 
+            /* COMMENTAIRES SIGNALES */
+
+            case 'displayRepComs':
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    getReportedComs();
+                } else {
+                    displayLoginView();
+                }
+            break;
+
+            case 'deleteCom':
+                session_start();
+                if (isset($_SESSION['user']) && isset($_POST['com_id'])) {
+                    deleteCom($_POST['com_id']);
+                    echo 'success';
+                } else {
+                    displayLoginView();
+                }
+            break;
+
             /* MAP */
 
             case 'displayMapMgmt':
