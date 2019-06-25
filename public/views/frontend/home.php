@@ -30,6 +30,8 @@
         <link rel="stylesheet" href="./css/style.blue.css" id="theme-stylesheet">
         <!-- Custom stylesheet - for your changes-->
         <link rel="stylesheet" href="./css/custom.css">
+        <!-- Lightbox -->
+        <link rel="stylesheet" href="./vendor/lightbox2/css/lightbox.css">
         <!-- Favicon-->
         <link rel="shortcut icon" href="favicon.png">
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -39,7 +41,7 @@
     <body>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
+            <div class="container home-navbar">
                 <a class="logo navbar-brand" href="./index.php"><img src="./img/logo_nacomed.png" /></a>
                     <button class="menu_btn navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         Menu
@@ -58,7 +60,7 @@
                             <a class="nav-link" href="./index.php?action=displayOnboard">Embarquement</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.php?action=displayContact">Nous soutenir</a>
+                            <a class="nav-link support-link" href="./index.php?action=displayContact">Nous soutenir</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./index.php?action=displayContact">Contact</a>
@@ -179,12 +181,12 @@
                         
                         <div class="carousel">
                             <div class="owl-carousel owl-theme">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_jour.jpg" alt="" style="height: 600px; width: 100%">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_profil_gauche.jpg" alt="" style="height: 600px; width: 100%">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_nuit.jpg" alt="" style="height: 600px; width: 100%">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_crepuscule.jpg" alt="" style="height: 600px; width: 100%">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_pont.jpg" alt="" style="height: 600px; width: 100%">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_pont_2.jpg" alt="" style="height: 600px; width: 100%">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_jour.jpg" alt="">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_profil_gauche.jpg" alt="">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_nuit.jpg" alt="">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_crepuscule.jpg" alt="">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_pont.jpg" alt="">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_pont_2.jpg" alt="">
                             </div>
                         </div>
 
@@ -201,16 +203,19 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-gray">
+            <section class="bg-gray scrollable">
                 <div class="d-flex h-100">
                     <div class="container boat-details">
                         <header class="text-center mb-5">
-                        <h2 class="text-uppercase lined">La sonate : détails techniques</h2>
+                            <h2 class="text-uppercase lined">La sonate : détails techniques</h2>
                         </header>
                         <div class="row">
-                            <div class="col-lg-4">
-                                <img class="boat-plan" src="./img/sonate/plan_sonate1_resized.jpg" alt="plan du bateau la sonate">
+                            <div class="col-lg-4 boat-plan-div">
+                            <a href="./img/sonate/plan_sonate1.jpg" data-lightbox="plan_sonate"><img class="boat-plan" src="./img/sonate/plan_sonate1_resized.jpg" alt="plan du bateau la sonate"><br>Cliquez pour agrandir</a>
                             </div>
+                        </div>
+
+                        <div class="row details-text-div">
                             <div class="details-text col-lg-4 col-sm-12">
                                 <h5>Matériel de navigation :</h5>
                                 1 VHF fixe Navicom 550<br>
@@ -291,6 +296,7 @@
     <script src="./js/scroll_nav.js"></script>
     <script src="./vendor/owl.carousel/owl.carousel.js"></script>
     <script src="./vendor/onepage-scroll/jquery.onepage-scroll.js"></script>
+    <script src="./vendor/lightbox2/js/lightbox.js"></script>
     <script src="./js/controllers/main.js"></script>
 
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
