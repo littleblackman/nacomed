@@ -8,7 +8,7 @@ var comToReport = {
     init: function() {
         var self = this;
 
-        if ($('#comments span').hasClass('span_censored')) {
+        if ($('#comments-area span').hasClass('span_censored')) {
             $('.span_censored').text('Commentaire signalé');
             } else {
                 $('.span_censored').text('');    
