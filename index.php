@@ -333,6 +333,25 @@
             break;
 
             /* GESTION DES NEWS */
+
+            case 'displayNewsMgmt':
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    displayNewsMgmt();
+                } else {
+                    displayLoginView();
+                }
+            break;
+
+            case 'displayNewsCreation':
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    displayNewsCreation();
+                } else {
+                    displayLoginView();
+                }
+            break;
+
             case 'addNews':
                 session_start();
                 $artTitle = trim($_POST['title']);

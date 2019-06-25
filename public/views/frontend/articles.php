@@ -41,7 +41,7 @@
             <?php
                 foreach ($articles as $value) {                           
             ?>
-            <div class="row">
+            <div class="row post-div">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="post-preview">
                         
@@ -63,7 +63,7 @@
                         
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 img-div">
                     <div class="image-news">
                         <img src="<?php echo $value->url_img(); ?>" />
                     </div>

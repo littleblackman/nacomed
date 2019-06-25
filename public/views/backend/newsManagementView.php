@@ -30,7 +30,7 @@
     </head>
     <body>
         <!-- Navigation -->
-        <?php require('../header.php'); ?>
+        <?php require('./public/views/header.php'); ?>
 
         <div class="container admin_interface">
             <div class="row mgmt">
@@ -63,7 +63,7 @@
         </div>
 
 
-        <?php require('../footer.php'); ?>
+        <?php require('./public/views/footer.php'); ?>
 
     <!-- JavaScript files-->
     <script src="../../../js/scroll_nav.js"></script>

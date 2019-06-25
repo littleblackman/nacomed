@@ -33,7 +33,7 @@
     </head>
     <body>
         <!-- Navigation -->
-        <?php require('../header.php'); ?>
+        <?php require('./public/views//header.php'); ?>
 
         <div class="container news-creation">
             <div class="row mgmt">
@@ -68,7 +68,7 @@
         </div>
 
         
-        <?php require('../footer.php'); ?>
+        <?php require('./public/views/footer.php'); ?>
 
         <!-- JavaScript files-->
         <script>tinymce.init({ selector: 'content' });</script>

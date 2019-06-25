@@ -2,7 +2,11 @@
 
 /* HEADER */
 
+/* Menu de navigation */
 
+.nav-div {
+  margin-left: 0;
+}
 
 
 /* PAGE D'ACCUEIL */
@@ -222,7 +226,7 @@
 }
 
 .image-news img {
-  width: 350px;
+  width: 100%;
 }
 
 /* PAGE EMBARQUEMENT */
@@ -246,6 +250,14 @@
 
 .eco-volunteer {
   margin-top: 150px;
+}
+
+.eco-vol-text {
+  margin-top: 5%;
+}
+
+.eco-vol-text header {
+  margin-bottom: 2%;
 }
 
 .onboard-carousel {
@@ -359,6 +371,7 @@ table, td, th {
 
 .news-img {
   display: flex;
+  margin-bottom: 10%
 }
 
 .news-img img {
@@ -371,6 +384,7 @@ table, td, th {
 .news-heading {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 7%;
 }
 
 #add_com {
@@ -603,7 +617,7 @@ table, td, th {
   }
 
   .navbar-expand-lg .navbar-collapse {
-    margin-left: 29%;
+    margin-left: 25%;
   }
 }
 
@@ -649,7 +663,7 @@ table, td, th {
   }
 
   .navbar-expand-lg .navbar-collapse {
-    margin-left: 22%;
+    margin-left: 16%;
   }
 
   #mainNav .navbar-nav > li.nav-item > a {
@@ -688,7 +702,7 @@ table, td, th {
   }
 
   .navbar-expand-lg .navbar-collapse {
-    margin-left: 16%;
+    
   }
 
   .admin-link {
@@ -758,8 +772,13 @@ table, td, th {
   .login {
     left: 0%;
   }
+
+  .admin-link, .logout {
+    left: 0;
+  }
 }
 
+/* PAGE ACCUEIL */
 /* Section 1 : accueil */
 
 @media (max-width: 992px) {
@@ -862,4 +881,81 @@ table, td, th {
     padding-right: 0px;
   }
 
+}
+
+/* PAGE ACTUALITES */
+
+@media screen and (max-width: 992px) {
+  .welcome-news {
+    margin-top: 20%;
+  }
+
+  .post-div {
+    flex-direction: column-reverse;
+  }
+
+  .img-div {
+    display: flex;
+  }
+
+  .image-news {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* PAGE D'UNE NEWS */
+
+@media screen and (max-width: 992px) {
+  .news-display {
+    margin-top: 15%;
+  }
+}
+
+/* TABLEAU DE BORD ADMIN */
+
+@media screen and (max-width: 992px) {
+  .admin_interface {
+    margin-top: 35%;
+  }
+}
+
+/* PAGDE DE CREATION DE NEWS */
+
+@media screen and (max-width: 992px) {
+  .news-creation {
+    margin-top: 25%;
+  }
+}
+
+/* PAGE DE GESTION DE LA MAP */
+
+@media screen and (max-width: 992px) {
+  .welcome-map, .events-map {
+    margin-top: 35%;
+  }
+}
+
+/* PAGE DES COMMENTAIRES SIGNALES */
+
+@media screen and (max-width: 992px) {
+  .reported_comments {
+    margin-top: 35%;
+  }
+}
+
+/* PAGE DE GESTION DU PROGRAMME */
+
+@media screen and (max-width: 992px) {
+  .welcome-program {
+    margin-top: 35%;
+  }
+}
+
+/* MODAL */
+
+@media screen and (max-width: 992px) {
+  .modal {
+    left:7%;
+  }
 }

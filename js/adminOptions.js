@@ -12,11 +12,11 @@ var option = {
         var self = this;
 
         self.newsMgmtBtn.click(function() {
-            window.location.href = "./public/views/backend/newsManagementView.php";
+            window.location.href = "./index.php?action=displayNewsMgmt";
         });
 
         self.newsCreationBtn.click(function() {
-            window.location.href = "./newsCreationView.php";
+            window.location.href = "./index.php?action=displayNewsCreation";
         });
 
         self.editMgmtBtn.click(function() {

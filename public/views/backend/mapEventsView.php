@@ -47,7 +47,7 @@
             <div class="row table-events">
                 <div class="col-lg-12">
                     
-                    <div class="events">
+                    <div class="events table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -83,7 +83,7 @@
                 
             </div>
 
-            <div id="gmap" style="width:800px; height:600px; margin: 0 auto;">
+            <div id="gmap" style="width:100%; height:600px; margin: 0 auto;">
             </div>
         </div>
 
