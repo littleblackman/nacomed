@@ -1,49 +1,8 @@
 /* your styles go here */
 
-
-/* Menu de navigation */
-#mainNav {
-position: absolute;
-border-bottom: 1px solid #e9ecef;
-background-color: white;
-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-#mainNav .navbar-brand {
-font-weight: 800;
-color: #343a40;
-}
-
-.navbar-brand img {
-  width: 9%;
-}
-
-#mainNav .navbar-toggler {
-font-size: 12px;
-font-weight: 800;
-padding: 13px;
-text-transform: uppercase;
-color: #343a40;
-}
-
-#mainNav .navbar-nav > li.nav-item > a {
-font-size: 12px;
-font-weight: 800;
-letter-spacing: 1px;
-text-transform: uppercase;
-}
-
-.login {
-  position: relative;
-  left: 30%;
-}
-
 /* HEADER */
 
-.admin-link, .logout {
-  position: relative;
-  left: 15%;
-}
+
 
 
 /* PAGE D'ACCUEIL */
@@ -165,6 +124,10 @@ text-transform: uppercase;
   flex-direction: column;
 }
 
+.owl-lazy {
+  height: 600px;
+}
+
 .boat-general-description {
   flex-direction: column;
   margin-top: 2%;
@@ -182,8 +145,18 @@ text-transform: uppercase;
   max-width: 100%;
 }
 
+.boat-plan-div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details-text-div {
+  margin-top: 50px;
+}
+
 .details-text {
-  margin-left: -4%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Section pagination */
@@ -507,6 +480,10 @@ table, td, th {
   flex-direction: column;
 }
 
+.comment_censored {
+  text-decoration: line-through;
+}
+
 /* PAGE DE GESTION DU PROGRAMME DU BATEAU */
 
 .welcome-program {
@@ -565,26 +542,166 @@ table, td, th {
 
 /* Menu de navigation*/
 
-@media (min-width: 992px) {
+.home-navbar {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.support-link {
+  width: 145px;
+}
+
+#mainNav {
+  position: absolute;
+  border-bottom: 1px solid #e9ecef;
+  background-color: white;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  #mainNav .navbar-brand {
+  font-weight: 800;
+  color: #343a40;
+  }
+  
+  .navbar-brand img {
+    width: 9%;
+  }
+  
+  #mainNav .navbar-toggler {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 13px;
+  text-transform: uppercase;
+  color: #343a40;
+  }
+  
+  #mainNav .navbar-nav > li.nav-item > a {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  }
+  
+  .login {
+    position: relative;
+    left: 30%;
+  }
+
+  .admin-link, .logout {
+    position: relative;
+    left: 15%;
+  }
+
+@media screen and (min-width: 1600px) {
   #mainNav {
     border-bottom: 1px solid transparent;
     background: transparent;
   }
+
+  #mainNav .navbar-nav > li.nav-item > a {
+    color: #fff;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    margin-left: 29%;
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+  #mainNav {
+    border-bottom: 1px solid transparent;
+    background: transparent;
+  }
+
+  #mainNav .navbar-nav > li.nav-item > a {
+    color: #fff;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    margin-left: 27%;
+  }
+
+  .logout {
+    left: 0%;
+    top: 30px;
+  }
+
+  .login {
+    left: 20%;
+  }
+
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+
+  #mainNav {
+    border-bottom: 1px solid transparent;
+    background: transparent;
+  }
+
+  .admin-link {
+    left: 5%; 
+  }
+
+  .logout {
+    left: -9.5%;
+    top: 30px;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    margin-left: 22%;
+  }
+
+  #mainNav .navbar-nav > li.nav-item > a {
+    color: #fff;
+  }
+
+  .login {
+    left: 12%;
+  }
+  
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #mainNav {
+    border-bottom: 1px solid transparent;
+    background: transparent;
+  }
+
   #mainNav .navbar-brand {
     padding: 10px 20px;
     color: #fff;
     position: relative;
-    left: -35%;
+    left: -6%;
   }
+
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
     color: rgba(255, 255, 255, 0.8);
   }
+
   #mainNav .navbar-nav > li.nav-item > a {
-    padding: 10px 20px;
     color: #fff;
   }
+
   #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
     color: rgba(255, 255, 255, 0.8);
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    margin-left: 16%;
+  }
+
+  .admin-link {
+    left: 0%;
+  }
+
+  .logout {
+    left: -14.5%;
+    top: 30px;
+  }
+
+  .login {
+    left: 2%;
   }
 }
 
@@ -630,6 +747,16 @@ table, td, th {
 
   #mainNav.is-fixed .navbar-nav > li.nav {
     color: black;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .support-link {
+    width: 100%;
+  }
+
+  .login {
+    left: 0%;
   }
 }
 
@@ -685,6 +812,33 @@ table, td, th {
     margin-left: 0;
   }
 }
+
+/* Section 3 : slider */
+
+@media screen and (max-width: 992px) {
+  .owl-lazy {
+    height: 300px;
+  }
+}
+
+/* Section 4 : détails techniques navire */
+
+@media screen and (max-width: 992px) {
+  .boat-plan-div {
+    display: flex;
+  }
+  
+  .boat-plan {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .details-text {
+    margin-left: 0;
+  }
+}
+
 
 /* Section 5 : contact */
 
