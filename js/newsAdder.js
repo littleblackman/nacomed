@@ -40,7 +40,7 @@ var articleToAdd = {
                         break;
 
                         case 'content_missing':
-                            self.modalText.text('Veuillez écrire le contenu de votre billet');
+                            self.modalText.text('Veuillez écrire le contenu de votre news');
                             self.modalCreate.show();
                             self.modalCreate.fadeOut(4000, function() {
                                 self.modalText.text('');

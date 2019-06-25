@@ -42,7 +42,7 @@ var articleToUpdate = {
                         break;
 
                         case 'content_missing':
-                            self.modalText.text('Veuillez écrire le contenu de votre billet');
+                            self.modalText.text('Veuillez écrire le contenu de votre news');
                             self.modalUpdate.show();
                             self.modalUpdate.fadeOut(4000, function() {
                                 self.modalText.text('');
@@ -60,7 +60,7 @@ var articleToUpdate = {
                         break;
 
                         default:
-                            self.modalText.text('Votre billet a été mis à jour');
+                            self.modalText.text('Votre news a été mis à jour');
                             self.modalUpdate.show();
                             self.modalUpdate.fadeOut(4000, function() {
                                 self.modalText.text('');

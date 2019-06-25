@@ -50,7 +50,7 @@ var artDelEdit = {
                     success: function() {
                         self.delModalBtn.hide();
                         self.editModalBtn.hide();
-                        self.modalText.text('Redirection vers la page d\'édition du billet');
+                        self.modalText.text('Redirection vers la page d\'édition de la news');
                         self.modal.show();
                         self.modal.fadeOut(4000, function() {
                             self.modal.hide();
@@ -65,7 +65,7 @@ var artDelEdit = {
             self.delModalBtn.click(function(e) {
                 e.preventDefault();
 
-                self.modalText.text('Voulez-vous vraiment supprimer ce billet ?');
+                self.modalText.text('Voulez-vous vraiment supprimer cette news ?');
                 self.modal.show();
                 self.editModalBtn.hide();
                 self.delModalBtn.hide();
@@ -87,7 +87,7 @@ var artDelEdit = {
                         success: function() {
                             self.yesModalBtn.hide();
                             self.noModalBtn.hide();
-                            self.modalText.text('Votre billet a été supprimé.');
+                            self.modalText.text('Votre news a été supprimé.');
                             self.modal.fadeOut(4000, function() {   
                                 window.location.href = "./index.php?action=listArticlesToEdit";
                             });
@@ -100,7 +100,7 @@ var artDelEdit = {
                 self.noModalBtn.click(function() {
                     self.yesModalBtn.hide();
                     self.noModalBtn.hide();
-                    self.modalText.text('Votre billet n\'a pas été supprimé.');
+                    self.modalText.text('Votre news n\'a pas été supprimé.');
                         self.modal.fadeOut(4000, function() {
                             self.modal.hide();
                         });

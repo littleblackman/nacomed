@@ -51,11 +51,11 @@
 
             <div class="row text-center">
                 <form id="news-update-form" class="article_form" action="./index.php?action=updateArticle" method="post" enctype="multipart/form-data">
-                    <p>Titre du billet :</p>
+                    <p>Titre de la news :</p>
                         <textarea class="content" id="art_title" name="title">
                             <?php echo $article->art_title(); ?>
                         </textarea></br>
-                    <p>Contenu du billet :</p>
+                    <p>Contenu de la news :</p>
                         <textarea class="content" id="art_content" name="content">
                             <?php echo $article->art_content(); ?> 
                         </textarea></br>

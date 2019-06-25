@@ -50,9 +50,9 @@
 
             <div class="row text-center">
                 <form class="article_form" id="NcrForm" action="../../../index.php?action=addNews" method="post" enctype="multipart/form-data">
-                    <p>Titre du billet :</p>
+                    <p>Titre de la news :</p>
                         <textarea class="content" id="art_title" name="title"></textarea></br>
-                    <p>Contenu du billet :</p>
+                    <p>Contenu de la news :</p>
                         <textarea class="content" id="art_content" name="content"></textarea></br>
                     <p>Sélectionner une image :</p>
                     <input type="file" name="img" id="img" /><br>
