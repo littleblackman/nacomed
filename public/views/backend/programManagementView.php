@@ -49,12 +49,18 @@
                     <form class="form-group" id="program-form" method="post" action="/nacomed/index.php?action=addProgInfos">
                         <label for="month">Sélectionner un mois</label>
                             <select name="month" id="month">
+                                <option id="jan">Janvier</option>
+                                <option id="feb">Février</option>
+                                <option id="mar">Mars</option>
+                                <option id="apr">Avril</option>
                                 <option id="may">Mai</option>
                                 <option id="jun">Juin</option>
                                 <option id="jul">Juillet</option>
                                 <option id="aug">Aout</option>
                                 <option id="sep">Septembre</option>
                                 <option id="oct">Octobre</option>
+                                <option id="nov">Novembre</option>
+                                <option id="dec">Décembre</option>
                             </select><br>
                         <label for="week">Sélectionner un numéro de semaine</label>
                             <select name="week" id="week">

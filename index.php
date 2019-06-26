@@ -207,14 +207,86 @@
                     if (empty($mission) && empty($details_mission) && empty($location) && empty($available_beds) && empty($comments)) {
                         echo 'missing_infos';
                     } else {
-                        if ($month === 'Mai') {
-                            if ($week === '3') {
+                        if ($month === 'Janvier') {
+                            if ($week === '1') {
+                                addProgJanInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jan1';
+                            } else if ($week === '2') {
+                                addProgJanInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jan2';
+                            } else if ($week === '3') {
+                                addProgJanInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jan3';
+                            } else if ($week === '4') {
+                                addProgJanInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Jan4';
+                            } else {
+                                echo 'badJanWeek';
+                            }
+                        } else if ($month === 'Février') {
+                            if ($week === '1') {
+                                addProgFebInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Feb1';
+                            } else if ($week === '2') {
+                                addProgFebInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Feb2';
+                            } else if ($week === '3') {
+                                addProgFebInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Feb3';
+                            } else if ($week === '4') {
+                                addProgFebInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Feb4';
+                            } else {
+                                echo 'badFebWeek';
+                            }
+                        } else if ($month === 'Mars') {
+                            if ($week === '1') {
+                                addProgMarInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Mar1';
+                            } else if ($week === '2') {
+                                addProgMarInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Mar2';
+                            } else if ($week === '3') {
+                                addProgMarInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Mar3';
+                            } else if ($week === '4') {
+                                addProgMarInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Mar4';
+                            } else {
+                                echo 'badMarWeek';
+                            }
+                        } else if ($month === 'Avril') {
+                            if ($week === '1') {
+                                addProgAprInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Apr1';
+                            } else if ($week === '2') {
+                                addProgAprInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Apr2';
+                            } else if ($week === '3') {
+                                addProgAprInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Apr3';
+                            } else if ($week === '4') {
+                                addProgAprInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'Apr4';
+                            } else {
+                                echo 'badAprWeek';
+                            }
+                        } else if ($month === 'Mai') {
+                            if ($week === '1') {
+                                addProgMayInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'May1';
+                            } else if ($week === '2') {
+                                addProgMayInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                echo 'May2';
+                            } else if ($week === '3') {
                                 addProgMayInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
                                 echo 'May3';
                             } else if ($week === '4') {
                                 addProgMayInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
                                 echo 'May4';
-                            } else echo 'badMayWeek';
+                            } else {
+                                echo 'badMayWeek';
+                            }
                         } else if ($month === 'Juin') {
                             if ($week === '1') {
                                 addProgJunInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
@@ -295,6 +367,38 @@
                             } else {
                                 echo 'badOctWeek';
                             }
+                        } else if ($month === 'Novembre') {
+                                if ($week === '1') {
+                                    addProgNovInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                    echo 'Nov1';
+                                } else if ($week === '2') {
+                                    addProgNovInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                    echo 'Nov2';
+                                } else if ($week === '3') {
+                                    addProgNovInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                    echo 'Nov3';
+                                } else if ($week === '4') {
+                                    addProgNovInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                    echo 'Nov4';
+                                } else {
+                                    echo 'badNovWeek';
+                                }
+                            } else if ($month === 'Décembre') {
+                                if ($week === '1') {
+                                    addProgDecInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                    echo 'Dec1';
+                                } else if ($week === '2') {
+                                    addProgDecInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                    echo 'Dec2';
+                                } else if ($week === '3') {
+                                    addProgDecInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                    echo 'Dec3';
+                                } else if ($week === '4') {
+                                    addProgDecInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                    echo 'Dec4';
+                                } else {
+                                    echo 'badDecWeek';
+                                }
                     } else {
                         echo 'badMonth';
                     }}   

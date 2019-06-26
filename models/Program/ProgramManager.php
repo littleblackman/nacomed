@@ -10,6 +10,62 @@ class ProgramManager {
         $this->setDb($db);
     }
 
+    public function getProg_jan() {
+        $row = [];
+
+        $q = $this->_db->prepare('SELECT * FROM prog_jan ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
+    }
+
+    public function getProg_feb() {
+        $row = [];
+
+        $q = $this->_db->prepare('SELECT * FROM prog_feb ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
+    }
+
+    public function getProg_mar() {
+        $row = [];
+
+        $q = $this->_db->prepare('SELECT * FROM prog_mar ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
+    }
+
+    public function getProg_apr() {
+        $row = [];
+
+        $q = $this->_db->prepare('SELECT * FROM prog_apr ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
+    }
+
     public function getProg_may() {
         $row = [];
 
@@ -94,6 +150,54 @@ class ProgramManager {
         return $row;
     }
 
+    public function getProg_nov() {
+        $row = [];
+
+        $q = $this->_db->prepare('SELECT * FROM prog_nov ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
+    }
+
+    public function getProg_dec() {
+        $row = [];
+
+        $q = $this->_db->prepare('SELECT * FROM prog_dec ORDER BY id ASC');
+        $q->execute(array());
+
+        $row = $q->fetchAll(PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+            $row = new Program($data);
+        }*/
+
+        return $row;
+    }
+
+    public function addProgJan($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_jan SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
+    public function addProgFeb($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_feb SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
+    public function addProgMar($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_mar SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
+    public function addProgApr($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_apr SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
     public function addProgMay($mission, $details_mission, $location, $available_beds, $comments, $week) {
         $q = $this->_db->prepare('UPDATE prog_may SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
         $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
@@ -121,6 +225,16 @@ class ProgramManager {
 
     public function addProgOct($mission, $details_mission, $location, $available_beds, $comments, $week) {
         $q = $this->_db->prepare('UPDATE prog_oct SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
+    public function addProgNov($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_nov SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
+        $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
+    }
+
+    public function addProgDec($mission, $details_mission, $location, $available_beds, $comments, $week) {
+        $q = $this->_db->prepare('UPDATE prog_dec SET mission = ?, details_mission = ?, location = ?, available_beds = ?, comments = ? WHERE id = ?');
         $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
     }
 
