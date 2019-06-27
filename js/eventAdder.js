@@ -29,7 +29,6 @@ var eventToAdd = {
                 processData:false,
                 dataType: 'text',
                 success: function(data) {
-                    console.log(data);
                     
                     switch(data) {
                         case 'name_missing':
