@@ -27,15 +27,6 @@ var programInfos = {
                 success: function(data) {
                     console.log(data);
                     switch (data) {
-                        case 'badMayWeek':
-                            self.modalText.text('Erreur dans le numéro de semaine pour le mois de Mai');
-                            self.modalProg.show();
-                            self.modalProg.fadeOut(4000, function() {
-                                self.modalText.text('');
-                                self.modalProg.hide();
-                            });
-                        break;
-
                         case 'missing_infos':
                             self.modalText.text('Attention, vous n\'avez rentré aucune information');
                             self.modalProg.show();
