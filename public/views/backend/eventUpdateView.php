@@ -57,6 +57,7 @@
                         <label for="lng">Longitude : </label><input class="form-control" type="text" id="lng" name="lng" placeholder="<?php echo $event['event_lng']; ?>" /><br/>
                         <label for="lat">Lattitude : </label><input class="form-control" type="text" id="lat" name="lat" placeholder="<?php echo $event['event_lat']; ?>" /><br>
                         <label for="on_date">Date d'embarquement : </label><input class="form-control" type="text" id="on_date" name="on_date" placeholder="<?php echo $event['onboarding_date']; ?>" /><br>
+                        <label for="comments">Commentaires : </label><input class="form-control" type="text" id="comments" name="comments" placeholder="<?php echo $event['event_comments']; ?>" /><br>
                         <label for="city">Ville : </label><input class="form-control" type="text" id="city" name="city" /><br>
                         <label for="event_id"></label><input type="hidden" id="event_id" name="event_id" value="<?php echo $event['event_id']; ?>" />
 

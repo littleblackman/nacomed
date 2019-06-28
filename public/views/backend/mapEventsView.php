@@ -55,6 +55,7 @@
                                     <th scope="col">Embarquement</th>
                                     <th scope="col">Lattitude</th>
                                     <th scope="col">Longitude</th>
+                                    <th scope="col">Commentaires</th>
                                     <th scope="col">Actions</th>
                                 </tr>
                             </thead>
@@ -66,6 +67,7 @@
                                         echo '<td class="on_date">' . $mE->onboarding_date() . '</td>';
                                         echo '<td class="event_lat">' . $mE->event_lat() . '</td>';
                                         echo '<td class="event_lng">' . $mE->event_lng() . '</td>';
+                                        echo '<td class="comments">' .$mE->event_comments() . '</td>';
                                         echo '<td class="buttons-map"><button id="edit' . $mE->event_id() . '">Editer</button>';
                                         echo '<button id="delete' . $mE->event_id() . '">Supprimer</button>';
                                         echo '<input type="hidden" id="event_id" value="' . $mE->event_id() . '" />';
