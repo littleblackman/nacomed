@@ -20,6 +20,20 @@ class ArticlesManager {
         return $article;
     }
 
+    public function addNewsNoImg($art_title, $art_content, $art_author) {
+        $q = $this->_db->prepare('INSERT INTO articles (art_title, art_content, art_author, art_creation_date) VALUES (?, ?, ?, NOW())');
+        $articleToAdd = $q->execute(array($art_title, $art_content, $art_author));
+
+        $addedArticle = [];
+        $req = $this->_db->prepare('SELECT art_title, art_content, art_author, art_id, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles WHERE art_title = ?');
+        $req->execute(array($art_title));
+
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+            $addedArticle = new Article($data);
+        }
+        return $addedArticle;
+    }
+
     public function addNews($art_title, $art_content, $url_img, $art_author) {
         $q = $this->_db->prepare('INSERT INTO articles (art_title, art_content, url_img, art_author, art_creation_date) VALUES (?, ?, ?, ?, NOW())');
         $articleToAdd = $q->execute(array($art_title, $art_content, $url_img, $art_author));
@@ -32,6 +46,12 @@ class ArticlesManager {
             $addedArticle = new Article($data);
         }
         return $addedArticle;
+    }
+
+    public function updateArticleNoImg($art_title, $art_content, $art_id) {
+        $q = $this->_db->prepare('UPDATE articles SET art_title = ?, art_content = ? WHERE art_id = ?');
+        $articleToUpdate = $q->execute(array($art_title, $art_content, $art_id));
+        return $articleToUpdate;
     }
 
     public function updateArticle($art_title, $art_content, $url_img, $art_id) {
