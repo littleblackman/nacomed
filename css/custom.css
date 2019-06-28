@@ -431,6 +431,11 @@ table, td, th {
   margin-right: 2%;
 }
 
+.video {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* PAGE D'EDITION DES NEWS */
 
 .post-preview {
