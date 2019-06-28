@@ -4,6 +4,7 @@ var articleToAdd = {
     artSubmitBtn: $('#art_submit_btn'),
     modalCreate: $('#modal_create'),
     modalText: $('#modal_text'),
+    buttonsDiv: $('#buttons'),
 
     init: function() {
         var self = this;
@@ -14,6 +15,8 @@ var articleToAdd = {
                 self.modalCreate.stop(true, true).fadeOut();
             } 
         });
+
+
 
         self.NcrForm.on('submit', function(e) {
             e.stopPropagation();
@@ -32,6 +35,7 @@ var articleToAdd = {
                     switch (data) {
                         case 'title_missing':
                             self.modalText.text('Veuillez écrire un titre');
+                            self.buttonsDiv.hide();
                             self.modalCreate.show();
                             self.modalCreate.fadeOut(4000, function() {
                                 self.modalText.text('');
@@ -41,6 +45,7 @@ var articleToAdd = {
 
                         case 'content_missing':
                             self.modalText.text('Veuillez écrire le contenu de votre news');
+                            self.buttonsDiv.hide();
                             self.modalCreate.show();
                             self.modalCreate.fadeOut(4000, function() {
                                 self.modalText.text('');
@@ -51,6 +56,7 @@ var articleToAdd = {
                         case 'failed':
                             console.log(data);
                             self.modalText.text('Veuillez remplir tous les champs, un titre et un contenu');
+                            self.buttonsDiv.hide();
                             self.modalCreate.show();
                             self.modalCreate.fadeOut(4000, function() {
                                 self.modalText.text('');
