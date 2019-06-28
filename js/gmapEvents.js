@@ -31,7 +31,9 @@ $(function() {
             var event_name = name_class.html();
             var on_date_class = $(this).find('.on_date');
             var on_date = on_date_class.html();
-            var contentInfoWindow = '<p>Sujet : ' + event_name + '</p><p>Date d\'embarquement : ' + on_date + '</p>';
+            var comments_class = $(this).find('.comments');
+            var comments = comments_class.html();
+            var contentInfoWindow = '<p>' + event_name + '</p><p>' + on_date + '</p><p>' + comments + '</p>';
     
             var infowindow = new google.maps.InfoWindow({
                 content: contentInfoWindow
