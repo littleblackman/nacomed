@@ -87,7 +87,7 @@
 
                 case 'deleteCom':
                     session_start();
-                    if (isset($_SESSION['user']) {
+                    if (isset($_SESSION['user'])) {
                             if ($_POST['com_id']) {
                                 deleteCom($_POST['com_id']);
                                 echo 'success';
@@ -469,20 +469,27 @@
                     session_start();
                     $artTitle = trim($_POST['title']);
                     $artContent = trim($_POST['content']);
+                    $img = $_FILES['img'];
+
 
                     if (isset($_SESSION['user'])) {
                         if (!empty($artTitle) && !empty($artContent)) {
-                            $img = $_FILES['img'];
-                            $url_img = "img/news/".$img['name'];
-                            $ext = strtolower(substr($img['name'],-3));
-                            $allow_ext = array("jpg",'png','gif');
-                            if(in_array($ext,$allow_ext)) {
-                                move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
-                                $artId = addNews($artTitle, $artContent, $url_img, $_SESSION['user']);
+                            if (!empty($img['name'])) {
+                                $url_img = "img/news/".$img['name'];
+                                $ext = strtolower(substr($img['name'],-3));
+                                $allow_ext = array("jpg",'png','gif');
+                                if(in_array($ext,$allow_ext)) {
+                                    move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
+                                    $artId = addNews($artTitle, $artContent, $url_img, $_SESSION['user']);
+                                    echo $artId;
+                                    exit;
+                                } else {
+                                    throw new Exception('Votre image n\'est pas au bon format, seuls sont acceptés les .jpg, .png et .gif');
+                                }
+                            } else {
+                                $artId = addNewsNoImg($artTitle, $artContent, $_SESSION['user']);
                                 echo $artId;
                                 exit;
-                            } else {
-                                throw new Exception('Votre image n\'est pas au bon format, seuls sont acceptés les .jpg, .png et .gif');
                             }
                         } else if (empty($artTitle) && empty($artContent)) {
                             echo 'failed';
@@ -532,19 +539,24 @@
                         if (isset($art_id) && $art_id > 0) {
                             $title = trim($_POST['title']);
                             $content = trim($_POST['content']);
+                            $img = $_FILES['img'];
 
                             if (!empty($title) && !empty($content)) {
-                            $img = $_FILES['img'];
-                            $url_img = "img/news/".$img['name'];
-                            $ext = strtolower(substr($img['name'],-3));
-                            $allow_ext = array("jpg",'png','gif');
-                            if(in_array($ext,$allow_ext)) {
-                                move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
-                                $artId = updateArticle($title, $content, $url_img, $art_id);
-                                echo $art_id;
-                            } else {
-                                throw new Exception('Votre image n\'est pas au bon format, seuls sont acceptés les .jpg, .png et .gif');
-                            }
+                                if (!empty($img['name'])) {
+                                    $url_img = "img/news/".$img['name'];
+                                    $ext = strtolower(substr($img['name'],-3));
+                                    $allow_ext = array("jpg",'png','gif');
+                                    if(in_array($ext,$allow_ext)) {
+                                        move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
+                                        $artId = updateArticle($title, $content, $url_img, $art_id);
+                                        echo $art_id;
+                                    } else {
+                                        throw new Exception('Votre image n\'est pas au bon format, seuls sont acceptés les .jpg, .png et .gif');
+                                    }
+                                } else {
+                                    $artId = updateArticleNoImg($title, $content,$art_id);
+                                    echo $art_id;
+                                }
                             } else if (empty($title) && empty($content)) {
                                 echo 'failed';
                             } else if (empty($title) && !empty($content)) {
