@@ -8,9 +8,9 @@ class MapManager {
         $this->setDb($db);
     }
 
-    public function addEvent($name, $lat, $lng, $date) {
-        $q = $this->_db->prepare('INSERT INTO map_events (event_name, event_lat, event_lng, onboarding_date) VALUES (?, ?, ?, ?)');
-        $eventToAdd = $q->execute(array($name, $lat, $lng, $date));
+    public function addEvent($name, $lat, $lng, $date, $com) {
+        $q = $this->_db->prepare('INSERT INTO map_events (event_name, event_lat, event_lng, onboarding_date, event_comments) VALUES (?, ?, ?, ?, ?)');
+        $eventToAdd = $q->execute(array($name, $lat, $lng, $date, $com));
     }
 
     public function displayEvents() {
@@ -33,9 +33,9 @@ class MapManager {
         return $data;
     }
 
-    public function updateEvent($name, $lat, $lng, $date, $id) {
-        $q = $this->_db->prepare('UPDATE map_events SET event_name = ?, event_lat = ?, event_lng = ?, onboarding_date = ?  WHERE event_id = ?');
-        $q->execute(array($name, $lat, $lng, $date, $id));
+    public function updateEvent($name, $lat, $lng, $date, $com, $id) {
+        $q = $this->_db->prepare('UPDATE map_events SET event_name = ?, event_lat = ?, event_lng = ?, onboarding_date = ?, event_comments = ?  WHERE event_id = ?');
+        $q->execute(array($name, $lat, $lng, $date, $com, $id));
     }
 
     public function deleteEvent($event_id) {
