@@ -125,10 +125,11 @@
                     $lat = $_POST['lat'];
                     $lng = $_POST['lng'];
                     $date = $_POST['on_date'];
+                    $com = $_POST['comments'];
 
                     if (isset($_SESSION['user'])) {
                         if (!empty($name) && !empty($lat) && !empty($lng) && !empty($date)) {
-                            addEvent($name, $lat, $lng, $date);
+                            addEvent($name, $lat, $lng, $date, $com);
                         } else if (empty($name)) {
                             echo 'name_missing';
                             exit;
@@ -169,10 +170,11 @@
                 $lng = $_POST['lng'];
                 $date = $_POST['on_date'];
                 $id = $_POST['event_id'];
+                $com = $_POST['comments'];
 
                     if (isset($_SESSION['user'])) {
                         if (!empty($name) && !empty($lat) && !empty($lng) && !empty($date)) {
-                            updateEvent($name, $lat, $lng, $date, $id);
+                            updateEvent($name, $lat, $lng, $date, $com, $id);
                         } else if (empty($name)) {
                             echo 'name_missing';
                         } else if (empty($lat)) {
