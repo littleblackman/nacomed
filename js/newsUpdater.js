@@ -19,9 +19,6 @@ var articleToUpdate = {
         self.newsUpdateForm.on('submit', function(e) {
             e.preventDefault();
 
-            var artTitle = tinyMCE.get('art_title').getContent();
-            var artContent = tinyMCE.get('art_content').getContent();
-
             $.ajax({
                 url: './index.php?action=updateArticle',
                 type: 'POST',
@@ -31,6 +28,7 @@ var articleToUpdate = {
                 processData:false,
                 dataType: 'text',
                 success: function(data) {
+                    console.log(data);
                     switch (data) {
                         case 'title_missing':
                             self.modalText.text('Veuillez écrire un titre');
