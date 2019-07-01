@@ -472,26 +472,47 @@
                     $artTitle = trim($_POST['title']);
                     $artContent = trim($_POST['content']);
                     $img = $_FILES['img'];
+                    $url_video = $_POST['video'];
 
 
                     if (isset($_SESSION['user'])) {
                         if (!empty($artTitle) && !empty($artContent)) {
                             if (!empty($img['name'])) {
-                                $url_img = "img/news/".$img['name'];
-                                $ext = strtolower(substr($img['name'],-3));
-                                $allow_ext = array("jpg",'png','gif');
-                                if(in_array($ext,$allow_ext)) {
-                                    move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
-                                    $artId = addNews($artTitle, $artContent, $url_img, $_SESSION['user']);
+                                if (!empty($url_video)) {
+                                    $url_img = "img/news/".$img['name'];
+                                    $ext = strtolower(substr($img['name'],-3));
+                                    $allow_ext = array('jpg','png','gif');
+                                    if(in_array($ext,$allow_ext)) {
+                                        move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
+                                        $artId = addNews($artTitle, $artContent, $url_img, $url_video, $_SESSION['user']);
+                                        echo $artId;
+                                        exit;
+                                    } else {
+                                        throw new Exception('Votre image n\'est pas au bon format, seuls sont acceptés les .jpg, .png et .gif');
+                                    }
+                                } else {
+                                    $url_img = "img/news/".$img['name'];
+                                    $ext = strtolower(substr($img['name'],-3));
+                                    $allow_ext = array('jpg','png','gif');
+                                    if(in_array($ext,$allow_ext)) {
+                                        move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
+                                        $artId = addNewsNoVideo($artTitle, $artContent, $url_img, $_SESSION['user']);
+                                        echo $artId;
+                                        exit;
+                                    } else {
+                                        throw new Exception('Votre image n\'est pas au bon format, seuls sont acceptés les .jpg, .png et .gif');
+                                    }    
+                                }
+                            } else if (empty($img['name'])) {
+                                if (empty($url_video)) {
+                                    $artId = addNewsNoImgNoVideo($artTitle, $artContent, $_SESSION['user']);
                                     echo $artId;
                                     exit;
                                 } else {
-                                    throw new Exception('Votre image n\'est pas au bon format, seuls sont acceptés les .jpg, .png et .gif');
+                                    $artId = addNewsVideo($artTitle, $artContent, $url_video, $_SESSION['user']);
+                                    echo $artId;
+                                    exit;
                                 }
-                            } else {
-                                $artId = addNewsNoImg($artTitle, $artContent, $_SESSION['user']);
-                                echo $artId;
-                                exit;
                             }
                         } else if (empty($artTitle) && empty($artContent)) {
                             echo 'failed';
@@ -535,41 +556,65 @@
 
                 case 'updateArticle':
                     session_start();
-                    $art_id = $_POST['art_id'];
+                    $artId = $_POST['art_id'];
 
                     if (isset($_SESSION['user'])) {
-                        if (isset($art_id) && $art_id > 0) {
-                            $title = trim($_POST['title']);
-                            $content = trim($_POST['content']);
+                        if (isset($artId) && $artId > 0) {
+                            $artTitle = trim($_POST['title']);
+                            $artContent = trim($_POST['content']);
                             $img = $_FILES['img'];
+                            $url_video = $_POST['video'];
 
-                            if (!empty($title) && !empty($content)) {
+                            if (!empty($artTitle) && !empty($artContent)) {
                                 if (!empty($img['name'])) {
-                                    $url_img = "img/news/".$img['name'];
-                                    $ext = strtolower(substr($img['name'],-3));
-                                    $allow_ext = array("jpg",'png','gif');
-                                    if(in_array($ext,$allow_ext)) {
-                                        move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
-                                        $artId = updateArticle($title, $content, $url_img, $art_id);
-                                        echo $art_id;
+                                    if (!empty($url_video)) {
+                                        $url_img = "img/news/".$img['name'];
+                                        $ext = strtolower(substr($img['name'],-3));
+                                        $allow_ext = array('jpg','png','gif');
+                                        if(in_array($ext,$allow_ext)) {
+                                            move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
+                                            updateArticle($artTitle, $artContent, $url_img, $url_video, $artId);
+                                            echo $artId;
+                                            exit;
+                                        } else {
+                                            throw new Exception('Votre image n\'est pas au bon format, seuls sont acceptés les .jpg, .png et .gif');
+                                        }
                                     } else {
-                                        throw new Exception('Votre image n\'est pas au bon format, seuls sont acceptés les .jpg, .png et .gif');
+                                        $url_img = "img/news/".$img['name'];
+                                        $ext = strtolower(substr($img['name'],-3));
+                                        $allow_ext = array('jpg','png','gif');
+                                        if(in_array($ext,$allow_ext)) {
+                                            move_uploaded_file($img['tmp_name'],"img/news/".$img['name']);
+                                            updateArticleNoVideo($artTitle, $artContent, $url_img, $artId);
+                                            echo $artId;
+                                            exit;
+                                        } else {
+                                            throw new Exception('Votre image n\'est pas au bon format, seuls sont acceptés les .jpg, .png et .gif');
+                                        }    
                                     }
+                            } else if (empty($img['name'])) {
+                                if (empty($url_video)) {
+                                    updateArticleNoImgNoVideo($artTitle, $artContent, $artId);
+                                    echo $artId;
+                                    exit;
                                 } else {
-                                    $artId = updateArticleNoImg($title, $content,$art_id);
-                                    echo $art_id;
+                                    updateArticleVideo($artTitle, $artContent, $url_video, $artId);
+                                    echo $artId;
+                                    exit;
                                 }
-                            } else if (empty($title) && empty($content)) {
+                            }
+                            } else if (empty($artTitle) && empty($artContent)) {
                                 echo 'failed';
-                            } else if (empty($title) && !empty($content)) {
+                            } else if (empty($artTitle) && !empty($artContent)) {
                                 echo 'title_missing';
-                            } else if (!empty($title) && empty($content)) {
+                            } else if (!empty($artTitle) && empty($artContent)) {
                                 echo 'content_missing';
                             } else {
                                 throw new Exception('Erreur fatale. Veuillez contacter votre webmaster.');
                             }
-                        }
-                    } else {
+                        } else {
+                            throw new Exception('Erreur dans la récupération de l\'id de la news');
+                    }} else {
                         displayLoginView();
                     }
                 break;
