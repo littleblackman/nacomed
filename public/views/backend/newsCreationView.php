@@ -55,7 +55,9 @@
                     <p>Contenu de la news :</p>
                         <textarea class="content" id="art_content" name="content"></textarea></br>
                     <p>Sélectionner une image :</p>
-                    <input type="file" name="img" id="img" /><br>
+                        <input type="file" name="img" id="img" /><br>
+                    <p>Insérer le lien de votre vidéo</p>
+                        <input type="text" name="video" id="video" /><br>
                     <input id="art_submit_btn" name="art_send" type="submit" value="Envoyer" />
                 </form>
             <div>
