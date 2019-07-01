@@ -7,6 +7,7 @@ class Article {
     private $_art_title;
     private $_art_content;
     private $_url_img;
+    private $_url_video;
     private $_art_author;
     private $_art_creation_date;
     private $_date_fr;
@@ -43,6 +44,10 @@ class Article {
 
     public function url_img() {
         return $this->_url_img;
+    }
+
+    public function url_video() {
+        return $this->_url_video;
     }
 
     public function art_author() {
@@ -88,6 +93,12 @@ class Article {
     public function setUrl_img($url_img) {
         if (is_string($url_img)) {
             $this->_url_img = $url_img;
+        }
+    }
+
+    public function setUrl_video($url_video) {
+        if (is_string($url_video)) {
+            $this->_url_video = $url_video;
         }
     }
 
