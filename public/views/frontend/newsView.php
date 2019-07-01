@@ -47,6 +47,10 @@
                             </div>
                         </div>
                     </article>
+
+                    <div class="video">
+                        <iframe id="video-iframe" src="<?php echo $article->url_video(); ?>" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                    </div>
                 </div>
             </div>
 
