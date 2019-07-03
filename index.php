@@ -28,6 +28,10 @@
                 case 'displayNews':
                     displayNews();
                 break;
+
+                case 'displaySupport':
+                    displaySUpport();
+                break;
                 
                 /* COMMENTAIRES */
                 case 'addComment':
