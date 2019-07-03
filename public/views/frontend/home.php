@@ -58,7 +58,7 @@
                             <a class="nav-link" href="./index.php?action=displayOnboard">Embarquement</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link support-link" href="./index.php?action=displayContact">Nous soutenir</a>
+                            <a class="nav-link support-link" href="./index.php?action=displaySupport">Nous soutenir</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./index.php?action=displayContact">Contact</a>
