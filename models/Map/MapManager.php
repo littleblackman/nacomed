@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Map;
+
 class MapManager {
 
     private $_db;
@@ -18,7 +20,7 @@ class MapManager {
 
         $q = $this->_db->query('SELECT * FROM map_events');
         
-        while ($data = $q->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $q->fetch(\PDO::FETCH_ASSOC)) {
             $events[] = new Map($data);
         }
         return $events;
@@ -44,7 +46,7 @@ class MapManager {
     }
 
 
-    public function setDb(PDO $db) {
+    public function setDb(\PDO $db) {
         $this->_db = $db;
     }
 }

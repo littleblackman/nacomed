@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Program;
+
 class Program {
     
     // Décalaration des attributs

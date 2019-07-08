@@ -74,9 +74,12 @@
             ?>
         </div>
 
+        <div><a id="header_link" href="#header">Retour en haut</a></div>
+
         <?php require('./public/views/footer.php'); ?>
 
         <!-- JavaScript files-->
+        <script src="./js/headerLink.js"></script>
         <script src="./js/scroll_nav2.js"></script>
     </body>
 </html>

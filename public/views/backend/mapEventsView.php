@@ -27,8 +27,6 @@
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-        <!-- Google Map -->
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMYjmQOsX1wZFkHJECVFrCZet0FJYK9kg&callback=initMap"></script>
     </head>
     <body>
         <!-- Navigation -->
@@ -108,6 +106,8 @@
 
     <?php require('./public/views/footer.php'); ?>
 
+    <!-- Google Map -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMYjmQOsX1wZFkHJECVFrCZet0FJYK9kg&callback=initMap">google.maps.event.addDomListener(window,'load', initMap);</script>
     <!-- JavaScript files-->
     <script src="./js/gmapEvents.js"></script>
 

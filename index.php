@@ -1,4 +1,5 @@
 <?php
+    require('./vendor/autoload.php');
     require('./controllers/frontController.php');
     require('./controllers/adminController.php');
 
@@ -345,7 +346,7 @@
                                     addProgAugInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
                                     echo 'Aug3';
                                 } else if ($week === '4') {
-                                    addProgJulInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
+                                    addProgAugInfos($mission, $details_mission, $location, $available_beds, $comments, $week);
                                     echo 'Aug4';
                                 } else {
                                     throw new Exception('Erreur de numéro de semaine pour aout');

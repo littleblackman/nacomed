@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Map;
+
 class Map {
     
     // Décalaration des attributs

@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Users;
+
 class UsersManager {
 
     private $_db;
@@ -17,7 +19,7 @@ class UsersManager {
     public function doesUserExist($user) {
         $q = $this->_db->prepare('SELECT user_login FROM users WHERE user_login = ?');
         $q->execute(array($user));
-        if ($response = $q->fetch(PDO::FETCH_ASSOC)) {
+        if ($response = $q->fetch(\PDO::FETCH_ASSOC)) {
             return true;
         } else {
             return false;
@@ -28,12 +30,12 @@ class UsersManager {
         $q = $this->_db->prepare('SELECT user_login, user_password FROM users WHERE user_login = :user_login');
         $q->execute(array(
             'user_login' => $user));
-        $response = $q->fetch(PDO::FETCH_ASSOC);
+        $response = $q->fetch(\PDO::FETCH_ASSOC);
         $validPassword = password_verify($password, $response['user_password']);
         return $validPassword;
     }
 
-    public function setDb(PDO $db) {
+    public function setDb(\PDO $db) {
         $this->_db = $db;
     }
 }

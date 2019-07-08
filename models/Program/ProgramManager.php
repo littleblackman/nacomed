@@ -1,6 +1,6 @@
 <?php
 
-//namespace App\Program;
+namespace App\Program;
 
 class ProgramManager {
 
@@ -16,8 +16,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_jan ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -30,8 +30,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_feb ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -44,8 +44,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_mar ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -58,8 +58,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_apr ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -72,8 +72,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_may ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -86,8 +86,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_jun ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -100,8 +100,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_jul ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -114,8 +114,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_aug ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -128,8 +128,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_sep ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -142,8 +142,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_oct ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -156,8 +156,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_nov ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -170,8 +170,8 @@ class ProgramManager {
         $q = $this->_db->prepare('SELECT * FROM prog_dec ORDER BY id ASC');
         $q->execute(array());
 
-        $row = $q->fetchAll(PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(PDO::FETCH_ASSOC)) {
+        $row = $q->fetchAll(\PDO::FETCH_ASSOC);
+        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
             $row = new Program($data);
         }*/
 
@@ -238,7 +238,7 @@ class ProgramManager {
         $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
     }
 
-    public function setDb(PDO $db) {
+    public function setDb(\PDO $db) {
         $this->_db = $db;
     }
 }

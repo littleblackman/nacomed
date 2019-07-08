@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Comments;
+
 class CommentsManager {
 
     private $_db;
@@ -11,7 +13,7 @@ class CommentsManager {
     public function readComment() {
         $q = $this->_db->query('SELECT com_title, com_content, com_author, com_creation_date FROM comments');
         
-        while ($data = $q->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $q->fetch(\PDO::FETCH_ASSOC)) {
             $comment = new Comment($data);
         }
         return $comment;
@@ -41,7 +43,7 @@ class CommentsManager {
         $comments = [];
         $q = $this->_db->query('SELECT com_id, com_title, com_content, com_author, DATE_FORMAT(com_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS com_date_fr FROM comments');
 
-        while ($data = $q->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $q->fetch(\PDO::FETCH_ASSOC)) {
             $comments[] = new Comment($data);
         }
         return $comments;
@@ -51,7 +53,7 @@ class CommentsManager {
         $comments = [];
         $q = $this->_db->prepare('SELECT com_id, com_content, com_author, fk_art_id, com_report_number, DATE_FORMAT(com_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS com_date_fr FROM comments WHERE fk_art_id = ? ORDER BY com_creation_date DESC');
         $q->execute(array($article_ID));
-        while ($data = $q->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $q->fetch(\PDO::FETCH_ASSOC)) {
             $comments[] = new Comment($data);        
         }
         return $comments;
@@ -68,14 +70,14 @@ class CommentsManager {
         $q = $this->_db->prepare('SELECT com_id, com_content, com_author, com_creation_date, com_report_number, fk_art_id, DATE_FORMAT(com_report_date, \'%d/%m/%Y à %Hh%imin%ss\') AS com_date_fr FROM comments WHERE com_report_number >= 1 ORDER BY com_report_number DESC');
         $q->execute();
         
-        while ($data = $q->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $q->fetch(\PDO::FETCH_ASSOC)) {
             $reportedComs[] = new Comment($data);
         } 
         $q->closeCursor();
         return $reportedComs;
     }
 
-    public function setDb(PDO $db) {
+    public function setDb(\PDO $db) {
         $this->_db = $db;
     }
 }

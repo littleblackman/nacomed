@@ -103,6 +103,8 @@
                 </div>
             </div>
         </div>
+        
+        <div><a id="header_link" href="#header">Retour en haut</a></div>
 
         <?php require('./public/views/footer.php'); ?>
 
@@ -111,6 +113,7 @@
         <script src="./js/commentAdder.js"></script>
         <script src="./js/reportCom.js"></script>
         <script src="./js/controllers/newsView.js"></script>
+        <script src="./js/headerLink.js"></script>
 
     </body>
 </html>

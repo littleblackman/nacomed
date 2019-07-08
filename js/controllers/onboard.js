@@ -7,16 +7,8 @@ $('.owl-carousel').owlCarousel({
     margin:10
 });
 
-$(document).click(function(event) { 
-    if(!$(event.target).closest('#mainNav').length) {
-        $('#mainNav').removeClass('is-visible');
-    } 
-});
-
 $(function() {
     /* GMAP */
-    
-
     function initMap() {
         var corte= {lat: 42.309409, lng: 9.149022};
     
@@ -47,7 +39,7 @@ $(function() {
             var on_date_class = $(this).find('.on_date');
             var on_date = on_date_class.attr('value');
             var comments_class = $(this).find('.comments');
-            var comments = comments_class.html();
+            var comments = comments_class.attr('value');
             var contentInfoWindow = '<p>' + event_name + '</p><p>' + on_date + '</p><p>' + comments + '</p>';
     
             var infowindow = new google.maps.InfoWindow({

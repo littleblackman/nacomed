@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Articles;
+
 class ArticlesManager {
 
     private $_db;
@@ -14,7 +16,7 @@ class ArticlesManager {
         $q = $this->_db->prepare('SELECT art_id, art_title, art_content, url_img, url_video, art_author, DATE_FORMAT(art_modified_date, \'%d/%m/%Y à %Hh%imin%ss\') AS modified_date_fr, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles WHERE art_id = ?');
         $q->execute(array($article_ID));
         
-        while ($data = $q->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $q->fetch(\PDO::FETCH_ASSOC)) {
             $article = new Article($data);
         }
         return $article;
@@ -28,7 +30,7 @@ class ArticlesManager {
         $req = $this->_db->prepare('SELECT art_title, art_content, art_author, art_id, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles WHERE art_title = ?');
         $req->execute(array($art_title));
 
-        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $req->fetch(\PDO::FETCH_ASSOC)) {
             $addedArticle = new Article($data);
         }
         return $addedArticle;
@@ -42,7 +44,7 @@ class ArticlesManager {
         $req = $this->_db->prepare('SELECT art_title, art_content, art_author, url_img, art_id, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles WHERE art_title = ?');
         $req->execute(array($art_title));
 
-        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $req->fetch(\PDO::FETCH_ASSOC)) {
             $addedArticle = new Article($data);
         }
         return $addedArticle;
@@ -56,7 +58,7 @@ class ArticlesManager {
         $req = $this->_db->prepare('SELECT art_title, art_content, art_author, art_id, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles WHERE art_title = ?');
         $req->execute(array($art_title));
 
-        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $req->fetch(\PDO::FETCH_ASSOC)) {
             $addedArticle = new Article($data);
         }
         return $addedArticle;
@@ -70,7 +72,7 @@ class ArticlesManager {
         $req = $this->_db->prepare('SELECT art_title, art_content, url_video, art_author, art_id, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles WHERE art_title = ?');
         $req->execute(array($art_title));
 
-        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $req->fetch(\PDO::FETCH_ASSOC)) {
             $addedArticle = new Article($data);
         }
         return $addedArticle;
@@ -84,7 +86,7 @@ class ArticlesManager {
         $req = $this->_db->prepare('SELECT art_title, art_content, url_img, art_author, art_id, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles WHERE art_title = ?');
         $req->execute(array($art_title));
 
-        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $req->fetch(\PDO::FETCH_ASSOC)) {
             $addedArticle = new Article($data);
         }
         return $addedArticle;
@@ -130,7 +132,7 @@ class ArticlesManager {
         $articles = [];
         $q = $this->_db->query('SELECT art_id, art_title, art_content, art_author, DATE_FORMAT(art_modified_date, \'%d/%m/%Y à %Hh%imin%ss\') AS modified_date_fr, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles ORDER BY art_creation_date DESC LIMIT 3');
 
-        while ($data = $q->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $q->fetch(\PDO::FETCH_ASSOC)) {
             $articles[] = new Article($data);
         }
         return $articles;
@@ -140,13 +142,13 @@ class ArticlesManager {
         $articles = [];
         $q = $this->_db->query('SELECT art_id, art_title, art_content, url_img, art_author, DATE_FORMAT(art_modified_date, \'%d/%m/%Y à %Hh%imin%ss\') AS modified_date_fr, DATE_FORMAT(art_creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles ORDER BY art_creation_date ASC');
 
-        while ($data = $q->fetch(PDO::FETCH_ASSOC)) {
+        while ($data = $q->fetch(\PDO::FETCH_ASSOC)) {
             $articles[] = new Article($data);
         }
         return $articles;
     }
 
-    public function setDb(PDO $db) {
+    public function setDb(\PDO $db) {
         $this->_db = $db;
     }
 }

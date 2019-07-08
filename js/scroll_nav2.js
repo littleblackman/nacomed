@@ -24,7 +24,7 @@
           //check if user is scrolling up
           if (currentTop < this.previousTop) {
             //if scrolling up...
-            if (currentTop > 0 && $('#mainNav').hasClass('is-fixed')) {
+            if (currentTop > 0 && $('.onboard-nav').hasClass('is-fixed')) {
               $('#mainNav').addClass('is-visible');
             } else {
               $('#mainNav').removeClass('is-visible is-fixed');
@@ -38,10 +38,10 @@
         });
     }
 
-    $(document).click(function(event) { 
+    /*$(document).click(function(event) { 
       if(!$(event.target).closest('#mainNav').length) {
           $('#mainNav').removeClass('is-visible');
-      } 
-  });
+      }*/ 
+  //});
   
   }); // End of use strict
