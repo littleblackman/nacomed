@@ -469,7 +469,7 @@ table, td, th {
   justify-content: space-around;
 }
 
-/* PAGE DES COMMENTAIRES SIGANLES */
+/* PAGE DES COMMENTAIRES SIGNALES */
 
 .reported_comments {
   display: flex;
@@ -501,6 +501,12 @@ table, td, th {
 
 .comment_censored {
   text-decoration: line-through;
+}
+
+/* PAGE NOUS SOUTENIR */
+
+#haWidget {
+  margin-top: 10%;
 }
 
 /* PAGE DE GESTION DU PROGRAMME DU BATEAU */
@@ -555,6 +561,14 @@ table, td, th {
 
 .close {
   margin-left: auto;
+}
+
+/* Lien de retour vers le header */
+
+#header_link {
+  position: fixed;
+  top: 95%;
+  right: 5%;
 }
 
 /* Responsive */
@@ -704,10 +718,6 @@ table, td, th {
 
   #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
     color: rgba(255, 255, 255, 0.8);
-  }
-
-  .navbar-expand-lg .navbar-collapse {
-    
   }
 
   .admin-link {
