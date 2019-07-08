@@ -34,6 +34,15 @@
         <link rel="shortcut icon" href="./img/logo_nacomed.png">
         <!-- Lightbox CSS -->
         <link rel="stylesheet" href="./vendor/lightbox2/css/lightbox.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142576167-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-142576167-1');
+        </script>
         
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
