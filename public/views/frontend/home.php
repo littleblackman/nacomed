@@ -32,6 +32,11 @@
         <link rel="stylesheet" href="./css/custom.css">
         <!-- Favicon-->
         <link rel="shortcut icon" href="./img/logo_nacomed.png">
+        <!-- Open Graph Data Facebook -->
+        <meta property="og:title" content="Page d'accueil de l'association Nacomed" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.nacomed.oc-maxlau.fr/index.php" />
+        <meta property="og:image" content="./img/logo_nacomed.png" />
         <!-- Lightbox CSS -->
         <link rel="stylesheet" href="./vendor/lightbox2/css/lightbox.css">
         <!-- Global site tag (gtag.js) - Google Analytics -->

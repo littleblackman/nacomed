@@ -18,6 +18,11 @@
         <link rel="stylesheet" href="./css/custom.css">
         <!-- Favicon-->
         <link rel="shortcut icon" href="./img/logo_nacomed.png">
+        <!-- Open Graph Data Facebook -->
+        <meta property="og:title" content="Page de contact de Nacomed" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.nacomed.oc-maxlau.fr/index.php?action=displayContact" />
+        <meta property="og:image" content="./img/logo_nacomed.png" />
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142576167-1"></script>
         <script>
