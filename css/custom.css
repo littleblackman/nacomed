@@ -509,6 +509,17 @@ table, td, th {
   margin-top: 10%;
 }
 
+.donation {
+  position: relative;
+  margin-top: 30%;
+  display: flex;
+}
+
+.donation p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* PAGE DE GESTION DU PROGRAMME DU BATEAU */
 
 .welcome-program {
@@ -921,6 +932,14 @@ table, td, th {
   .image-news {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+/* PAGE NOUS SOUTENIR */
+
+@media screen and (max-width: 992px) {
+  .donation {
+    margin-top: 40%;
   }
 }
 
