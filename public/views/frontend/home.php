@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Association Nacomed : Accueil</title>
-        <meta name="description" content="">
+        <meta name="description" content="Page d'accueil du site de l'association Nacomed">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
         <!-- Bootstrap CSS-->

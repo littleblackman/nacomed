@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Association Nacomed : Nous soutenir</title>
-        <meta name="description" content="">
+        <meta name="description" content="Page pour soutenir l'association Nacomed : les dons">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
         <!-- Bootstrap CSS-->
