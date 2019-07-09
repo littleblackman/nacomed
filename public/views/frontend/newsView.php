@@ -22,7 +22,7 @@
         <meta property="og:title" content="Page de votre News Nacomed" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://www.nacomed.oc-maxlau.fr/index.php?action=getArticle&article_id=<?php echo $article->art_id(); ?>" />
-        <meta property="og:image" content="./img/logo_nacomed.png" />
+        <meta property="og:image" content="http://zupimages.net/viewer.php?id=19/28/69dv.png" />
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142576167-1"></script>
         <script>
