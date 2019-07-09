@@ -20,7 +20,7 @@
         <link rel="shortcut icon" href="./img/logo_nacomed.png">
         <!-- Open Graph Data Facebook -->
         <meta property="og:title" content="Page de votre News Nacomed" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta property="og:url" content="https://www.nacomed.oc-maxlau.fr/index.php?action=getArticle&article_id=<?php echo $article->art_id(); ?>" />
         <meta property="og:image" content="./img/logo_nacomed.png" />
         <!-- Global site tag (gtag.js) - Google Analytics -->
