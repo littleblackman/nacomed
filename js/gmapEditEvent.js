@@ -1,21 +1,21 @@
 $(function() {
     /* GMAP */
 
-    var event_lat_pl = $('#lat').attr('placeholder');
-    var event_lat = parseFloat(event_lat_pl);
-    var event_lng_pl = $('#lng').attr('placeholder');
-    var event_lng = parseFloat(event_lng_pl);
-    console.log(event_lat, event_lng);
-    var pointer= {lat: event_lat, lng: event_lng};
-
-    var map = new google.maps.Map(document.getElementById('gmap'), {
-        zoom: 8,
-        center: pointer,
-        mapTypeId: google.maps.MapTypeId.ROADMAP 
-    });
+    
 
     function initMap() {
-        map;
+        var event_lat_pl = $('#lat').attr('placeholder');
+        var event_lat = parseFloat(event_lat_pl);
+        var event_lng_pl = $('#lng').attr('placeholder');
+        var event_lng = parseFloat(event_lng_pl);
+        console.log(event_lat, event_lng);
+        var pointer= {lat: event_lat, lng: event_lng};
+
+        var map = new google.maps.Map(document.getElementById('gmap'), {
+            zoom: 8,
+            center: pointer,
+            mapTypeId: google.maps.MapTypeId.ROADMAP 
+        });
 
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(event_lat, event_lng),
@@ -115,15 +115,9 @@ $(function() {
                                 window.location.href = "./index.php?action=listMapEvents";
                             });
                     }
-                },
-                error: function() {
-                    console.log('erreur ajax');
                 }
             });
         });
     }
-        
-    initMap();
-
-    
+    initMap(); 
 });

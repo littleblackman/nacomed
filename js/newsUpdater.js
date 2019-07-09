@@ -28,7 +28,6 @@ var articleToUpdate = {
                 processData:false,
                 dataType: 'text',
                 success: function(data) {
-                    console.log(data);
                     switch (data) {
                         case 'title_missing':
                             self.modalText.text('Veuillez écrire un titre');

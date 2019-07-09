@@ -31,7 +31,6 @@ var articleToAdd = {
                 processData:false,
                 dataType: 'text',
                 success: function(data) {
-                    console.log(data);
                     switch (data) {
                         case 'title_missing':
                             self.modalText.text('Veuillez écrire un titre');
@@ -54,7 +53,6 @@ var articleToAdd = {
                         break;
 
                         case 'failed':
-                            console.log(data);
                             self.modalText.text('Veuillez remplir tous les champs, un titre et un contenu');
                             self.buttonsDiv.hide();
                             self.modalCreate.show();

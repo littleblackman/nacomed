@@ -36,7 +36,6 @@ var loginValid = {
                 processData:false,
                 dataType: 'text',
                 success: function(data) {
-                    console.log(data);
                     if (data == 'success') {
                         self.modalText.text('Heureux de vous revoir ' + self.userLogin.val() + '.');
                         self.modal.show();

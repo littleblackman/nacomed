@@ -25,7 +25,6 @@ var programInfos = {
                 processData:false,
                 dataType: 'text',
                 success: function(data) {
-                    console.log(data);
                     switch (data) {
                         case 'missing_infos':
                             self.modalText.text('Attention, vous n\'avez rentré aucune information');

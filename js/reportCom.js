@@ -44,7 +44,6 @@ var comToReport = {
 
         $(document).click(function(event) { 
             if(!$(event.target).closest(self.modalCom).length) {
-                console.log('document cliqué');
                 self.modalCom.hide();
                 self.modalCom.stop(true, true).fadeOut();
             } 

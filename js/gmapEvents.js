@@ -1,17 +1,17 @@
 $(function() {
     /* GMAP */
-    var corte= {lat: 42.309409, lng: 9.149022};
     
-    var currentInfoWindow = null;
-
-    var map = new google.maps.Map(document.getElementById('gmap'), {
-        zoom: 8,
-        center: corte,
-        mapTypeId: google.maps.MapTypeId.ROADMAP 
-    });
 
     function initMap() {
-        map;
+        var corte= {lat: 42.309409, lng: 9.149022};
+    
+        var currentInfoWindow = null;
+
+        var map = new google.maps.Map(document.getElementById('gmap'), {
+            zoom: 8,
+            center: corte,
+            mapTypeId: google.maps.MapTypeId.ROADMAP 
+        });
 
         $('.row-map').each(function() {
             var lat_class = $(this).find('.event_lat');
@@ -116,9 +116,5 @@ $(function() {
             });
         });
     }
-        
-
-    initMap();
-
-    
+    initMap();  
 });
