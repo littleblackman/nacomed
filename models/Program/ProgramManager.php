@@ -17,9 +17,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
@@ -31,9 +28,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
@@ -45,9 +39,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
@@ -59,9 +50,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
@@ -73,9 +61,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
@@ -87,9 +72,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
@@ -101,9 +83,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
@@ -115,9 +94,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
@@ -129,9 +105,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
@@ -143,9 +116,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
@@ -157,9 +127,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
@@ -171,9 +138,6 @@ class ProgramManager {
         $q->execute(array());
 
         $row = $q->fetchAll(\PDO::FETCH_ASSOC);
-        /*while ($data = $q->fetchAll(\PDO::FETCH_ASSOC)) {
-            $row = new Program($data);
-        }*/
 
         return $row;
     }
