@@ -77,9 +77,9 @@
     <?php require('./public/views/footer.php'); ?>
 
     <!-- JavaScript files-->
+    <script src="./js/gmap.js"></script>
     <!-- Google Map -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMYjmQOsX1wZFkHJECVFrCZet0FJYK9kg&callback=initMap">google.maps.event.addDomListener(window,'load', initMap);</script>
-    <script src="./js/gmap.js"></script>
     <script src="./js/adminOptions.js"></script>
     <script src="./js/controllers/adminOptions.js"></script>
     <script src="./js/eventAdder.js"></script>

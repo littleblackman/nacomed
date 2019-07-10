@@ -42,11 +42,11 @@
         <!-- Navigation -->
         <?php require('./public/views/header.php'); ?>
 
-        <div class="donation">
+        <!-- <div class="donation">
             <p>A VENIR : VOUS POURREZ SOUTENIR L'ASSOCIATION EN FAISANT DES DONS</p>
-        </div>
+        </div> -->
 
-        <!-- <iframe id="haWidget" allowtransparency="true" scrolling="auto" src="https://www.helloasso.com/associations/nacomed/formulaires/1/widget" style="width:100%;height:750px;border:none;" onload="window.scroll(0, this.offsetTop)"></iframe> -->
+        <iframe id="haWidget" allowtransparency="true" scrolling="auto" src="https://www.helloasso.com/associations/nacomed/formulaires/1/widget" style="width:100%;height:750px;border:none;" onload="window.scroll(0, this.offsetTop)"></iframe>
 
 
         <?php require('./public/views/footer.php'); ?>

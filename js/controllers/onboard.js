@@ -7,9 +7,8 @@ $('.owl-carousel').owlCarousel({
     margin:10
 });
 
-$(function() {
+var initMap = function() {
     /* GMAP */
-    function initMap() {
         var corte= {lat: 42.309409, lng: 9.149022};
     
         var currentInfoWindow = null;
@@ -53,11 +52,8 @@ $(function() {
                 infowindow.open(map, marker);
                 currentInfoWindow = infowindow;
             });
-        });
+        })  
     }
         
 
-    initMap();
-
-    
-});
+    //initMap();
