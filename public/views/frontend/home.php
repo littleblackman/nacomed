@@ -6,7 +6,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,7 +57,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container home-navbar">
-                <a class="logo navbar-brand" href="./index.php"><img src="./img/logo_nacomed.png" /></a>
+                <a class="logo navbar-brand" href="./index.php"><img src="./img/logo_nacomed.png" alt="logo de nacomed" /></a>
                     <button class="menu_btn navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         Menu
                         <i class="fas fa-bars"></i>
@@ -130,21 +130,21 @@
                                 <h3 class="text-uppercase">Un navire scientifique</h3>
                                     <p class="lined">&Eacute;tudier le milieu marin</p>
                             </header>
-                                <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/microscope.png"><p class="about-title short-p">Accueillir des missions scientifiques</p></div>
-                                <div class="boat-info"><img class="sized_img" src="https://img.icons8.com/ios/50/000000/graph.png"><p class="about-title short-p">Effectuer des relevés en autonomie (plancton, micorplastique, accoustique</p></div>
-                                <div class="boat-info"><img src="./img/plancton.png"><p class="about-title short-p">S'intégrer à des programmes de recherches</p></div>
-                                <div class="boat-info"><img class="sized_img" src="https://img.icons8.com/dotty/50/000000/flounder-fish.png"><p class="about-title short-p">Participer aux réseaux de sciences participatives en mer (OBSenMER, ...)</p></div>
+                                <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/microscope.png" alt="microscope"><p class="about-title short-p">Accueillir des missions scientifiques</p></div>
+                                <div class="boat-info"><img class="sized_img" src="https://img.icons8.com/ios/50/000000/graph.png" alt="graphique"><p class="about-title short-p">Effectuer des relevés en autonomie (plancton, micorplastique, accoustique</p></div>
+                                <div class="boat-info"><img src="./img/plancton.png" alt="plancton"><p class="about-title short-p">S'intégrer à des programmes de recherches</p></div>
+                                <div class="boat-info"><img class="sized_img" src="https://img.icons8.com/dotty/50/000000/flounder-fish.png" alt="poisson"><p class="about-title short-p">Participer aux réseaux de sciences participatives en mer (OBSenMER, ...)</p></div>
                         </div>
-                        <div class="col-lg-2 logo-div"><img src="./img/logo_nacomed.png" alt="..." class="img-fluid rounded-circle d-block mx-auto about-logo"></div>
+                        <div class="col-lg-2 logo-div"><img src="./img/logo_nacomed.png" alt="logo de nacomed" class="img-fluid rounded-circle d-block mx-auto about-logo"></div>
                         <div class="col-lg-5 ecology-boat">
                             <header class="text-center">
                                 <h3 class="text-uppercase">Un navire écologique</h3>
                                 <p class="lined">Préserver et sensibiliser</p>
                             </header>
-                                <div class="boat-info"><img src="https://img.icons8.com/dotty/50/000000/compass.png"><p class="about-title short-p">Naviguer et s’avitailler de manière éco-responsable</p></div>
-                                <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/atom-editor.png"><p class="about-title">Développer l’autonomie du navire grâce aux low-techs</p></div>
-                                <div class="boat-info"><img class="sized_img" src="https://img.icons8.com/dotty/50/000000/commercial.png"><p class="about-title"> Mener des actions de sensibilisation auprès des plaisanciers, des plagistes, des écoliers et étudiants, et du grand public</p></div>
-                                <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/recycle-sign.png"><p class="about-title short-p">Effectuer des dépollutions et nettoyages</p></div>
+                                <div class="boat-info"><img src="https://img.icons8.com/dotty/50/000000/compass.png" alt="boussole"><p class="about-title short-p">Naviguer et s’avitailler de manière éco-responsable</p></div>
+                                <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/atom-editor.png" alt="atome"><p class="about-title">Développer l’autonomie du navire grâce aux low-techs</p></div>
+                                <div class="boat-info"><img class="sized_img" src="https://img.icons8.com/dotty/50/000000/commercial.png" alt="mega-phone"><p class="about-title"> Mener des actions de sensibilisation auprès des plaisanciers, des plagistes, des écoliers et étudiants, et du grand public</p></div>
+                                <div class="boat-info"><img src="https://img.icons8.com/ios/50/000000/recycle-sign.png" alt="logo de recyclage"><p class="about-title short-p">Effectuer des dépollutions et nettoyages</p></div>
                         </div>
                     </div>
 
@@ -196,12 +196,12 @@
                         
                         <div class="carousel">
                             <div class="owl-carousel owl-theme">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_jour.jpg" alt="">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_profil_gauche.jpg" alt="">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_nuit.jpg" alt="">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_crepuscule.jpg" alt="">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_pont.jpg" alt="">
-                                <img class="owl-lazy" data-src="./img/sonate/sonate_pont_2.jpg" alt="">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_jour.jpg" src="./img/sonate/sonate_jour.jpg" alt="photo de la sonate">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_profil_gauche.jpg" src="./img/sonate/sonate_profil_gauche.jpg" alt="photo de la sonate">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_nuit.jpg" src="./img/sonate/sonate_nuit.jpg" alt="photo de la sonate">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_crepuscule.jpg" src="./img/sonate/sonate_crepuscule.jpg" alt="photo de la sonate">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_pont.jpg" src="./img/sonate/sonate_pont.jpg" alt="photo de la sonate">
+                                <img class="owl-lazy" data-src="./img/sonate/sonate_pont_2.jpg" src="./img/sonate/sonate_pont.jpg" alt="photo de la sonate">
                             </div>
                         </div>
 
@@ -277,7 +277,7 @@
                             <h2 class="text-uppercase lined">Contact</h2>
                         </header>
                         <div class="row">
-                            <div class="contact-logo-div col-lg-12"><img class="contact-logo" src="./img/logo_nacomed.png" alt="..." class="img-fluid rounded-circle d-block mx-auto contact-logo"></div>
+                            <div class="contact-logo-div col-lg-12"><img src="./img/logo_nacomed.png" alt="logo de nacomed" class="img-fluid rounded-circle d-block mx-auto contact-logo"></div>
                         </div>
                         <div class="row lined">
                             <div class="col-lg-6 person_infos text-center">
@@ -287,7 +287,7 @@
                                 <p>Mail : <a href="mailto:navirecorsemed@gmail.com">navirecorsemed@gmail.com</a></p>
                             </div>
                             <div class="col-lg-6 text-center person_pic">
-                                <img src="./img/cyrille_resized.png">
+                                <img src="./img/cyrille_resized.png" alt="portrait de Cyrille Lorenzi, fondateur de nacomed">
                             </div>
                         </div>
 
@@ -298,7 +298,7 @@
                                 <p>Mail : <a href="mailto:mlauvergeat@gmail.com">mlauvergeat@gmail.com</a></p>
                             </div>
                             <div class="col-lg-6 text-center person_pic">
-                                <img src="./img/max_resized.png">
+                                <img src="./img/max_resized.png" alt="portrait de Maxime Lauvergeat, développeur web">
                             </div>
                         </div>
                     <?php require('./public/views/footer.php'); ?>
