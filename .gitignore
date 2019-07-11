@@ -2,11 +2,8 @@
 /vendor/
 /pdf/
 /.vscode/
-/controllers/
 
-/public/views/backend/mapsManagementView.php
+config.php
 
 composer.json
 composer.phar
-frontController_online.php
-/public/views/frontend/onboard.php
