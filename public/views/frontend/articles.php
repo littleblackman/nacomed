@@ -96,7 +96,6 @@
 
         <!-- JavaScript files-->
         <script src="./js/headerLink.js"></script>
-        <script src="./js/scroll_nav2.js"></script>
     </body>
 </html>
 
