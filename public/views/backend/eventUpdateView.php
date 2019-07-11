@@ -80,7 +80,7 @@
     <!-- JavaScript files-->
     <script src="./js/gmapEditEvent.js"></script>
     <!-- Google Map -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMYjmQOsX1wZFkHJECVFrCZet0FJYK9kg&callback=initMap">google.maps.event.addDomListener(window,'load', initMap);</script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php include('./config.php'); echo $apiKey; ?>&callback=initMap">google.maps.event.addDomListener(window,'load', initMap);</script>
 
     <script src="./js/adminOptions.js"></script>
     <script src="./js/controllers/adminOptions.js"></script>
