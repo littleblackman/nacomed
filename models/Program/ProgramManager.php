@@ -10,6 +10,18 @@ class ProgramManager {
         $this->setDb($db);
     }
 
+    function setDb() {
+        try {
+            include('./config.php');
+            $db = new \PDO('mysql:host=' . $localhost . ';dbname=' . $dbName . '; charset=utf8' , '' . $loginLocal . '', ''. $pwdLocal . '');
+            $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_WARNING);
+            return $db;
+        } catch(Exception $e) {
+            $errorMessage = $e->getMessage();
+            require('./public/views/frontend/errorView.php');
+        }
+    }
+
     public function getProg_jan() {
         $row = [];
 
@@ -202,7 +214,7 @@ class ProgramManager {
         $q->execute(array($mission, $details_mission, $location, $available_beds, $comments, $week));
     }
 
-    public function setDb(\PDO $db) {
+    /*public function setDb(\PDO $db) {
         $this->_db = $db;
-    }
+    }*/
 }

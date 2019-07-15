@@ -10,6 +10,18 @@ class MapManager {
         $this->setDb($db);
     }
 
+    function setDb() {
+        try {
+            include('./config.php');
+            $db = new \PDO('mysql:host=' . $localhost . ';dbname=' . $dbName . '; charset=utf8' , '' . $loginLocal . '', ''. $pwdLocal . '');
+            $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_WARNING);
+            return $db;
+        } catch(Exception $e) {
+            $errorMessage = $e->getMessage();
+            require('./public/views/frontend/errorView.php');
+        }
+    }
+
     public function addEvent($name, $lat, $lng, $date, $com) {
         $q = $this->_db->prepare('INSERT INTO map_events (event_name, event_lat, event_lng, onboarding_date, event_comments) VALUES (?, ?, ?, ?, ?)');
         $eventToAdd = $q->execute(array($name, $lat, $lng, $date, $com));
@@ -46,7 +58,7 @@ class MapManager {
     }
 
 
-    public function setDb(\PDO $db) {
+    /*public function setDb(\PDO $db) {
         $this->_db = $db;
-    }
+    }*/
 }

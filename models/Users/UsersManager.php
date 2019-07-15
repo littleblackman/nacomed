@@ -9,6 +9,18 @@ class UsersManager {
         $this->setDb($db);
     }
 
+    function setDb() {
+        try {
+            include('./config.php');
+            $db = new \PDO('mysql:host=' . $localhost . ';dbname=' . $dbName . '; charset=utf8' , '' . $loginLocal . '', ''. $pwdLocal . '');
+            $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_WARNING);
+            return $db;
+        } catch(Exception $e) {
+            $errorMessage = $e->getMessage();
+            require('./public/views/frontend/errorView.php');
+        }
+    }
+
     public function createUser($user, $password) {
         $q = $this->_db->prepare('INSERT INTO users (user_login, user_password) VALUES (:user_login, :user_password)');
         $q->execute(array(
@@ -35,7 +47,7 @@ class UsersManager {
         return $validPassword;
     }
 
-    public function setDb(\PDO $db) {
+    /*public function setDb(\PDO $db) {
         $this->_db = $db;
-    }
+    }*/
 }

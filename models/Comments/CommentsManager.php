@@ -10,6 +10,18 @@ class CommentsManager {
         $this->setDb($db);
     }
 
+    function setDb() {
+        try {
+            include('./config.php');
+            $db = new \PDO('mysql:host=' . $localhost . ';dbname=' . $dbName . '; charset=utf8' , '' . $loginLocal . '', ''. $pwdLocal . '');
+            $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_WARNING);
+            return $db;
+        } catch(Exception $e) {
+            $errorMessage = $e->getMessage();
+            require('./public/views/frontend/errorView.php');
+        }
+    }
+
     public function readComment() {
         $q = $this->_db->query('SELECT com_title, com_content, com_author, com_creation_date FROM comments');
         
@@ -77,7 +89,7 @@ class CommentsManager {
         return $reportedComs;
     }
 
-    public function setDb(\PDO $db) {
+    /*public function setDb(\PDO $db) {
         $this->_db = $db;
-    }
+    }*/
 }
