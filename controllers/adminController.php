@@ -10,8 +10,7 @@
 /* Liste des news à éditer */
 function listArticlesToEdit() {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);    
+        $articlesManager = new App\Articles\ArticlesManager();    
         $articles = $articlesManager->listArticles();
         require('./public/views/backend/newsEditionView.php');
     } catch(Exception $e) {
@@ -23,8 +22,7 @@ function listArticlesToEdit() {
 /* Ajouter une news sans vidéo/sans image */
 function addNewsNoImgNoVideo($art_title, $art_content, $art_author) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $article = $articlesManager->addNewsNoImgNoVideo($art_title, $art_content, $art_author);
         $articleId = $article->art_id();
         return $articleId;
@@ -38,8 +36,7 @@ function addNewsNoImgNoVideo($art_title, $art_content, $art_author) {
 /* Ajouter une news avec image/ sans vidéo */
 function addNewsNoVideo($art_title, $art_content, $url_img, $art_author) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $article = $articlesManager->addNewsNoVideo($art_title, $art_content, $url_img, $art_author);
         $articleId = $article->art_id();
         return $articleId;
@@ -53,8 +50,7 @@ function addNewsNoVideo($art_title, $art_content, $url_img, $art_author) {
 /* Ajouter une news avec vidéo / sans image */
 function addNewsVideo($art_title, $art_content, $url_video, $art_author) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $article = $articlesManager->addNewsVideo($art_title, $art_content, $url_video, $art_author);
         $articleId = $article->art_id();
         return $articleId;
@@ -68,8 +64,7 @@ function addNewsVideo($art_title, $art_content, $url_video, $art_author) {
 /* Ajouter une news avec vidéo / avec image */
 function addNews($art_title, $art_content, $url_img, $url_video, $art_author) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $article = $articlesManager->addNews($art_title, $art_content, $url_img, $url_video, $art_author);
         $articleId = $article->art_id();
         return $articleId;
@@ -83,8 +78,7 @@ function addNews($art_title, $art_content, $url_img, $url_video, $art_author) {
 /* Récupérer une news à éditer */
 function editArticle($article_id) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $article = $articlesManager->getArticle($article_id);
         require('./public/views/backend/newsUpdateView.php');
     } catch(Exception $e) {
@@ -96,8 +90,7 @@ function editArticle($article_id) {
 /* Mettre à jour une news avec vidéo / sans image */
 function updateArticleNoVideo($art_title, $art_content, $url_img, $art_id) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $articleToUpdate = $articlesManager->updateArticleNoVideo($art_title, $art_content, $url_img, $art_id);
         return $articleToUpdate;
         require('./public/views/frontend/newsView.php');
@@ -110,8 +103,7 @@ function updateArticleNoVideo($art_title, $art_content, $url_img, $art_id) {
 /* Mettre à jour une news sans vidéo / sans image */
 function updateArticleNoImgNoVideo($art_title, $art_content, $art_id) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $articleToUpdate = $articlesManager->updateArticleNoImgNoVideo($art_title, $art_content, $art_id);
         return $articleToUpdate;
         require('./public/views/frontend/newsView.php');
@@ -124,8 +116,7 @@ function updateArticleNoImgNoVideo($art_title, $art_content, $art_id) {
 /* Mettre à jour une news avec vidéo / sans image */
 function updateArticleVideo($art_title, $art_content, $url_video, $art_id) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $articleToUpdate = $articlesManager->updateArticleVideo($art_title, $art_content, $url_video, $art_id);
         return $articleToUpdate;
         require('./public/views/frontend/newsView.php');
@@ -138,8 +129,7 @@ function updateArticleVideo($art_title, $art_content, $url_video, $art_id) {
 /* Mettre à jour une news avec vidéo / avec image */
 function updateArticle($art_title, $art_content, $url_img, $url_video, $art_id) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $articleToUpdate = $articlesManager->updateArticle($art_title, $art_content, $url_img, $url_video, $art_id);
         return $articleToUpdate;
         require('./public/views/frontend/newsView.php');
@@ -152,9 +142,8 @@ function updateArticle($art_title, $art_content, $url_img, $url_video, $art_id) 
 /* Supprimer une news */
 function deleteArticle($article_id) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
-        $commentsManager = new App\Comments\CommentsManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
+        $commentsManager = new App\Comments\CommentsManager();
         $comsToDelete = $commentsManager->deleteComsFromArticle($article_id);
         $articleToDelete = $articlesManager->deleteArticle($article_id);
         require('./views/frontend/articleView.php');
@@ -167,8 +156,7 @@ function deleteArticle($article_id) {
 /* Ajouter un évènement sur la map */
 function addEvent($name, $lat, $lng, $date, $com) {
     try {
-        $db = setDb();
-        $mapManager = new App\Map\MapManager($db);
+        $mapManager = new App\Map\MapManager();
         $eventToAdd = $mapManager->addEvent($name, $lat, $lng, $date, $com);
         require('./public/views/backend/mapManagementView.php');
     } catch(Exception $e) {
@@ -180,8 +168,7 @@ function addEvent($name, $lat, $lng, $date, $com) {
 /* Récupérer tous les évènements sur la map */
 function displayMapEvents() {
     try {
-        $db = setDb();
-        $mapManager = new App\Map\MapManager($db);
+        $mapManager = new App\Map\MapManager();
         $mapEvents = $mapManager->displayEvents();
         require('./public/views/backend/mapEventsView.php');
     } catch(Exception $e) {
@@ -193,8 +180,7 @@ function displayMapEvents() {
 /* Afficher un évènement que l'on va mettre à jour */
 function displayEventUpdateView($id) {
     try {
-        $db = setDb();
-        $mapManager = new App\Map\MapManager($db);
+        $mapManager = new App\Map\MapManager();
         $event = $mapManager->displayEditedEvent($id);
         require('./public/views/backend/eventUpdateView.php');
     } catch(Exception $e) {
@@ -206,8 +192,7 @@ function displayEventUpdateView($id) {
 /* Mettre à jour un évènement */
 function updateEvent($name, $lat, $lng, $date, $com, $id) {
     try {
-        $db = setDb();
-        $mapManager = new App\Map\MapManager($db);
+        $mapManager = new App\Map\MapManager();
         $eventToUpdate = $mapManager->updateEvent($name, $lat, $lng, $date, $com, $id);
         require('./public/views/backend/eventUpdateView.php');
     } catch(Exception $e) {
@@ -219,8 +204,7 @@ function updateEvent($name, $lat, $lng, $date, $com, $id) {
 /* Supprimer un évènement */
 function deleteEvent($id) {
     try {
-        $db = setDb();
-        $mapManager = new App\Map\MapManager($db);
+        $mapManager = new App\Map\MapManager();
         $eventToDel = $mapManager->deleteEvent($id);
         return $eventToDel;
         require('./public/views/backend/mapEventsView.php');
@@ -233,8 +217,7 @@ function deleteEvent($id) {
 /* Ajouter les informations de programme du navire pour janvier */
 function addProgJanInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgJan($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -246,8 +229,7 @@ function addProgJanInfos($mission, $details_mission, $location, $available_beds,
 /* Ajouter les information de programme du navire pour février */
 function addProgFebInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgFeb($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -259,8 +241,7 @@ function addProgFebInfos($mission, $details_mission, $location, $available_beds,
 /* Ajouter ... pour mars */
 function addProgMarInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgMar($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -272,8 +253,7 @@ function addProgMarInfos($mission, $details_mission, $location, $available_beds,
 /* Ajouter ... pour avril */
 function addProgAprInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgApr($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -285,8 +265,7 @@ function addProgAprInfos($mission, $details_mission, $location, $available_beds,
 /* Ajouter ... pour mai */
 function addProgMayInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgMay($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -298,8 +277,7 @@ function addProgMayInfos($mission, $details_mission, $location, $available_beds,
 /* Ajouter ... pour juin */
 function addProgJunInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgJun($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -311,8 +289,7 @@ function addProgJunInfos($mission, $details_mission, $location, $available_beds,
 /* Ajouter ... pour juillet */
 function addProgJulInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgJul($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -324,8 +301,7 @@ function addProgJulInfos($mission, $details_mission, $location, $available_beds,
 /* AJouter ... pour aout */
 function addProgAugInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgAug($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -337,8 +313,7 @@ function addProgAugInfos($mission, $details_mission, $location, $available_beds,
 /* Ajouter ... pour septembre */
 function addProgSepInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgSep($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -350,8 +325,7 @@ function addProgSepInfos($mission, $details_mission, $location, $available_beds,
 /* Ajouter ... pour octobre */
 function addProgOctInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgOct($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -363,8 +337,7 @@ function addProgOctInfos($mission, $details_mission, $location, $available_beds,
 /* Ajouter ... pour novembre */
 function addProgNovInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgNov($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -376,8 +349,7 @@ function addProgNovInfos($mission, $details_mission, $location, $available_beds,
 /* Ajouter ... pour décembre */
 function addProgDecInfos($mission, $details_mission, $location, $available_beds, $comments, $week) {
     try {
-        $db = setDb();
-        $progManager = new App\Program\ProgramManager($db);
+        $progManager = new App\Program\ProgramManager();
         $progManager->addProgDec($mission, $details_mission, $location, $available_beds, $comments, $week);
         require('./public/views/backend/programManagementView.php');
     } catch(Exception $e) {
@@ -389,8 +361,7 @@ function addProgDecInfos($mission, $details_mission, $location, $available_beds,
 /* Supprimer un commentaire signalé */
 function deleteCom($com_id) {
     try {
-        $db = setDb();
-        $commentsManager = new App\Comments\CommentsManager($db);
+        $commentsManager = new App\Comments\CommentsManager();
         $comToDelete = $commentsManager->deleteCom($com_id);
         return $comToDelete;
         require('./public/views/backend/reportedComsView.php');
@@ -403,8 +374,7 @@ function deleteCom($com_id) {
 /* Récupérer tous les commentaires signalés */
 function getReportedComs() {
     try {
-        $db = setDb();
-        $commentsManager = new App\Comments\CommentsManager($db);
+        $commentsManager = new App\Comments\CommentsManager();
         $comments = $commentsManager->getReportedComs();  
         require('./public/views/backend/reportedComsView.php');
     } catch(Exception $e) {
@@ -416,8 +386,7 @@ function getReportedComs() {
 /* Connexion de l'admin */
 function logUser($login, $password) {
     try {
-        $db = setDb();
-        $usersManager = new App\Users\UsersManager($db);
+        $usersManager = new App\Users\UsersManager();
         $userToLog = $usersManager->logUser($login, $password);
         return $userToLog; 
         require('./public/views/backend/adminView.php');

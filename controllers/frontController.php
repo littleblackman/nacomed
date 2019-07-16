@@ -9,11 +9,10 @@
 /* Récupération des commentaires d'une news */
 function getArtCom($article_id) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $article = $articlesManager->getArticle($article_id);
 
-        $commentsManager = new App\Comments\CommentsManager($db);
+        $commentsManager = new App\Comments\CommentsManager();
         $comments = $commentsManager->getComFromArticle($article_id);
         require('./public/views/frontend/newsView.php');
     } catch(Exception $e) {
@@ -25,11 +24,10 @@ function getArtCom($article_id) {
 /* Ajout de commentaires */
 function addComment($com_content, $com_author, $article_id) {
     try {
-        $db = setDb();
-        $commentsManager = new App\Comments\CommentsManager($db);
+        $commentsManager = new App\Comments\CommentsManager();
         $comment = $commentsManager->addComment($com_content, $com_author, $article_id);
 
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $article = $articlesManager->getArticle($article_id);
 
         $comments = $commentsManager->getComFromArticle($article_id);
@@ -42,11 +40,10 @@ function addComment($com_content, $com_author, $article_id) {
 /* Signalement de commentaire */
 function reportCom($article_id, $com_id) {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);
+        $articlesManager = new App\Articles\ArticlesManager();
         $article = $articlesManager->getArticle($article_id);
 
-        $commentsManager = new App\Comments\CommentsManager($db);
+        $commentsManager = new App\Comments\CommentsManager();
         $comments = $commentsManager->getComFromArticle($article_id);
 
         $reportedCom = $commentsManager->reportComment($com_id);
@@ -61,8 +58,7 @@ function reportCom($article_id, $com_id) {
 
 function displayOnBoard() {
     try {
-        $db = setDb();
-        $progMayManager = new App\Program\ProgramManager($db);
+        $progMayManager = new App\Program\ProgramManager();
         $prog_jan = $progMayManager->getProg_jan();
         $prog_feb = $progMayManager->getProg_feb();
         $prog_mar = $progMayManager->getProg_mar();
@@ -76,7 +72,7 @@ function displayOnBoard() {
         $prog_nov = $progMayManager->getProg_nov();
         $prog_dec = $progMayManager->getProg_dec();
 
-        $mapManager = new App\Map\MapManager($db);
+        $mapManager = new App\Map\MapManager();
         $mapEvents = $mapManager->displayEvents();
         require('./public/views/frontend/onboard.php');
     } catch(Exception $e) {
@@ -95,8 +91,7 @@ function displayHome() {
 /* Affichage de la page des articles (news) */
 function displayNews() {
     try {
-        $db = setDb();
-        $articlesManager = new App\Articles\ArticlesManager($db);    
+        $articlesManager = new App\Articles\ArticlesManager();    
         $articles = $articlesManager->listArticles();
         require('./public/views/frontend/articles.php');
     } catch(Exception $e) {
@@ -113,16 +108,4 @@ function displayContact() {
 /* Page nous soutenir */
 function displaySupport() {
     require('./public/views/frontend/supportUsView.php');
-}
-
-function setDb() {
-    try {
-        include('./config.php');
-        $db = new \PDO('mysql:host=' . $localhost . ';dbname=' . $dbName . '; charset=utf8' , '' . $loginLocal . '', ''. $pwdLocal . '');
-        $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_WARNING);
-        return $db;
-    } catch(Exception $e) {
-        $errorMessage = $e->getMessage();
-        require('./public/views/frontend/errorView.php');
-    }
 }
