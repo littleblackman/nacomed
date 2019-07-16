@@ -1,431 +1,387 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Association Nacomed : Embarquement</title>
-        <meta name="description" content="Page des informations d'embarquement pour l'association Nacomed">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="all,follow">
-        <!-- Bootstrap CSS-->
-        <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
-        <!-- Google fonts-->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo:400,400i">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-        <!-- OwlCarousel -->
-        <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.carousel.css">
-        <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.theme.default.min.css">
-        <!-- Font Awesome-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <!-- Custom stylesheet - for your changes-->
-        <link rel="stylesheet" href="./css/custom.css">
-        <!-- Favicon-->
-        <link rel="shortcut icon" href="./img/logo_nacomed.png">
-        <!-- Open Graph Data Facebook -->
-        <meta property="og:title" content="Page des informations d'embarquement de l'association Nacomed" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nacomed.oc-maxlau.fr/index.php?action=displayOnboard" />
-        <meta property="og:image" content="http://zupimages.net/viewer.php?id=19/28/69dv.png" />
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142576167-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+<?php $title = 'Association Nacomed : Embarquement'; ?>
+<?php $meta_description = 'Page des informations d\'embarquement pour l\'association Nacomed'; ?>
+<?php $og_title = 'Page de votre News Nacomed'; ?>
 
-            gtag('config', 'UA-142576167-1');
-        </script>
-        
-        <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    </head>
-    <body>
-        <!-- Navigation -->
-        <?php require('./public/views/header.php'); ?>
+<?php ob_start(); ?>
 
-        <div class="eco-volunteer">
-            <header class="text-center">
-                <h1>Embarquer comme éco-marin</h1>
-            </header>
+<div class="eco-volunteer">
+    <header class="text-center">
+        <h1>Embarquer comme éco-marin</h1>
+    </header>
 
-            <div class="carousel onboard-carousel">
-                <div class="owl-carousel owl-theme">
-                    <img class="owl-lazy" data-src="./img/sonate/sonate_jour.jpg" alt="">
-                    <img class="owl-lazy" data-src="./img/sonate/sonate_profil_gauche.jpg" alt="">
-                    <img class="owl-lazy" data-src="./img/sonate/sonate_nuit.jpg" alt="">
-                    <img class="owl-lazy" data-src="./img/sonate/sonate_crepuscule.jpg" alt="">
-                    <img class="owl-lazy" data-src="./img/sonate/sonate_pont.jpg" alt="">
-                    <img class="owl-lazy" data-src="./img/sonate/sonate_pont_2.jpg" alt="">
-                </div>
+    <div class="carousel onboard-carousel">
+        <div class="owl-carousel owl-theme">
+            <img class="owl-lazy" data-src="./img/sonate/sonate_jour.jpg" alt="">
+            <img class="owl-lazy" data-src="./img/sonate/sonate_profil_gauche.jpg" alt="">
+            <img class="owl-lazy" data-src="./img/sonate/sonate_nuit.jpg" alt="">
+            <img class="owl-lazy" data-src="./img/sonate/sonate_crepuscule.jpg" alt="">
+            <img class="owl-lazy" data-src="./img/sonate/sonate_pont.jpg" alt="">
+            <img class="owl-lazy" data-src="./img/sonate/sonate_pont_2.jpg" alt="">
+        </div>
+    </div>
+
+    <div class=container>
+        <div class="row eco-vol-text">
+            <div class="col-lg-12">
+                <header class="text-center">
+                    <h2>Qu'est ce qu'un éco-marin ?</h2>
+                </header>
+                <p>L’éco-marin est un marin de notre temps.
+                    Il ne rejette aucun polluant et maîtrise ses rejets pour ne pas nuire au milieu ; il sensibilise et informe les acteurs (pros, ports, plaisanciers) 
+                    pour initier et faciliter leurs démarches écologiques ; il utilise des produits (pour ses navigations et la maintenance) qui sont respectueux de
+                    l’environnement ; il fait la chasse au gaspillage des ressources (eau douce, électricité, …) et ne pêche que ce dont il a besoin ; il fait attention
+                    à son impact sur la biodiversité marine en navigation et au mouillage ; il connaît les réglementations et les zones protégées ; il ne dérange pas 
+                    la vie des autres espèces lors de ses observations.<br>
+                    À bord c’est aussi quelqu’un qui a soif de découverte, qui veut apprendre, qui s'investit dans toutes les tâches, qui transmet son savoir, qui
+                    respecte les autres et qui a pour but d’aider à faire progresser le projet dont l’objectif est l’étude du milieu marin, sa protection,
+                    sa valorisation et l’enrichissement personnel.
+
+                </p>
             </div>
-
-            <div class=container>
-                <div class="row eco-vol-text">
-                    <div class="col-lg-12">
-                        <header class="text-center">
-                            <h2>Qu'est ce qu'un éco-marin ?</h2>
-                        </header>
-                        <p>L’éco-marin est un marin de notre temps.
-                           Il ne rejette aucun polluant et maîtrise ses rejets pour ne pas nuire au milieu ; il sensibilise et informe les acteurs (pros, ports, plaisanciers) 
-                           pour initier et faciliter leurs démarches écologiques ; il utilise des produits (pour ses navigations et la maintenance) qui sont respectueux de
-                           l’environnement ; il fait la chasse au gaspillage des ressources (eau douce, électricité, …) et ne pêche que ce dont il a besoin ; il fait attention
-                           à son impact sur la biodiversité marine en navigation et au mouillage ; il connaît les réglementations et les zones protégées ; il ne dérange pas 
-                           la vie des autres espèces lors de ses observations.<br>
-                           À bord c’est aussi quelqu’un qui a soif de découverte, qui veut apprendre, qui s'investit dans toutes les tâches, qui transmet son savoir, qui
-                           respecte les autres et qui a pour but d’aider à faire progresser le projet dont l’objectif est l’étude du milieu marin, sa protection,
-                           sa valorisation et l’enrichissement personnel.
- 
-                        </p>
-                    </div>
-                </div>
-                <div class="row eco-vol-text">
-                    <div class="col-lg-12">
-                        <header class="text-center">
-                            <h2>La vie à bord de Sonate !<h2>
-                        </header>
-                        <p>Nous chercherons à varier les plaisirs en accueillant une multitude de projets scientifiques en faveur de la connaissance, de la défense de 
-                           l’environnement, du développement durable, d’initiative Low Tech, du  zéro déchet…
-                           Nous chercherons également à embarquer des acteurs et spécialistes de tous ces domaines.<br>
-                           Les activités auxquelles nous participerons à bord ont pour but de nous offrir une expérience d’aventure simple, solidaire et sur le terrain à
-                           bord d’un voilier écologique. C’est à travers l’optimisme, notre polyvalence et notre volonté que nous y parviendrons.
-                        </p>
-                    </div>
-                </div>
-                <div class="row eco-vol-text">
-                    <div class="col-lg-12">
-                        <header class="text-center">
-                            <h2>Le mot du Captain :<h2>
-                        </header>
-                        <p class="font-italic">“Encore une fois, ce n’est pas une croisière apéro glandouille qui vous est proposée !<br><br>
-                            La vocation du navire étant scientifique nous participerons à différentes missions très variées qui seront définies au fur et à mesure.<br>
-                            Nous alternerons les navigations, de jour comme de nuit, et les escales où je privilégie les mouillages plutôt que les ports.  Nous adopterons 
-                            vite le rythme des levers et couchers de soleil, des repas, des observations, des relevés…<br>
-                            Il faudra faire du quart, exécuter les manœuvres, compléter le livre et le journal de bord, effectuer les réparations, la maintenance, le ménage,
-                            la cuisine, la vaisselle…<br>
-                            Pas de panique ! Vous ne serez pas seul à bord et apprendrez en pratiquant. Ça ne devrait pas être la mer à boire…<br>
-                            Il y aura également, tous les jours, un peu de théorie sur beaucoup d’aspects utiles pour la navigation (calculs de nav, carte, sécurité, sûreté,
-                             vocabulaire, réglage de voile, équilibre et stabilité du navire, manœuvres, admin, matelotage, …).<br>
-                            Il y aura tout de même quelques apéros ;-)<br>
-                            Je conseille de télécharger mon doc : “copain des mers, l’équipement.”<br>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row eco-vol-text">
-                    <div class="col-lg-12">
-                        <header class="text-center">
-                            <h1>Combien ça coûte ? </h1>
-                         </header>
-                        <p>La participation à verser à l’association est de 100€/j/pers ; qui vous fournira une attestation de dons. Cette attestation vous donne droit à une 
-                        déduction d’impôt de 66% de la somme totale versée.<br><br>
-                        Déduction fiscale :<br>
-                        Chaque don effectué à l'Association NACOMED ouvre droit à une déduction fiscale (pour les entreprises ou les personnes assujetties à l'impôt sur les sociétés
-                        ou sur le revenu en France).<br><br>
-                        Particuliers : <br>
-                        – Les particuliers peuvent s’engager individuellement. A ce titre, vous bénéficiez d’une déduction d’impôts de 66% des sommes versées pour votre don
-                        “mission” et votre adhésion, dans la limite de 20% du revenu imposable (article 200 du CGI). S’il y a excèdent, la somme est reportable sur les 5 
-                        nnées suivantes.<br><br>
-                        Entreprises : <br>
-                        – Pour une entreprise souhaitant effectuer un don ponctuel ou régulier, la déduction fiscale s’élève à 60% du don dans la limite de 0.5% du chiffre d’affaire de
-                        l’entreprise.<br>
-                        – Les Congés Solidaires sont un moyen pour les employeurs et leurs salariés de concrétiser leur engagement envers l’environnement. L’employeur finance, en partie
-                        ou intégralement, la mission embarquée d’un ou de plusieurs de ses salariés. Cette mission se déroule durant les congés du salarié (ou RTT). 60% des
-                        sommes versées (comprenant les frais de mission et l’adhésion) sont déductibles de l’impôt sur les sociétés, dans la limite de 0,5% du chiffre d’affaire 
-                        (article 238 bis du CGI).<br><br>
-                        Le navire étant en navigation et un maximum en mission, il est donc sujet aux aléas de la météo et d’autres imprévus, même si cela devrait bien se passer.<br>
-                        Votre participation vous servira donc à réserver des « jours embarqués ».<br>
-                        Ensemble nous réservons votre place à bord aux alentours de dates approximatives, en fonction des missions qui vous intéressent et des places vacantes à bord.<br>  
-                        Il vous faudra ensuite rejoindre par vos propres moyens le navire lors d’une de ses escales.<br>
-                        Nous serons toujours disponibles pour vous conseiller et vous aider autant que possible pour les réservations et les voyages (embarquement / débarquement).
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row eco-vol-text">
-                    <div class="col-lg-12">
-                        <header class="text-center">
-                            <h2>À quoi sert mon don ?<h2>
-                        </header>
-                        <p class="text-center">Cette participation sert à louer le navire, l’entretenir, effectuer les réparations, aux frais de fonctionnement, à la caisse de bord...<br>
-                        Mais aussi à participer au financement de missions scientifiques en leur fournissant un support (le navire) de terrain.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12 pdf-download">
-                        <header class="text-center">
-                            <h3>Documents PDF à télécharger</h3>
-                        </header>
-                        <a class="pdf" href="./public/pdf/impératifs_embarquement.pdf" target="_blank">Impératifs pour embarquer</a>
-                        <a class="pdf" href="./public/pdf/monter_à_bord_A_Z.pdf" target="_blank">Comment monter à bord</a>
-                        <a class="pdf" href="./public/pdf/copains_des_mers.pdf" target="_blank">Les copains des mers : l'équipement</a>
-                        <a class="pdf" href="./public/pdf/carte_pratique_corse.pdf" target="_blank">Carte pratique de la Corse</a>
-                        <a class="pdf" href="./public/pdf/just_for_fun.pdf" target="_blank">Juste pour rire</a>
-                    </div>
-                </div>
+        </div>
+        <div class="row eco-vol-text">
+            <div class="col-lg-12">
+                <header class="text-center">
+                    <h2>La vie à bord de Sonate !<h2>
+                </header>
+                <p>Nous chercherons à varier les plaisirs en accueillant une multitude de projets scientifiques en faveur de la connaissance, de la défense de 
+                    l’environnement, du développement durable, d’initiative Low Tech, du  zéro déchet…
+                    Nous chercherons également à embarquer des acteurs et spécialistes de tous ces domaines.<br>
+                    Les activités auxquelles nous participerons à bord ont pour but de nous offrir une expérience d’aventure simple, solidaire et sur le terrain à
+                    bord d’un voilier écologique. C’est à travers l’optimisme, notre polyvalence et notre volonté que nous y parviendrons.
+                </p>
             </div>
-
-            <div class="container boat-program">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <header class="text-center">
-                            <h3>Programme du navire</h3>
-                        </header>
-
-                        <div class="table-responsive">
-                            <table style="width: 100%"class="table_program text-center">
-                                <thead>
-                                    <tr class="head">
-                                        <th>MOIS</th>
-                                        <th>SEMAINE</th>
-                                        <th>MISSION</th>
-                                        <th>DETAILS MISSION</th>
-                                        <th>LOCALISATION</th>
-                                        <th class="banets">NBRE DE BANNETTES DISPO.</th>
-                                        <th>REMARQUES</th>
-                                    <tr>
-                                </thead>
-
-                                <tbody>
-                                    <!-- Mois de janvier -->
-                                    <tr>
-                                        <td>JANVIER</td>
-                                        <?php foreach ($prog_jan as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-
-                                    <!-- Mois de février -->
-                                    <tr>
-                                        <td>FEVRIER</td>
-                                        <?php foreach ($prog_feb as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-
-                                    <!-- Mois de mars -->
-                                    <tr>
-                                        <td>MARS</td>
-                                        <?php foreach ($prog_mar as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-
-                                    <!-- Mois d'avril -->
-                                    <tr>
-                                        <td>AVRIL</td>
-                                        <?php foreach ($prog_apr as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-                                    
-                                    <!-- Mois de mai -->
-                                    <tr>
-                                        <td>MAI</td>
-                                        <?php foreach ($prog_may as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-                                    
-                                    <!-- Mois de juin -->
-                                    <tr>
-                                        <td>JUIN</td>
-                                        <?php foreach ($prog_jun as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-
-                                    <!-- Mois de juillet -->
-                                    <tr>
-                                        <td>JUILLET</td>
-                                        <?php foreach ($prog_jul as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-
-                                    <!-- Mois d'août -->
-                                    <tr>
-                                        <td>AOUT</td>
-                                        <?php foreach ($prog_aug as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-
-                                    <!-- Mois de septembre -->
-                                    <tr>
-                                        <td>SEPTEMBRE</td>
-                                        <?php foreach ($prog_sep as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-
-                                    <!-- Mois d'octobre -->
-                                    <tr>
-                                        <td>OCTOBRE</td>
-                                        <?php foreach ($prog_oct as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-
-                                    <!-- Mois de novembre -->
-                                    <tr>
-                                        <td>NOVEMBRE</td>
-                                        <?php foreach ($prog_nov as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-
-                                    <!-- Mois de décembre -->
-                                    <tr>
-                                        <td>DECEMBRE</td>
-                                        <?php foreach ($prog_dec as $prog) {
-                                                echo '<td>' . $prog['id'] . '</td>';
-                                                echo '<td>' . $prog['mission'] . '</td>';
-                                                echo '<td>' . $prog['details_mission'] . '</td>';
-                                                echo '<td>' . $prog['location'] . '</td>';
-                                                echo '<td>' . $prog['available_beds'] . '</td>';
-                                                echo '<td>' . $prog['comments'] . '</td>';
-                                                echo '<tr></tr>';
-                                                echo '<td></td>';
-                                            }
-                                        ?>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="row eco-vol-text">
+            <div class="col-lg-12">
+                <header class="text-center">
+                    <h2>Le mot du Captain :<h2>
+                </header>
+                <p class="font-italic">“Encore une fois, ce n’est pas une croisière apéro glandouille qui vous est proposée !<br><br>
+                    La vocation du navire étant scientifique nous participerons à différentes missions très variées qui seront définies au fur et à mesure.<br>
+                    Nous alternerons les navigations, de jour comme de nuit, et les escales où je privilégie les mouillages plutôt que les ports.  Nous adopterons 
+                    vite le rythme des levers et couchers de soleil, des repas, des observations, des relevés…<br>
+                    Il faudra faire du quart, exécuter les manœuvres, compléter le livre et le journal de bord, effectuer les réparations, la maintenance, le ménage,
+                    la cuisine, la vaisselle…<br>
+                    Pas de panique ! Vous ne serez pas seul à bord et apprendrez en pratiquant. Ça ne devrait pas être la mer à boire…<br>
+                    Il y aura également, tous les jours, un peu de théorie sur beaucoup d’aspects utiles pour la navigation (calculs de nav, carte, sécurité, sûreté,
+                        vocabulaire, réglage de voile, équilibre et stabilité du navire, manœuvres, admin, matelotage, …).<br>
+                    Il y aura tout de même quelques apéros ;-)<br>
+                    Je conseille de télécharger mon doc : “copain des mers, l’équipement.”<br>
+                </p>
             </div>
-            <?php foreach ($mapEvents as $me) { ?>
-                <div class="map_events">
-                    <input type="hidden" class="event_name" value="<?php echo $me->event_name(); ?>" />
-                    <input type="hidden" class="event_lat" value="<?php echo $me->event_lat(); ?>" />
-                    <input type="hidden" class="event_lng" value="<?php echo $me->event_lng(); ?>" />
-                    <input type="hidden" class="comments" value="<?php echo $me->event_comments(); ?>" />
-                    <input type="hidden" class="on_date" value="<?php echo $me->onboarding_date(); ?>" />
-                </div>
-            <?php } ?>
-            <div class="container onboard-events-map">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <header>
-                            <h3>Carte des embarquements</h3>
-                        </header>
-                        <p class="font-italic">
-                            Cliquez sur un marqueur pour afficher les informations d'embarquement (dates et lieux).
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div id="gmap" style="width:100%; height:600px; margin: 0 auto;"></div>
-                    </div>
-                </div>
-            </div>
-
-        <?php require('./public/views/footer.php'); ?>
         </div>
 
-        <div><a id="header_link" href="#header">Retour en haut</a></div>
+        <div class="row eco-vol-text">
+            <div class="col-lg-12">
+                <header class="text-center">
+                    <h1>Combien ça coûte ? </h1>
+                    </header>
+                <p>La participation à verser à l’association est de 100€/j/pers ; qui vous fournira une attestation de dons. Cette attestation vous donne droit à une 
+                déduction d’impôt de 66% de la somme totale versée.<br><br>
+                Déduction fiscale :<br>
+                Chaque don effectué à l'Association NACOMED ouvre droit à une déduction fiscale (pour les entreprises ou les personnes assujetties à l'impôt sur les sociétés
+                ou sur le revenu en France).<br><br>
+                Particuliers : <br>
+                – Les particuliers peuvent s’engager individuellement. A ce titre, vous bénéficiez d’une déduction d’impôts de 66% des sommes versées pour votre don
+                “mission” et votre adhésion, dans la limite de 20% du revenu imposable (article 200 du CGI). S’il y a excèdent, la somme est reportable sur les 5 
+                nnées suivantes.<br><br>
+                Entreprises : <br>
+                – Pour une entreprise souhaitant effectuer un don ponctuel ou régulier, la déduction fiscale s’élève à 60% du don dans la limite de 0.5% du chiffre d’affaire de
+                l’entreprise.<br>
+                – Les Congés Solidaires sont un moyen pour les employeurs et leurs salariés de concrétiser leur engagement envers l’environnement. L’employeur finance, en partie
+                ou intégralement, la mission embarquée d’un ou de plusieurs de ses salariés. Cette mission se déroule durant les congés du salarié (ou RTT). 60% des
+                sommes versées (comprenant les frais de mission et l’adhésion) sont déductibles de l’impôt sur les sociétés, dans la limite de 0,5% du chiffre d’affaire 
+                (article 238 bis du CGI).<br><br>
+                Le navire étant en navigation et un maximum en mission, il est donc sujet aux aléas de la météo et d’autres imprévus, même si cela devrait bien se passer.<br>
+                Votre participation vous servira donc à réserver des « jours embarqués ».<br>
+                Ensemble nous réservons votre place à bord aux alentours de dates approximatives, en fonction des missions qui vous intéressent et des places vacantes à bord.<br>  
+                Il vous faudra ensuite rejoindre par vos propres moyens le navire lors d’une de ses escales.<br>
+                Nous serons toujours disponibles pour vous conseiller et vous aider autant que possible pour les réservations et les voyages (embarquement / débarquement).
+                </p>
+            </div>
+        </div>
 
-        <!-- JavaScript files-->     
-        <script src="./vendor/owl.carousel/owl.carousel.js"></script>
-        
-        <!-- Google Map -->
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php include('./config.php'); echo $apiKey; ?>&callback=initMap"></script>
-        <script src="./js/controllers/onboard.js"></script>
-        <script src="./js/headerLink.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    </body>
-</html>
+        <div class="row eco-vol-text">
+            <div class="col-lg-12">
+                <header class="text-center">
+                    <h2>À quoi sert mon don ?<h2>
+                </header>
+                <p class="text-center">Cette participation sert à louer le navire, l’entretenir, effectuer les réparations, aux frais de fonctionnement, à la caisse de bord...<br>
+                Mais aussi à participer au financement de missions scientifiques en leur fournissant un support (le navire) de terrain.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 pdf-download">
+                <header class="text-center">
+                    <h3>Documents PDF à télécharger</h3>
+                </header>
+                <a class="pdf" href="./public/pdf/impératifs_embarquement.pdf" target="_blank">Impératifs pour embarquer</a>
+                <a class="pdf" href="./public/pdf/monter_à_bord_A_Z.pdf" target="_blank">Comment monter à bord</a>
+                <a class="pdf" href="./public/pdf/copains_des_mers.pdf" target="_blank">Les copains des mers : l'équipement</a>
+                <a class="pdf" href="./public/pdf/carte_pratique_corse.pdf" target="_blank">Carte pratique de la Corse</a>
+                <a class="pdf" href="./public/pdf/just_for_fun.pdf" target="_blank">Juste pour rire</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container boat-program">
+        <div class="row">
+            <div class="col-lg-12">
+                <header class="text-center">
+                    <h3>Programme du navire</h3>
+                </header>
+
+                <div class="table-responsive">
+                    <table style="width: 100%"class="table_program text-center">
+                        <thead>
+                            <tr class="head">
+                                <th>MOIS</th>
+                                <th>SEMAINE</th>
+                                <th>MISSION</th>
+                                <th>DETAILS MISSION</th>
+                                <th>LOCALISATION</th>
+                                <th class="banets">NBRE DE BANNETTES DISPO.</th>
+                                <th>REMARQUES</th>
+                            <tr>
+                        </thead>
+
+                        <tbody>
+                            <!-- Mois de janvier -->
+                            <tr>
+                                <td>JANVIER</td>
+                                <?php foreach ($prog_jan as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+
+                            <!-- Mois de février -->
+                            <tr>
+                                <td>FEVRIER</td>
+                                <?php foreach ($prog_feb as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+
+                            <!-- Mois de mars -->
+                            <tr>
+                                <td>MARS</td>
+                                <?php foreach ($prog_mar as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+
+                            <!-- Mois d'avril -->
+                            <tr>
+                                <td>AVRIL</td>
+                                <?php foreach ($prog_apr as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+                            
+                            <!-- Mois de mai -->
+                            <tr>
+                                <td>MAI</td>
+                                <?php foreach ($prog_may as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+                            
+                            <!-- Mois de juin -->
+                            <tr>
+                                <td>JUIN</td>
+                                <?php foreach ($prog_jun as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+
+                            <!-- Mois de juillet -->
+                            <tr>
+                                <td>JUILLET</td>
+                                <?php foreach ($prog_jul as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+
+                            <!-- Mois d'août -->
+                            <tr>
+                                <td>AOUT</td>
+                                <?php foreach ($prog_aug as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+
+                            <!-- Mois de septembre -->
+                            <tr>
+                                <td>SEPTEMBRE</td>
+                                <?php foreach ($prog_sep as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+
+                            <!-- Mois d'octobre -->
+                            <tr>
+                                <td>OCTOBRE</td>
+                                <?php foreach ($prog_oct as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+
+                            <!-- Mois de novembre -->
+                            <tr>
+                                <td>NOVEMBRE</td>
+                                <?php foreach ($prog_nov as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+
+                            <!-- Mois de décembre -->
+                            <tr>
+                                <td>DECEMBRE</td>
+                                <?php foreach ($prog_dec as $prog) {
+                                        echo '<td>' . $prog['id'] . '</td>';
+                                        echo '<td>' . $prog['mission'] . '</td>';
+                                        echo '<td>' . $prog['details_mission'] . '</td>';
+                                        echo '<td>' . $prog['location'] . '</td>';
+                                        echo '<td>' . $prog['available_beds'] . '</td>';
+                                        echo '<td>' . $prog['comments'] . '</td>';
+                                        echo '<tr></tr>';
+                                        echo '<td></td>';
+                                    }
+                                ?>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php foreach ($mapEvents as $me) { ?>
+        <div class="map_events">
+            <input type="hidden" class="event_name" value="<?php echo $me->event_name(); ?>" />
+            <input type="hidden" class="event_lat" value="<?php echo $me->event_lat(); ?>" />
+            <input type="hidden" class="event_lng" value="<?php echo $me->event_lng(); ?>" />
+            <input type="hidden" class="comments" value="<?php echo $me->event_comments(); ?>" />
+            <input type="hidden" class="on_date" value="<?php echo $me->onboarding_date(); ?>" />
+        </div>
+    <?php } ?>
+    <div class="container onboard-events-map">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <header>
+                    <h3>Carte des embarquements</h3>
+                </header>
+                <p class="font-italic">
+                    Cliquez sur un marqueur pour afficher les informations d'embarquement (dates et lieux).
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="gmap" style="width:100%; height:600px; margin: 0 auto;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div><a id="header_link" href="#header">Retour en haut</a></div>
+
+<?php $content = ob_get_clean(); ?>
+<?php require('public/views/layoutFront.php'); ?>
+    
+<script src="./vendor/owl.carousel/owl.carousel.js"></script>
+
+<!-- Google Map -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php include('./config.php'); echo $apiKey; ?>&callback=initMap"></script>
+<script src="./js/controllers/onboard.js"></script>

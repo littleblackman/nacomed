@@ -1,4 +1,6 @@
 <?php $title = 'Association Nacomed : News'; ?>
+<?php $meta_description = 'Page des News de Nacomed, retrouvez ici toutes les news'; ?>
+<?php $og_title = 'Page des news de Nacomed'; ?>
 
 <?php ob_start(); ?>
 

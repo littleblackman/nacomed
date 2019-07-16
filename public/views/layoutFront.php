@@ -10,7 +10,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title><?= $title ?></title>
-        <meta name="description" content="Page d'accueil du site de l'association Nacomed">
+        <meta name="description" content="<?= $meta_description; ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
         <!-- Bootstrap CSS-->
@@ -18,6 +18,9 @@
         <!-- Google fonts-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo:400,400i">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+        <!-- OwlCarousel -->
+        <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.carousel.css">
+        <link rel="stylesheet" href="./vendor/owl.carousel/assets/owl.theme.default.min.css">
         <!-- Font Awesome-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <!-- theme stylesheet-->
@@ -27,12 +30,10 @@
         <!-- Favicon-->
         <link rel="shortcut icon" href="./img/logo_nacomed.png">
         <!-- Open Graph Data Facebook -->
-        <meta property="og:title" content="Page d'accueil de l'association Nacomed" />
+        <meta property="og:title" content="<?= $og_title; ?>" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nacomed.oc-maxlau.fr/index.php" />
+        <meta property="og:url" content="https://www.nacomed.oc-maxlau.fr" />
         <meta property="og:image" content="http://zupimages.net/viewer.php?id=19/28/69dv.png" />
-        <!-- Lightbox CSS -->
-        <link rel="stylesheet" href="./vendor/lightbox2/css/lightbox.css">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142576167-1"></script>
         <script>
