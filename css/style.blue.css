@@ -443,18 +443,6 @@ STYLE SWITCHER FOR DEMO
   color: #6c757d;
 }
 
-.btn-primary {
-  color: #212529;
-  background-color: #4fbfa8;
-  border-color: #4fbfa8;
-}
-
-.btn-primary:hover {
-  color: #fff;
-  background-color: #3eaa94;
-  border-color: #3aa18c;
-}
-
 .btn-primary:focus, .btn-primary.focus {
   box-shadow: 0 0 0 0.2rem rgba(79, 191, 168, 0.5);
 }
