@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Manager;
+namespace App\Managers;
 
 class Manager {
+
     protected function dbConnect() {
         try {
             include('./config.php');
