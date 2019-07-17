@@ -34,7 +34,7 @@
         <!-- Open Graph Data Facebook -->
         <meta property="og:title" content="Page d'accueil de l'association Nacomed" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nacomed.oc-maxlau.fr/index.php" />
+        <meta property="og:url" content="https://www.nacomed.oc-maxlau.fr" />
         <meta property="og:image" content="http://zupimages.net/viewer.php?id=19/28/69dv.png" />
         <!-- Lightbox CSS -->
         <link rel="stylesheet" href="./vendor/lightbox2/css/lightbox.css">

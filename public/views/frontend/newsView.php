@@ -86,7 +86,6 @@
 <?php require('public/views/layoutFront.php'); ?>
 
 <!-- JavaScript files-->
-<script src="./js/scroll_nav.js"></script>
 <script src="./js/commentAdder.js"></script>
 <script src="./js/reportCom.js"></script>
 <script src="./js/controllers/newsView.js"></script>
