@@ -582,6 +582,13 @@ table, td, th {
   right: 5%;
 }
 
+/* Vue des erreurs */
+
+.error-message {
+  margin-top: 250px;
+  text-align: center;
+}
+
 /* Responsive */
 
 /* Menu de navigation*/
