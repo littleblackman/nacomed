@@ -108,8 +108,8 @@ var initMap = function() {
                     $('#modal_edit').hide();
                     window.location.href = "./index.php?action=listMapEvents";
                 })
-            })
+            });
 
-        })
-    })
+        });
+    });
 }

@@ -112,5 +112,5 @@ var initMap = function() {
                 }
             }
         });
-    })
+    });
 }

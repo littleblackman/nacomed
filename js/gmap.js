@@ -43,5 +43,5 @@ var initMap = function() {
                 });
                 return false;
             }
-        })
+        });
 }
