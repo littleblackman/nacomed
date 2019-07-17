@@ -11,7 +11,7 @@
                         getArtCom($_GET['article_id']);
                         exit;
                     } else {
-                        throw new Exception('Erreur d\'id de news');
+                        throw new Exception('Erreur d\'id de news, cette page n\'existe pas');
                     }
 
                 case 'displayHome':
